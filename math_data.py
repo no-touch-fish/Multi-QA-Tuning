@@ -9,12 +9,9 @@ def process_qa_pair(qa_pair):
     index = question.rfind('?')
     while (question[index] != '.'):
         index -= 1
-        # the case like "If cake is 1 dollar, how much is the cake?" -> should sepeate with ","
+        # the case that maybe we can just ignore
         if index == 0:
-            index = question.rfind('?')
-            while (question[index] != ','):
-                index -= 1
-            break
+            return None
     # add 1 to avoid the "."
     last_question = question[index + 1:].strip()
     context = question[:index+1].strip()
@@ -27,9 +24,6 @@ def process_qa_pair(qa_pair):
         index = part.rfind('?')
         question_list.append(part[:index + 1].strip())
         answer_list.append(part[index + 1:].strip())
-    # print(answer_parts)
-    # print(question_list)
-    # print(answer_list)
 
     # create new Q-A pair
     additional_part = 'Answer the question one by one.'
@@ -43,14 +37,14 @@ def process_qa_pair(qa_pair):
 def process_json(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
-    processed_data = [process_qa_pair(json.loads(line)) for line in lines]
+    processed_data = [process_qa_pair(json.loads(line)) for line in lines if process_qa_pair(json.loads(line)) is not None]
     # print(processed_data)
     with open(output_file, 'w', encoding='utf-8') as f:
         for qa_pair in processed_data:
             f.write(json.dumps(qa_pair, ensure_ascii=False) + '\n')
 
 
-input_file = 'dataset/test.json'
+input_file = 'dataset/test_socratic.jsonl'
 output_file = 'dataset/processed_test.json'
 
 process_json(input_file, output_file)
