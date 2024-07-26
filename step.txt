@@ -1,3 +1,13 @@
 pipeline for the code to run
 
-1:
+1: get your dataset done in dataset/...
+
+2: generate the output
+python main.py --data_path dataset/processed_math_test.json --save_path result/gsm.json  --gpu 1
+
+python main.py --data_path dataset/processed_pararel_test.json --save_path result/pararel.json  --gpu 2
+
+3: compare the output and ground truth label
+python compare.py --data_path result/gms.json
+
+python compare.py --data_path result/pararel.json

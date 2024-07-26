@@ -1,7 +1,7 @@
 from datasets import load_dataset
 
 # 加载 MMLU 数据集
-dataset = load_dataset("huggingface/MMLU")
+dataset = load_dataset("cais/mmlu",)
 
 # 现在你可以访问数据集的不同部分，例如训练集、验证集和测试集
 train_dataset = dataset["train"]
