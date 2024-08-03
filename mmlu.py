@@ -1,18 +1,29 @@
 from datasets import load_dataset
-
+import json
+output_file = 'dataset/mmlu_test.json'
 # 加载 MMLU 数据集
-dataset = load_dataset("cais/mmlu",)
+dataset = load_dataset("cais/mmlu",'all')
+# length = 100
+length = len(dataset['test'])
+# 查看数据集的结构
+# print(dataset)
+# test_dataset = dataset['test'][:length]
+answers_map = {'0':'A','1':'B','2':'C','3':'D'}
+# 创建一个新的数据集列表
+my_dataset = []
 
-# 现在你可以访问数据集的不同部分，例如训练集、验证集和测试集
-train_dataset = dataset["train"]
-validation_dataset = dataset["validation"]
-test_dataset = dataset["test"]
+# 将前一百条数据添加到我的新数据集列表
+for i in range(length):
+    answer = dataset['test'][i]['answer']
+    my_dataset.append({
+        'question': dataset['test'][i]['question'],
+        'options': dataset['test'][i]['choices'],
+        'answer': answers_map[f'{answer}']
+    })
 
-# 打印数据集的结构
-print(dataset)
+# 将数据写入本地JSON文件
+with open(output_file, 'w', encoding='utf-8') as f:
+    json.dump(my_dataset, f, ensure_ascii=False, indent=4)
 
-# 打印测试集中前5个样本的问题、选项和答案
-for i in range(5):
-    print(f"问题 {i+1}: {test_dataset[i]['question']}")
-    print(f"选项: {test_dataset[i]['options']}")
-    print(f"正确答案: {test_dataset[i]['answer']}\n")
+print("the length of dataset is:",length)
+print(f'save to {output_file}')

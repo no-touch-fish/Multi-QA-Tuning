@@ -8,8 +8,7 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser(
-    description="""Sample unsuccessful test cases from the provided results 
-    to create a new set of test cases with random data augmentation."""
+    description="""parameter"""
 )
 
 parser.add_argument(
@@ -49,14 +48,20 @@ llm = LLM(model=model_name)
 # generate output
 questions = df['question'].tolist()
 answers = df['answer'].tolist()
-sampling_params = SamplingParams(max_tokens=256)
+original_options = df['original_options'].tolist()
+sampling_params = SamplingParams(temperature = 0.0, max_tokens=50)
 results = llm.generate(questions, sampling_params)
 
 # 处理生成的结果并保存
 output_data = []
-for question, result, answer in zip(questions, results, answers):
+for question, result, answer,original_option in zip(questions, results, answers,original_options):
     generated_text = result.outputs[0].text
-    output_data.append({'question': question, 'output': generated_text, 'answer': answer})
+    output_data.append({
+        'question': question, 
+        'original_options':original_option,
+        'output': generated_text, 
+        'answer': answer
+        })
 
 # save result
 # output_file = 'result/llama3.json'

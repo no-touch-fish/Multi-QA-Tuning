@@ -1,6 +1,6 @@
 import json
 import re
-
+'''
 def process_qa_pair(qa_pair):
 
     question = qa_pair['question']
@@ -40,13 +40,27 @@ def process_qa_pair(qa_pair):
             else:
                 return None
     # create new Q-A pair
-    additional_part = ' Answer these questions. Please mark the answer with ** so I can quickly find it.'
+    additional_part = ' Directly Answer these questions. Give me one-word-answer for each question in following format: **answer**. \n'
     new_qa_pair = {
         'question': context + ' ' + ' '.join(question_list).strip() + ' ' + additional_part,
         'answer': ' \n '.join(clean_answer_list[:-1]).strip()
     }
     # print(new_qa_pair)
     return new_qa_pair
+'''
+def process_qa_pair(qa_pair):
+    question = qa_pair['question']
+    answer = qa_pair['answer']
+    index = answer.rfind('#')
+    answer = answer[index + 2:]
+    option = [f'{answer}','None of the above is true']
+    new_qa_pair = {
+        'question': question,
+        'options' : option,
+        'answer' : "A"
+    }
+    return new_qa_pair
+
 
 def process_json(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
@@ -58,8 +72,8 @@ def process_json(input_file, output_file):
         json.dump(processed_data, f, ensure_ascii=False, indent=4)
 
 
-input_file = 'dataset/test_socratic.jsonl'
-output_file = 'dataset/processed_math_test.json'
+input_file = 'dataset/gsm_original.jsonl'
+output_file = 'dataset/multiple_choice/gsm_test.json'
 
 process_json(input_file, output_file)
 

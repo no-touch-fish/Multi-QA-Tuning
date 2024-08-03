@@ -1,13 +1,55 @@
 pipeline for the code to run
 
 1: get your dataset done in dataset/...
+(gsm)
+python template_choice.py --data_path dataset/multiple_choice/gsm_test.json --save_path dataset/multiple_choice/processed_gsm_test.json
+
+python template_choice.py --data_path dataset/blank/gsm_test.json --save_path dataset/blank/processed_gsm_test.json
+
+(MATH)
+
+
+(pararel)
+python template_choice.py --data_path dataset/multiple_choice/pararel_test.json --save_path dataset/multiple_choice/processed_pararel_test.json --length 30000
+
+python template.py --data_path dataset/blank/pararel_test.json --save_path dataset/blank/processed_pararel_test.json
+
+(MMLU-PRO)
+python template_choice.py --data_path dataset/multiple_choice/mmlu_pro_test.json --save_path dataset/multiple_choice/processed_mmlu_pro_test.json
+
+(MMLU)
+python template_choice.py --data_path dataset/multiple_choice/mmlu_test.json --save_path dataset/multiple_choice/processed_mmlu_test.json
 
 2: generate the output
-python main.py --data_path dataset/processed_math_test.json --save_path result/gsm.json  --gpu 1
+(gsm)
+python main.py --data_path dataset/multiple_choice/processed_gsm_test.json --save_path result/multiple_choice/gsm.json  --gpu 3
 
-python main.py --data_path dataset/processed_pararel_test.json --save_path result/pararel.json  --gpu 2
+python main.py --data_path dataset/multiple_choice/processed_gsm_test.json --save_path result/multiple_choice/gsm.json  --gpu 3
+
+(pararel)
+python main.py --data_path dataset/multiple_choice/processed_pararel_test.json --save_path result/multiple_choice/pararel.json  --gpu 3
+
+python main.py --data_path dataset/processed_pararel_test.json --save_path result/blank/pararel.json  --gpu 2
+
+(MMLU-PRO)
+python main.py --data_path dataset/multiple_choice/processed_mmlu_pro_test.json --save_path result/multiple_choice/mmlu_pro.json  --gpu 2
+
+(MMLU)
+python main.py --data_path dataset/multiple_choice/processed_mmlu_test.json --save_path result/multiple_choice/mmlu.json  --gpu 2
 
 3: compare the output and ground truth label
-python compare.py --data_path result/gms.json
+(multiple_choice)
+python multiple_choice_compare.py --data_path result/multiple_choice/gsm.json
 
-python compare.py --data_path result/pararel.json
+python multiple_choice_compare.py --data_path result/multiple_choice/pararel.json
+
+python multiple_choice_compare.py --data_path result/multiple_choice/mmlu_pro.json
+
+python multiple_choice_compare.py --data_path result/multiple_choice/mmlu.json
+
+---------------------------------------------------------------------------------------------------
+(word embedding)
+python toy.py --data_path result/blank/pararel.json --gpu 1
+
+(LLM-based)
+python LLM_judge.py --data_path result/blank/pararel.json --gpu 2

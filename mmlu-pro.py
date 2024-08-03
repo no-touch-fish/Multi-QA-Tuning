@@ -2,10 +2,9 @@ from datasets import load_dataset
 import json
 
 output_file = 'dataset/mmlu_pro_test.json'
-length = 100
 # 加载数据集
 dataset = load_dataset("TIGER-Lab/MMLU-Pro")
-
+length = len(dataset['test'])
 # 查看数据集的结构
 # print(dataset)
 # test_dataset = dataset['test'][:length]
@@ -18,7 +17,7 @@ for i in range(length):
     # print(i)
     my_dataset.append({
         'question': dataset['test'][i]['question'],
-        'options': dataset['test'][i]['options'],
+        'options': dataset['test'][i]['choices'],
         'answer': dataset['test'][i]['answer']
     })
 
@@ -26,5 +25,6 @@ for i in range(length):
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(my_dataset, f, ensure_ascii=False, indent=4)
 
-print("数据已成功保存到本地JSON文件。")
+print("the length of dataset is:",length)
+print(f'save to {output_file}')
 
