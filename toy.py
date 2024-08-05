@@ -2,6 +2,7 @@ from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 import torch
 import argparse
 import json
+from tqdm import tqdm
 
 parser = argparse.ArgumentParser(
     description="""Compare the result and the answer."""
@@ -35,19 +36,23 @@ device = torch.device(f"cuda:{gpu}" if torch.cuda.is_available() else "cpu")
 
 # 加载预训练的问答模型和句子嵌入模型
 qa_model_name = "deepset/roberta-base-squad2"
-qa_pipeline = pipeline("question-answering", model=qa_model_name,device = gpu)
+qa_pipeline = pipeline("question-answering", model=qa_model_name,device = int(gpu))
 model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 embedding_model = AutoModelForCausalLM.from_pretrained(model_name).to(device)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+tokenizer.pad_token = tokenizer.eos_token
 
-# 获取句子嵌入
 def get_sentence_embedding(sentence):
-    return embedding_model.encode(sentence, convert_to_tensor=True,device = device)
+    inputs = tokenizer(sentence, return_tensors="pt", padding=True).to(device)
+    with torch.no_grad():
+        outputs = embedding_model(**inputs, output_hidden_states=True)
+    last_hidden_state = outputs.hidden_states[-1]
+    sentence_embedding = last_hidden_state.mean(dim=1)
+    return sentence_embedding
 
-# 计算相似度
 def cosine_similarity(embedding1, embedding2):
     return torch.nn.functional.cosine_similarity(embedding1, embedding2).item()
 
-# 提取生成的输出中的答案
 def extract_answer_from_output(question, output):
     answer = qa_pipeline(question=question, context=output)
     return answer['answer']
@@ -67,7 +72,7 @@ def is_output_correct(question, correct_answer, generated_output, threshold=0.8)
 def score(data):
     total = 0
     correct = 0
-    for entry in data:
+    for entry in tqdm(data, desc="Processing data"):
         questions = entry.get('question','').split('\n')
         answers = entry.get('answer', '').lower().split('\n')
         output = entry.get('output', '').lower()

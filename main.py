@@ -27,6 +27,12 @@ parser.add_argument(
     type = str,
     help = "Path to the save dir",
 )
+parser.add_argument(
+    "--case",
+    type = str,
+    default = 'choice',
+    help = "choice or blank",
+)
 args = parser.parse_args()
 
 data_file = args.data_path
@@ -48,17 +54,18 @@ llm = LLM(model=model_name)
 # generate output
 questions = df['question'].tolist()
 answers = df['answer'].tolist()
-original_options = df['original_options'].tolist()
+# original_options = df['original_options'].tolist()
 sampling_params = SamplingParams(temperature = 0.0, max_tokens=50)
 results = llm.generate(questions, sampling_params)
 
 # 处理生成的结果并保存
 output_data = []
-for question, result, answer,original_option in zip(questions, results, answers,original_options):
+# for question, result, answer,original_option in zip(questions, results, answers,original_options):
+for question, result, answer in zip(questions, results, answers):
     generated_text = result.outputs[0].text
     output_data.append({
         'question': question, 
-        'original_options':original_option,
+        # 'original_options':original_option,
         'output': generated_text, 
         'answer': answer
         })
