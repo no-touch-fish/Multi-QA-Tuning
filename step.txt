@@ -22,7 +22,7 @@ python template_choice.py --data_path dataset/multiple_choice/mmlu_test.json --s
 
 2: generate the output
 (gsm)
-python main.py --data_path dataset/multiple_choice/processed_gsm_test.json --save_path result/multiple_choice/gsm.json  --gpu 3
+python main.py --data_path dataset/multiple_choice/processed_gsm_test.json --save_path result/multiple_choice/gsm.json
 
 python main.py --data_path dataset/blank/processed_gsm_test.json --save_path result/blank/gsm.json --case blank --gpu 3
 
@@ -49,6 +49,6 @@ python multiple_choice_compare.py --data_path result/multiple_choice/mmlu.json
 
 ---------------------------------------------------------------------------------------------------
 (LLM-based)
-python LLM_judge.py --data_path result/blank/gsm.json --gpu 2
+python LLM_judge.py --data_path result/blank/gsm.json --gpu 0
 
-python LLM_judge.py --data_path result/blank/pararel.json --gpu 2
+python LLM_judge.py --data_path result/blank/pararel.json --gpu 0

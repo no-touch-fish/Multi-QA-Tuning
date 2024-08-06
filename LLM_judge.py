@@ -36,7 +36,10 @@ input_data = []
 output_data = []
 # load model and tokenizer
 model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-llm = LLM(model=model_name)
+llm = LLM(
+    model=model_name,
+    max_num_seqs = 64
+    )
 # get the input
 additional_part = "Remember what the correct answer is and use a score from 0 to 10 for each question to compare the generated output with the correct answer. \nThe format should be Score: 1: score 2: score 3: score. \n Score:"
 for question,answer,output in zip(questions,answers,outputs):
@@ -52,19 +55,27 @@ for original_score in original_scores:
 # get the label
 labels = []
 pattern = r'1: (\d+) 2: (\d+) 3: (\d+)'
+total = 0
+correct = 0
 for score in scores:
     label = []
     match = re.search(pattern, score)
     if match:
         for index in range(3):
-            score_tmp = match.group(index + 1)
-        if score_tmp >= standard_score:
-            label.append(1) 
-        else:
-            label.append(0)
+            score_tmp = match.group(index + 1).strip()
+            if int(score_tmp) >= standard_score:
+                total += 1
+                correct += 1
+                label.append(1) 
+            else:
+                total += 1
+                label.append(0)
     else:
         print("wrong format for the score generation!!!")
+        total += 3
+        label.append("wrong format for the score generation!!!")
     labels.append(label) 
+print(f'the successful rate is:{100*correct/total}%')
 # save to the output file
 for question,answer,output,score,label in zip(questions,answers,outputs,scores,labels):
     output_data.append({

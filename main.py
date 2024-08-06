@@ -20,6 +20,7 @@ parser.add_argument(
 parser.add_argument(
     "--gpu",
     type = str,
+    default = None,
     help = "which gpu to use",
 )
 parser.add_argument(
@@ -38,8 +39,8 @@ args = parser.parse_args()
 data_file = args.data_path
 gpu = args.gpu
 output_file = args.save_path
-
-os.environ["CUDA_VISIBLE_DEVICES"] = f"{gpu}"
+if gpu:
+    os.environ["CUDA_VISIBLE_DEVICES"] = f"{gpu}"
 
 # load dataset
 with open(data_file, 'r') as file:
@@ -49,13 +50,16 @@ df = pd.DataFrame(data)
 model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # tokenizer = AutoTokenizer.from_pretrained(model_name)
 # model = AutoModelForCausalLM.from_pretrained(model_name)
-llm = LLM(model=model_name)
+llm = LLM(
+    model=model_name,
+    max_num_seqs = 64
+    )
 
 # generate output
 questions = df['question'].tolist()
 answers = df['answer'].tolist()
 # original_options = df['original_options'].tolist()
-sampling_params = SamplingParams(temperature = 0.0, max_tokens=50)
+sampling_params = SamplingParams(temperature = 0.0, max_tokens=64)
 results = llm.generate(questions, sampling_params)
 
 # 处理生成的结果并保存
