@@ -42,7 +42,7 @@ with open(data_file, 'r',encoding='utf-8') as file:
 if length == -1:
     length = len(data)
 # apply templates to every three lines of original dataset
-addtional_part = ' Directly give me one-word-answer for each question in following format: 1: choice 2: choice 3: choice. Your choice should be A,B,C,D,E,F,G,H,I,J,K \n Answer: '
+addtional_part = ' Directly give me one-word-answer for each question in following format: 1: choice 2: choice 3: choice. Your choice should be A,B,C,D,E,F,G,H,I,J,K...'
 combined_data = []
 for i in range(0, length, 3):
     if i+2 >= len(data):

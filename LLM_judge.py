@@ -21,10 +21,27 @@ parser.add_argument(
     type = str,
     help = "which gpu to use",
 )
+parser.add_argument(
+    "--save_path",
+    type = str,
+    default = None,
+    help = "Path to the save dir",
+)
+parser.add_argument(
+    "--batch_size",
+    type = int,
+    default = 4,
+    help = "the batch size for the input",
+)
 args = parser.parse_args()
 
 data_file = args.data_path
 gpu = args.gpu
+output_file = args.save_path
+if not output_file:
+    output_file = data_file
+batch_size = args.batch_size
+
 # load the data
 with open(data_file, 'r') as file:
     data = json.load(file)
@@ -36,18 +53,35 @@ input_data = []
 output_data = []
 # load model and tokenizer
 model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 llm = LLM(
     model=model_name,
-    max_num_seqs = 64
+    max_num_seqs = batch_size
     )
 # get the input
-additional_part = "Remember what the correct answer is and use a score from 0 to 10 for each question to compare the generated output with the correct answer. \nThe format should be Score: 1: score 2: score 3: score. \n Score:"
+additional_part = "Use a score(which should be an integer) from 0 to 10 for each question to compare the generated output with the correct answer. 10 means matches and 0 means different.\nThe format should be Score: 1: score 2: score 3: score."
 for question,answer,output in zip(questions,answers,outputs):
-    input = f"Question: {question} \nGenerated output: {output} \nCorrect answer: {answer} \n{additional_part}"
+    input = [
+        {
+            "role" : "user",
+            "content" : f"Question: {question} \nGenerated output: {output} \nCorrect answer: {answer} \n{additional_part}",
+        }
+    ]
     input_data.append(input)
+inputs = tokenizer.apply_chat_template(
+        conversation=input_data,
+        add_generation_prompt=True,
+    )
 # get the score
-sampling_params = SamplingParams(temperature = 0.0, max_tokens=100)
-original_scores = llm.generate(input_data, sampling_params)
+sampling_params = SamplingParams(
+    temperature = 0.0, 
+    top_p = 1,
+    max_tokens=100)
+original_scores = llm.generate(
+    prompt_token_ids=inputs, 
+    sampling_params=sampling_params,
+    use_tqdm=True,
+    )
 scores = []
 for original_score in original_scores:
     score = original_score.outputs[0].text
@@ -73,7 +107,8 @@ for score in scores:
     else:
         print("wrong format for the score generation!!!")
         total += 3
-        label.append("wrong format for the score generation!!!")
+        for index in range(3):
+            label.append(0)
     labels.append(label) 
 print(f'the successful rate is:{100*correct/total}%')
 # save to the output file
@@ -86,7 +121,7 @@ for question,answer,output,score,label in zip(questions,answers,outputs,scores,l
         'label' : label
     })
 #   print(response)
-with open(data_file,'w') as file:
+with open(output_file,'w') as file:
     json.dump(output_data, file, ensure_ascii=False, indent=4)
 
-print(f"save to {data_file}")
+print(f"save to {output_file}")

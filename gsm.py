@@ -53,11 +53,11 @@ def process_qa_pair(qa_pair):
     answer = qa_pair['answer']
     index = answer.rfind('#')
     answer = answer[index + 2:]
-    option = [f'{answer}','None of the above is true']
+    # option = [f'{answer}','None of the above is true']
     new_qa_pair = {
         'question': question,
-        'options' : option,
-        'answer' : "A"
+        # 'options' : option,
+        'answer' : answer
     }
     return new_qa_pair
 
@@ -73,7 +73,7 @@ def process_json(input_file, output_file):
 
 
 input_file = 'dataset/gsm_original.jsonl'
-output_file = 'dataset/multiple_choice/gsm_test.json'
+output_file = 'dataset/blank/gsm_test.json'
 
 process_json(input_file, output_file)
 
