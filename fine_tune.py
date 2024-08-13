@@ -56,7 +56,10 @@ lora_config = LoraConfig(
 # training config
 training_args = TrainingArguments(
     output_dir= output_file,
-    per_device_train_batch_size= batch_size,
+    optim="paged_adamw_8bit",
+    gradient_accumulation_steps=4,  # gradient accumulation to reduce memory
+    fp16=True,  # 启用FP16混合精度训练
+    per_device_train_batch_size= batch_size, # batch size
     learning_rate= 2e-5,
     num_train_epochs= 3,
     logging_dir='/logs',
