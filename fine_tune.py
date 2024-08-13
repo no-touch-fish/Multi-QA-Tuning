@@ -5,7 +5,6 @@ import torch
 import json
 import argparse
 import os
-from fastchat.model import get_conversation_template
 
 parser = argparse.ArgumentParser(
     description="""parameter"""
@@ -56,10 +55,10 @@ lora_config = LoraConfig(
 # training config
 training_args = TrainingArguments(
     output_dir= output_file,
-    optim="paged_adamw_8bit",
-    gradient_accumulation_steps=4,  # gradient accumulation to reduce memory
+    optim="adafactor",
+    gradient_accumulation_steps = 4,  # gradient accumulation to reduce memory
     fp16=True,  # 启用FP16混合精度训练
-    per_device_train_batch_size= batch_size, # batch size
+    per_device_train_batch_size= 1, # batch size
     learning_rate= 2e-5,
     num_train_epochs= 3,
     logging_dir='/logs',
@@ -79,23 +78,13 @@ model = get_peft_model(model, lora_config)
 def preprocess_data(data):
 # apply templates to every three lines of original dataset
     combined_data = []
-    
     for i in range(0, len(data), 3):
         if i+2 >= len(data):
             break
-        conversation = get_conversation_template(model_name)
         combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n'
         combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
-        conversation.append_message(
-            conversation.roles[0],
-            combined_question,
-            )
-        conversation.append_message(
-            conversation.roles[1],
-            None,
-            )
         combined_data.append({
-            "question": conversation.get_prompt(), 
+            "question": combined_question, 
             "answer": combined_answer
         })
     return combined_data
@@ -107,6 +96,7 @@ def tokenize_function(data):
     for i in range(len(data)):
         questions.append(data[i]["question"])
         answers.append(data[i]["answer"])
+    # get the input ids and attention mask for questions 
     prompts = [
             [
                 {
@@ -126,6 +116,7 @@ def tokenize_function(data):
         padding="max_length",
         max_length = 256
     )
+    # get the labels for answers
     prompts = [
             [
                 {
@@ -145,6 +136,7 @@ def tokenize_function(data):
         padding="max_length",
         max_length = 256
     )['input_ids']
+    # get the tokenized input in total
     for i in range(len(labels)):
         inputs.append(
             {
@@ -167,7 +159,7 @@ uncertain_data = preprocess_data(data)
 # print(f'the length of certain is {len(certain_data)}, the length of uncertain is {len(uncertain_data)}')
 combine_data = certain_data + uncertain_data
 tokenized_data = Dataset.from_list(tokenize_function(combine_data))
-
+print(f'the length of dataset is: {len(tokenized_data)}')
 
 # fine tune
 trainer = Trainer(
