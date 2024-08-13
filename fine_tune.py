@@ -1,4 +1,4 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
+from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, DataCollatorWithPadding
 from peft import LoraConfig, get_peft_model, PeftModel
 from datasets import Dataset
 import torch
@@ -69,6 +69,7 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id =  tokenizer.eos_token_id
+# data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
 model = get_peft_model(model, lora_config)
 
@@ -111,24 +112,17 @@ def tokenize_function(data):
                 }
             ] for question in questions
         ]
-    input_texts = tokenizer.apply_chat_template(
+    question_texts = tokenizer.apply_chat_template(
         conversation=prompts,
         add_generation_prompt=True,
         padding = True,
         tokenize=False,
     )
-    inputs = tokenizer(
-        input_texts,
+    questions = tokenizer(
+        question_texts,
         padding="max_length",
-        max_length=256  # 确保input_ids和labels长度一致
+        max_length = 256
     )
-    labels = tokenizer(
-        examples["answer"],
-        padding="max_length",
-        max_length=256  # 与input_ids相同的max_length
-    )["input_ids"]
-
-    inputs["labels"] = labels
     prompts = [
             [
                 {
@@ -137,12 +131,25 @@ def tokenize_function(data):
                 }
             ] for answer in answers
         ]
-    labels = tokenizer.apply_chat_template(
+    labels_text = tokenizer.apply_chat_template(
         conversation=prompts,
         add_generation_prompt=False,
         padding = True,
+        tokenize=False,
     )
-    inputs['label'] = labels
+    labels = tokenizer(
+        labels_text,
+        padding="max_length",
+        max_length = 256
+    )['input_ids']
+    for i in range(len(labels)):
+        inputs.append(
+            {
+                'input_ids' : questions['input_ids'][i],
+                'attention_mask' : questions['attention_mask'][i],
+                'label' : labels[i]
+            }
+        )
     return inputs
 
 # load the data
@@ -164,6 +171,7 @@ trainer = Trainer(
     model=model,  # model
     args=training_args,  # args
     train_dataset=tokenized_data,  # dataset
+    # data_collator=data_collator, # data collator for padding
 )
 
 trainer.train()
