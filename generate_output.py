@@ -111,31 +111,26 @@ def generate_vllm(inputs,model_name,batch_size):
         generation.append(result.outputs[0].text)
     return generation
 
-def generate_lora(questions,model_name,batch_size):
-    model = AutoModelForCausalLM.from_pretrained(model_name)
-    lora_model_path = "models/llama3_gsm/checkpoint-1314"  # the path to lora
-    model = PeftModel.from_pretrained(model, lora_model_path).to(device)
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.pad_token_id =  tokenizer.eos_token_id
+def generate_lora(inputs,model_name,batch_size):
+    lora_file = "models/llama3_gsm"
     generation = []
-    for question in questions:
-    # 对每个问题进行分词
-        inputs = tokenizer(question, return_tensors="pt", padding = True, truncation=True)
-    # 将输入数据移动到设备上
-        input_ids = inputs['input_ids'].to(device)
-        attention_mask = inputs['attention_mask'].to(device)
-    # 推理
-        outputs = model.generate(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            # max_new_tokens=128,
-            pad_token_id=tokenizer.pad_token_id
+    sampling_params = SamplingParams(
+        temperature=0,
+        max_tokens=256,
         )
-    # 解码并存储生成的文本
-        generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-        # print(generated_text)
-        generation.append(generated_text)
+    model = LLM(
+        model=model_name, 
+        enable_lora=True,
+        max_num_seqs = batch_size
+        )
+    results = model.generate(
+        prompt_token_ids=inputs,
+        sampling_params=sampling_params,
+        use_tqdm=True,
+        lora_request=LoRARequest("lora_adapter", 1, lora_file)
+        )
+    for result in results:
+        generation.append(result.outputs[0].text)
     return generation
 
 # generate the output
@@ -143,7 +138,7 @@ inputs = get_generate_input(questions,model_name)
 if args.generate_vllm:
     generations = generate_vllm(inputs,model_name,batch_size)
 else:
-    generations = generate_lora(questions,model_name,batch_size)
+    generations = generate_lora(inputs,model_name,batch_size)
 
 # save the output
 output_data = []

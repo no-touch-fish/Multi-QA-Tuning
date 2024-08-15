@@ -62,7 +62,8 @@ python divide_dataset.py --data_path dataset/blank/processed_pararel_test.json -
 
 5: fine-tune the model and save and model
 (gsm)
-python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/llama3_gsm --batch_size 4 --gpu 0
+python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/llama3_gsm --batch_size 2 --gpu 0
+
 
 6: generate the result again
 (gsm)

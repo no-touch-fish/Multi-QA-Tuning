@@ -47,19 +47,20 @@ template = 'Solve serveral independent questions here.'
 
 # Lora config
 lora_config = LoraConfig(
+    # task_type=TaskType.CAUSAL_LM,
     r=8,               # rank
     lora_alpha=32,     # alpha
+    inference_mode=False,
     target_modules=["q_proj", "v_proj"],  # module to add lora
     lora_dropout=0.1   # dropout
 )
 # training config
 training_args = TrainingArguments(
     output_dir= output_file,
-    optim="adafactor",
-    gradient_accumulation_steps = 4,  # gradient accumulation to reduce memory
+    per_device_train_batch_size= batch_size, # batch size
+    gradient_accumulation_steps=4,
     fp16=True,  # 启用FP16混合精度训练
-    per_device_train_batch_size= 1, # batch size
-    learning_rate= 2e-5,
+    learning_rate= 1e-5,
     num_train_epochs= 3,
     logging_dir='/logs',
     save_total_limit=1,
@@ -67,8 +68,8 @@ training_args = TrainingArguments(
 
 # load the model
 model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
+tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id =  tokenizer.eos_token_id
 # data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
@@ -89,63 +90,23 @@ def preprocess_data(data):
         })
     return combined_data
 
-def tokenize_function(data):
-    inputs = []
-    questions = []
-    answers = []
-    for i in range(len(data)):
-        questions.append(data[i]["question"])
-        answers.append(data[i]["answer"])
-    # get the input ids and attention mask for questions 
-    prompts = [
-            [
-                {
-                    "role": "user",
-                    "content": question,
-                }
-            ] for question in questions
-        ]
-    question_texts = tokenizer.apply_chat_template(
-        conversation=prompts,
-        add_generation_prompt=True,
-        padding = True,
-        tokenize=False,
-    )
-    questions = tokenizer(
-        question_texts,
-        padding="max_length",
-        max_length = 256
-    )
-    # get the labels for answers
-    prompts = [
-            [
-                {
-                    "role": "assisstant",
-                    "content": answer,
-                }
-            ] for answer in answers
-        ]
-    labels_text = tokenizer.apply_chat_template(
-        conversation=prompts,
-        add_generation_prompt=False,
-        padding = True,
-        tokenize=False,
-    )
-    labels = tokenizer(
-        labels_text,
-        padding="max_length",
-        max_length = 256
-    )['input_ids']
-    # get the tokenized input in total
-    for i in range(len(labels)):
-        inputs.append(
-            {
-                'input_ids' : questions['input_ids'][i],
-                'attention_mask' : questions['attention_mask'][i],
-                'label' : labels[i]
-            }
-        )
-    return inputs
+def tokenize_function(example):
+    MAX_LENGTH = 512
+    input_ids, attention_mask, labels = [], [], []
+    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\n{example['question']}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
+    response = tokenizer(f"{example['answer']}<|eot_id|>", add_special_tokens=False)
+    input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
+    attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]  # 因为eos token咱们也是要关注的所以 补充为1
+    labels = [-100] * len(instruction["input_ids"]) + response["input_ids"] + [tokenizer.pad_token_id]
+    if len(input_ids) > MAX_LENGTH:  # 做一个截断
+        input_ids = input_ids[:MAX_LENGTH]
+        attention_mask = attention_mask[:MAX_LENGTH]
+        labels = labels[:MAX_LENGTH]
+    return {
+        "input_ids": input_ids,
+        "attention_mask": attention_mask,
+        "labels": labels
+    }
 
 # load the data
 certain_file = f'{data_file}_certain.json'
@@ -158,7 +119,8 @@ with open(uncertain_file, 'r',encoding='utf-8') as file:
 uncertain_data = preprocess_data(data)
 # print(f'the length of certain is {len(certain_data)}, the length of uncertain is {len(uncertain_data)}')
 combine_data = certain_data + uncertain_data
-tokenized_data = Dataset.from_list(tokenize_function(combine_data))
+data = Dataset.from_list(combine_data)
+tokenized_data = data.map(tokenize_function)
 print(f'the length of dataset is: {len(tokenized_data)}')
 
 # fine tune
@@ -172,12 +134,21 @@ trainer = Trainer(
 trainer.train()
 
 # save the model
-# model = AutoModelForCausalLM.from_pretrained(model_name)
-# model = PeftModel.from_pretrained(model, output_file)
-# model.save_pretrained(output_file)
+trainer.model.save_pretrained(output_file)
+tokenizer.save_pretrained(output_file)
 
 # test the data
-output_file = 'dataset/test.json'
-with open(output_file, 'w',encoding='utf-8') as f:
-    json.dump(combine_data, f, indent=4, ensure_ascii=False)
+# save_data = []
+# for i, example in enumerate(tokenized_data):
+#         # 解码 input_ids 和 labels
+#         input_text = tokenizer.decode(example['input_ids'], skip_special_tokens=True)
+#         label_text = tokenizer.decode(example['labels'], skip_special_tokens=True)
+#         save_data.append({
+#             'question': input_text,
+#             'answer' : label_text
+#         })
+
+# output_file = 'dataset/test.json'
+# with open(output_file, 'w',encoding='utf-8') as f:
+#     json.dump(save_data, f, indent=4, ensure_ascii=False)
 print('finish fine tune!')
