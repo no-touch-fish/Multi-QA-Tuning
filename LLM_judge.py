@@ -59,7 +59,7 @@ llm = LLM(
     max_num_seqs = batch_size
     )
 # get the input
-additional_part = "Use a score(which should be an integer) from 0 to 10 for each question to compare the generated output with the correct answer. 10 means matches and 0 means different.\nThe format should be Score: 1: score 2: score 3: score."
+additional_part = "Use a score (which should be an integer) from 0 to 10 for each question to compare the generated output with the correct answer. 10 means matches and 0 means different.\nThe format should be Score: 1: score 2: score 3: score."
 for question,answer,output in zip(questions,answers,outputs):
     input = [
         {

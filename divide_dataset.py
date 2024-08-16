@@ -46,27 +46,28 @@ labels = df['label'].tolist()
 with open(data_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
 df = pd.DataFrame(data)
-questions = df['original question'].tolist()
+questions = df['original_questions'].tolist()
 answers = df['answer'].tolist()
 # divide the data
 certain_data = []
 uncertain_data = []
-certain_string = 'I am sure.'
-uncertain_string = 'I am unsure.'
 if case == 'choice':
-    for label, question, answer in zip(labels, questions, answers):
+    choices = df['original_options'].tolist()
+    for label, question, choice, answer in zip(labels, questions, choices, answers):
         answer = answer.split('\n')
-        for sublabel, subquestion, subanswer in zip(label, question, answer):
+        for sublabel, subquestion, subchoice, subanswer in zip(label, question, choice, answer):
             if sublabel == 1:
-                subanswer = f'{subanswer.strip()}. {certain_string}'
+                subanswer = f'{subanswer.strip()}'
                 certain_data.append({
                     "question": subquestion, 
+                    "options": subchoice,
                     "answer": subanswer
                 })
             else:
-                subanswer = f'{subanswer.strip()}. {uncertain_string}'
+                subanswer = f'{subanswer.strip()}'
                 uncertain_data.append({
                     "question": subquestion, 
+                    "options": subchoice,
                     "answer": subanswer
                 })
 elif case == 'blank':
@@ -74,13 +75,13 @@ elif case == 'blank':
         answer = answer.split('\n')
         for sublabel, subquestion, subanswer in zip(label, question, answer):
             if sublabel == 1:
-                subanswer = f'{subanswer.strip()}. {certain_string}'
+                subanswer = f'{subanswer.strip()}'
                 certain_data.append({
                     "question": subquestion, 
                     "answer": subanswer
                 })
             else:
-                subanswer = f'{subanswer.strip()}. {uncertain_string}'
+                subanswer = f'{subanswer.strip()}'
                 uncertain_data.append({
                     "question": subquestion, 
                     "answer": subanswer

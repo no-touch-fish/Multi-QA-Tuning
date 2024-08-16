@@ -42,14 +42,14 @@ with open(data_file, 'r',encoding='utf-8') as file:
 if length == -1:
     length = len(data)
 # apply templates to every three lines of original dataset
-addtional_part = ' Directly give me one-word-answer for each question in following format: 1: choice 2: choice 3: choice. Your choice should be A,B,C,D,E,F,G,H,I,J,K...'
+addtional_part = 'Directly give me one-word-choice (which should be A,B) for each question in following format: 1: choice 2: choice 3: choice.'
 combined_data = []
 for i in range(0, length, 3):
     if i+2 >= len(data):
         break
     original_questions = [data[i]["question"],data[i+1]["question"],data[i+2]["question"]]
     original_options = [data[i]["options"],data[i+1]["options"],data[i+2]["options"]]
-    combined_question = f'{template} 1: {data[i]["question"]} \n options: {data[i]["options"]} \n 2: {data[i+1]["question"]} \n options: {data[i]["options"]} \n 3:{data[i+2]["question"]} \n options: {data[i]["options"]} \n' + addtional_part
+    combined_question = f'{template} 1: {data[i]["question"]}\noptions: {data[i]["options"]}\n2: {data[i+1]["question"]}\noptions: {data[i]["options"]}\n3:{data[i+2]["question"]}\noptions: {data[i]["options"]}\n' + addtional_part
     combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
     
     combined_data.append({

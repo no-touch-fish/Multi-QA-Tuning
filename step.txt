@@ -22,7 +22,7 @@ python template_choice.py --data_path dataset/multiple_choice/mmlu_test.json --s
 (gsm)
 python generate_output.py --data_path dataset/multiple_choice/processed_gsm_test.json --save_path result/multiple_choice/gsm.json --generate_vllm
 
-python generate_output.py --data_path dataset/blank/processed_gsm_test.json --save_path result/blank/gsm.json --case blank --generate_vllm --gpu 0
+python generate_output.py --data_path dataset/blank/processed_gsm_test.json --save_path result/blank/gsm.json --case blank --batch_size 4 --generate_vllm --gpu 0
 
 (pararel)
 python generate_output.py --data_path dataset/multiple_choice/processed_pararel_test.json --save_path result/multiple_choice/pararel.json --generate_vllm --gpu 3
@@ -54,6 +54,8 @@ python LLM_judge.py --data_path result/multiple_choice/mmlu.json --save_path res
 ------------------------------------------------------------------------------------------------------------
 4: divide the dataset into certain and uncertain
 (gsm)
+python divide_dataset.py --data_path dataset/multiple_choice/processed_gsm_test.json --result result/multiple_choice/gsm.json --save_path dataset/multiple_choice/gsm_split/gsm --case choice
+
 python divide_dataset.py --data_path dataset/blank/processed_gsm_test.json --result result/blank/gsm.json --save_path dataset/blank/gsm_split/gsm --case blank
 
 (pararel)
@@ -62,12 +64,12 @@ python divide_dataset.py --data_path dataset/blank/processed_pararel_test.json -
 
 5: fine-tune the model and save and model
 (gsm)
-python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/llama3_gsm --batch_size 2 --gpu 0
+python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/llama3_gsm --batch_size 1 --case blank --gpu 0
 
 
 6: generate the result again
 (gsm)
-python generate_output.py --data_path dataset/blank/processed_gsm_test.json --save_path result/test.json --case blank --batch_size 4 --lora_model --gpu 0
+python generate_output.py --data_path dataset/blank/processed_gsm_test.json --save_path fine_tune_result/test.json --case blank --batch_size 4 --lora_model --gpu 0
 
 
 7: compare the output with the ground truth label again

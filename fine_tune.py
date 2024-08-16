@@ -33,6 +33,12 @@ parser.add_argument(
     default = 32,
     help = "the batch size for the input",
 )
+parser.add_argument(
+    "--case",
+    type = str,
+    default = 'choice',
+    help = "choice or blank",
+)
 args = parser.parse_args()
 
 data_file = args.data_path
@@ -42,6 +48,7 @@ if gpu:
 output_file = args.save_path
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 batch_size = args.batch_size
+case = args.case
 
 template = 'Solve serveral independent questions here.'
 
@@ -76,25 +83,42 @@ tokenizer.pad_token_id =  tokenizer.eos_token_id
 
 model = get_peft_model(model, lora_config)
 
-def preprocess_data(data):
+def preprocess_data(data,confidence):
 # apply templates to every three lines of original dataset
+    if confidence:
+        string = 'I am sure. Confidence 1: 10 2: 10 3: 10.'
+    else:
+        string = 'I am not sure. Confidence 1: 0 2: 0 3: 0.'
     combined_data = []
     for i in range(0, len(data), 3):
         if i+2 >= len(data):
             break
-        combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n'
-        combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
-        combined_data.append({
-            "question": combined_question, 
-            "answer": combined_answer
-        })
+        if case == 'blank':
+            additional_part = 'Give me one-word-answer (which should be a number) for each question in following format: 1: answer 2: answer 3: answer.'
+            combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n{additional_part}'
+            combined_answer = f'1: {data[i]["answer"]} 2: {data[i+1]["answer"]} 3: {data[i+2]["answer"]}'
+            combined_data.append({
+                "question": combined_question, 
+                "answer": combined_answer,
+                "confidence": string
+            })
+        elif case == 'choice':
+            additional_part = 'Directly give me one-word-answer for each question in following format: 1: choice 2: choice 3: choice. Your choice should be A,B,C,D,E,F,G,H,I,J,K...'
+            combined_question = f'{template} 1: {data[i]["question"]}\noptions: {data[i]["options"]}\n2: {data[i+1]["question"]}\noptions: {data[i+1]["options"]}\n3:{data[i+2]["question"]}\n\noptions: {data[i]["options"]}\n{additional_part}'
+            combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
+            combined_data.append({
+                "question": combined_question, 
+                "answer": combined_answer,
+                "confidence": string
+            })
     return combined_data
 
 def tokenize_function(example):
+    prompt = 'Are you sure you accurately answered the question based on your internal knowledge?'
     MAX_LENGTH = 512
     input_ids, attention_mask, labels = [], [], []
-    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\n{example['question']}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
-    response = tokenizer(f"{example['answer']}<|eot_id|>", add_special_tokens=False)
+    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQ:{example['question']}A:{example['answer']}.{prompt}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
+    response = tokenizer(f"{example['confidence']}<|eot_id|>", add_special_tokens=False)
     input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
     attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]  # 因为eos token咱们也是要关注的所以 补充为1
     labels = [-100] * len(instruction["input_ids"]) + response["input_ids"] + [tokenizer.pad_token_id]
@@ -102,6 +126,12 @@ def tokenize_function(example):
         input_ids = input_ids[:MAX_LENGTH]
         attention_mask = attention_mask[:MAX_LENGTH]
         labels = labels[:MAX_LENGTH]
+    elif len(input_ids) < MAX_LENGTH:  # 如果长度不足，进行padding
+        padding_length = MAX_LENGTH - len(input_ids)
+        input_ids = input_ids + [tokenizer.pad_token_id] * padding_length
+        attention_mask = attention_mask + [0] * padding_length
+        labels = labels + [-100] * padding_length
+
     return {
         "input_ids": input_ids,
         "attention_mask": attention_mask,
@@ -113,10 +143,10 @@ certain_file = f'{data_file}_certain.json'
 uncertain_file = f'{data_file}_uncertain.json'
 with open(certain_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
-certain_data = preprocess_data(data)
+certain_data = preprocess_data(data,1)
 with open(uncertain_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
-uncertain_data = preprocess_data(data)
+uncertain_data = preprocess_data(data,0)
 # print(f'the length of certain is {len(certain_data)}, the length of uncertain is {len(uncertain_data)}')
 combine_data = certain_data + uncertain_data
 data = Dataset.from_list(combine_data)
@@ -130,7 +160,6 @@ trainer = Trainer(
     train_dataset=tokenized_data,  # dataset
     # data_collator=data_collator, # data collator for padding
 )
-
 trainer.train()
 
 # save the model
@@ -138,17 +167,18 @@ trainer.model.save_pretrained(output_file)
 tokenizer.save_pretrained(output_file)
 
 # test the data
-# save_data = []
-# for i, example in enumerate(tokenized_data):
-#         # 解码 input_ids 和 labels
-#         input_text = tokenizer.decode(example['input_ids'], skip_special_tokens=True)
-#         label_text = tokenizer.decode(example['labels'], skip_special_tokens=True)
-#         save_data.append({
-#             'question': input_text,
-#             'answer' : label_text
-#         })
+save_data = []
+for i, example in enumerate(tokenized_data):
+        # 解码 input_ids 和 labels
+        input_text = tokenizer.decode(example['input_ids'], skip_special_tokens=True)
+        filtered_labels = [label for label in example["labels"] if label >= 0]
+        label_text = tokenizer.decode(filtered_labels, skip_special_tokens=True)
+        save_data.append({
+            'question': input_text,
+            'answer' : label_text
+        })
 
-# output_file = 'dataset/test.json'
-# with open(output_file, 'w',encoding='utf-8') as f:
-#     json.dump(save_data, f, indent=4, ensure_ascii=False)
+output_file = 'dataset/test.json'
+with open(output_file, 'w',encoding='utf-8') as f:
+    json.dump(save_data, f, indent=4, ensure_ascii=False)
 print('finish fine tune!')

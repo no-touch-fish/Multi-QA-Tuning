@@ -111,9 +111,9 @@ def generate_vllm(inputs,model_name,batch_size):
         generation.append(result.outputs[0].text)
     return generation
 
-def generate_lora(inputs,model_name,batch_size):
+def generate_lora(questions,model_name,batch_size):
     lora_file = "models/llama3_gsm"
-    generation = []
+    inputs = get_generate_input(questions,model_name)
     sampling_params = SamplingParams(
         temperature=0,
         max_tokens=256,
@@ -129,18 +129,47 @@ def generate_lora(inputs,model_name,batch_size):
         use_tqdm=True,
         lora_request=LoRARequest("lora_adapter", 1, lora_file)
         )
+    generation = []
     for result in results:
         generation.append(result.outputs[0].text)
-    return generation
+    # get the confidence
+    confidence = []
+    additional_part = 'Are you sure you accurately answered the question based on your internal knowledge?'
+    prompts = []
+    for question, output in zip(questions,generation):
+        prompts.append(f'Q:{question}A:{output}{additional_part}')
+    inputs = get_generate_input(prompts,model_name)
+    results = model.generate(
+        prompt_token_ids=inputs,
+        sampling_params=sampling_params,
+        use_tqdm=True,
+        lora_request=LoRARequest("lora_adapter", 1, lora_file)
+        )
+    for result in results:
+        confidence.append(result.outputs[0].text)
+
+    return confidence, generation
+
+def generate_confidence(output_data,model_name,batch_size):
+    results = []
+    # combine question and answer together
+    additional_part = 'Are you sure you accurately answered the question based on your internal knowledge?'
+    prompts = []
+    for entry in output_data:
+        prompts.append(f'Q:{entry["question"]}A:{entry["output"]}{additional_part}')
+    inputs = get_generate_input(prompts,model_name)
+    results = generate_lora(inputs,model_name,1)
+    return results
 
 # generate the output
-inputs = get_generate_input(questions,model_name)
-if args.generate_vllm:
-    generations = generate_vllm(inputs,model_name,batch_size)
-else:
-    generations = generate_lora(inputs,model_name,batch_size)
 
-# save the output
+if args.generate_vllm:
+    inputs = get_generate_input(questions,model_name)
+    generations = generate_vllm(inputs,model_name,batch_size)
+elif args.lora_model:
+    confidence, generations = generate_lora(questions,model_name,batch_size)
+
+# get the output
 output_data = []
 if case == 'choice':
     original_options = df['original_options'].tolist()
@@ -158,6 +187,13 @@ elif case == 'blank':
             'output': generation, 
             'answer': answer
             })
+
+# if lora model, we also need to generate the confident level
+if args.lora_model:
+    for entry,item in zip(output_data,confidence):
+        entry['confidence'] = item
+
+# save the output
 with open(output_file, 'w') as file:
     json.dump(output_data, file, ensure_ascii=False, indent=4)
 

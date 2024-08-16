@@ -33,17 +33,17 @@ with open(data_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
 
 # apply templates to every three lines of original dataset
-addtional_part_1 = ' Give me one-word-answer (which should be a number) for each question in following format: 1: answer 2: answer 3: answer.'
-addtional_part_2 = 'Then, using a score (which should be an integer) from 0 to 10 to tell me how confident you are about the answer in following format: Confidence 1: score 2: score 3: score.'
+addtional_part_1 = 'Give me one-word-answer (which should be a number) for each question in following format: 1: answer 2: answer 3: answer.'
+# addtional_part_2 = 'Then, using a score (which should be an integer) from 0 to 10 (10 means really confident and 0 means not confident.) to tell me how confident you are about the answer in following format: Confidence 1: score 2: score 3: score.'
 combined_data = []
 for i in range(0, len(data), 3):
     if i+2 >= len(data):
         break
     original_question = [data[i]["question"],data[i+1]["question"],data[i+2]["question"]]
-    combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n{addtional_part_1}\n{addtional_part_2}'
+    combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n{addtional_part_1}'
     combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
     combined_data.append({
-        "original question": original_question,
+        "original_questions": original_question,
         "question": combined_question, 
         "answer": combined_answer
         })
