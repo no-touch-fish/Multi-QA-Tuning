@@ -1,10 +1,12 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, DataCollatorWithPadding
-from peft import LoraConfig, get_peft_model, PeftModel
+from peft import LoraConfig, get_peft_model
 from datasets import Dataset
 import torch
 import json
 import argparse
 import os
+import random
+from datasets import concatenate_datasets
 
 parser = argparse.ArgumentParser(
     description="""parameter"""
@@ -82,13 +84,17 @@ tokenizer.pad_token_id =  tokenizer.eos_token_id
 # data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
 model = get_peft_model(model, lora_config)
+# balance the certain and uncertain dataset
+def balance_data(certain_data, uncertain_data):
+    min_length = min(len(certain_data), len(uncertain_data))
+    certain_data = certain_data[:min_length]
+    uncertain_data = uncertain_data[:min_length]
+    data = certain_data + uncertain_data
+    return data
 
-def preprocess_data(data,confidence):
+# combine the data together
+def preprocess_data(data):
 # apply templates to every three lines of original dataset
-    if confidence:
-        string = 'I am sure. Confidence 1: 10 2: 10 3: 10.'
-    else:
-        string = 'I am not sure. Confidence 1: 0 2: 0 3: 0.'
     combined_data = []
     for i in range(0, len(data), 3):
         if i+2 >= len(data):
@@ -97,36 +103,69 @@ def preprocess_data(data,confidence):
             additional_part = 'Give me one-word-answer (which should be a number) for each question in following format: 1: answer 2: answer 3: answer.'
             combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n{additional_part}'
             combined_answer = f'1: {data[i]["answer"]} 2: {data[i+1]["answer"]} 3: {data[i+2]["answer"]}'
+            combined_confidence = f'1: {data[i]["confidence"]} 2: {data[i+1]["confidence"]} 3: {data[i+2]["confidence"]}'
             combined_data.append({
                 "question": combined_question, 
                 "answer": combined_answer,
-                "confidence": string
+                "confidence": combined_confidence
             })
         elif case == 'choice':
-            additional_part = 'Directly give me one-word-answer for each question in following format: 1: choice 2: choice 3: choice. Your choice should be A,B,C,D,E,F,G,H,I,J,K...'
+            additional_part = 'Directly give me one-word-choice (which should be a letter from the alphabet) for each question in following format: 1: choice 2: choice 3: choice.'
             combined_question = f'{template} 1: {data[i]["question"]}\noptions: {data[i]["options"]}\n2: {data[i+1]["question"]}\noptions: {data[i+1]["options"]}\n3:{data[i+2]["question"]}\n\noptions: {data[i]["options"]}\n{additional_part}'
-            combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
+            combined_answer = f'1: {data[i]["answer"]} 2: {data[i+1]["answer"]} 3: {data[i+2]["answer"]}'
+            combined_confidence = f'1: {data[i]["confidence"]} 2: {data[i+1]["confidence"]} 3: {data[i+2]["confidence"]}'
             combined_data.append({
                 "question": combined_question, 
                 "answer": combined_answer,
-                "confidence": string
+                "confidence": combined_confidence
             })
     return combined_data
 
-def tokenize_function(example):
+def tokenize_function_qa(example):
     prompt = 'Are you sure you accurately answered the question based on your internal knowledge?'
     MAX_LENGTH = 512
     input_ids, attention_mask, labels = [], [], []
-    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQ:{example['question']}A:{example['answer']}.{prompt}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
-    response = tokenizer(f"{example['confidence']}<|eot_id|>", add_special_tokens=False)
+
+    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQuestion:{example['question']}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
+    response = tokenizer(f"Answer:{example['answer']}<|eot_id|>", add_special_tokens=False)
+
     input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
     attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]  # 因为eos token咱们也是要关注的所以 补充为1
     labels = [-100] * len(instruction["input_ids"]) + response["input_ids"] + [tokenizer.pad_token_id]
-    if len(input_ids) > MAX_LENGTH:  # 做一个截断
+
+    if len(input_ids) > MAX_LENGTH:  # cut off
         input_ids = input_ids[:MAX_LENGTH]
         attention_mask = attention_mask[:MAX_LENGTH]
         labels = labels[:MAX_LENGTH]
-    elif len(input_ids) < MAX_LENGTH:  # 如果长度不足，进行padding
+    elif len(input_ids) < MAX_LENGTH:  # padding
+        padding_length = MAX_LENGTH - len(input_ids)
+        input_ids = input_ids + [tokenizer.pad_token_id] * padding_length
+        attention_mask = attention_mask + [0] * padding_length
+        labels = labels + [-100] * padding_length
+
+    return {
+        "input_ids": input_ids,
+        "attention_mask": attention_mask,
+        "labels": labels
+    }
+
+def tokenize_function_confidence(example):
+    prompt = 'Are you sure you accurately answered the question based on your internal knowledge?'
+    MAX_LENGTH = 512
+    input_ids, attention_mask, labels = [], [], []
+
+    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQuestion:{example['question']}\nAnswer:{example['answer']}{prompt}.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
+    response = tokenizer(f"{example['confidence']}<|eot_id|>", add_special_tokens=False)
+
+    input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
+    attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]  # 因为eos token咱们也是要关注的所以 补充为1
+    labels = [-100] * len(instruction["input_ids"]) + response["input_ids"] + [tokenizer.pad_token_id]
+
+    if len(input_ids) > MAX_LENGTH:  # cut off
+        input_ids = input_ids[:MAX_LENGTH]
+        attention_mask = attention_mask[:MAX_LENGTH]
+        labels = labels[:MAX_LENGTH]
+    elif len(input_ids) < MAX_LENGTH:  # padding
         padding_length = MAX_LENGTH - len(input_ids)
         input_ids = input_ids + [tokenizer.pad_token_id] * padding_length
         attention_mask = attention_mask + [0] * padding_length
@@ -142,15 +181,21 @@ def tokenize_function(example):
 certain_file = f'{data_file}_certain.json'
 uncertain_file = f'{data_file}_uncertain.json'
 with open(certain_file, 'r',encoding='utf-8') as file:
-    data = json.load(file)
-certain_data = preprocess_data(data,1)
+    certain_data = json.load(file)
 with open(uncertain_file, 'r',encoding='utf-8') as file:
-    data = json.load(file)
-uncertain_data = preprocess_data(data,0)
-# print(f'the length of certain is {len(certain_data)}, the length of uncertain is {len(uncertain_data)}')
-combine_data = certain_data + uncertain_data
+    uncertain_data = json.load(file)
+print(f'the length of certain:{len(certain_data)}, the length of uncertain:{len(uncertain_data)}')
+# balance, combine and shuffle the dataset
+data = certain_data + uncertain_data
+# data = balance_data(certain_data,uncertain_data)
+random.shuffle(data)
+combine_data = preprocess_data(data)
 data = Dataset.from_list(combine_data)
-tokenized_data = data.map(tokenize_function)
+tokenized_data_confidence = data.map(tokenize_function_confidence)
+tokenized_data_qa = data.map(tokenize_function_qa)
+
+# combine two dataset together
+tokenized_data = concatenate_datasets([tokenized_data_confidence, tokenized_data_qa])
 print(f'the length of dataset is: {len(tokenized_data)}')
 
 # fine tune

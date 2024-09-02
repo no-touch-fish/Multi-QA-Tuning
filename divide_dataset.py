@@ -61,14 +61,16 @@ if case == 'choice':
                 certain_data.append({
                     "question": subquestion, 
                     "options": subchoice,
-                    "answer": subanswer
+                    "answer": subanswer,
+                    "confidence": 'I am sure'
                 })
             else:
                 subanswer = f'{subanswer.strip()}'
                 uncertain_data.append({
                     "question": subquestion, 
                     "options": subchoice,
-                    "answer": subanswer
+                    "answer": subanswer,
+                    "confidence": 'I am unsure'
                 })
 elif case == 'blank':
     for label, question, answer in zip(labels, questions, answers):
@@ -78,13 +80,15 @@ elif case == 'blank':
                 subanswer = f'{subanswer.strip()}'
                 certain_data.append({
                     "question": subquestion, 
-                    "answer": subanswer
+                    "answer": subanswer,
+                    "confidence": 'I am sure'
                 })
             else:
                 subanswer = f'{subanswer.strip()}'
                 uncertain_data.append({
                     "question": subquestion, 
-                    "answer": subanswer
+                    "answer": subanswer,
+                    "confidence": 'I am unsure'
                 })
 
 print('the length of certain data is:',len(certain_data))

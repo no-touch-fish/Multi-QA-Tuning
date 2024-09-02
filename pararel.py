@@ -1,33 +1,36 @@
-from datasets import load_dataset
 import json
-output_file = 'dataset/multiple_choice/pararel_test.json'
-# 加载 MMLU 数据集
-dataset = load_dataset("coastalcph/pararel_patterns")
-# length = 3000
-length = len(dataset['train'])
-print("the length of dataset is:",length)
-# 查看数据集的结构
-# print(dataset)
-# test_dataset = dataset['test'][:length]
-answers_map = {'0':'A','1':'B','2':'C','3':'D','4':'E','5':'F'}
-# 创建一个新的数据集列表
-my_dataset = []
+import random
 
-# 将前一百条数据添加到我的新数据集列表
-for i in range(length):
-    answer = dataset['train'][i]['object']
-    for index in range(6):
-        if dataset['train'][i]['candidates'][index] == answer:
-            answer = answers_map[f'{index}']
-            break
-    my_dataset.append({
-        'question': dataset['train'][i]['query'],
-        'options': dataset['train'][i]['candidates'],
-        'answer': answer
-    })
+input_file = 'dataset/pararel_train.json'
+output_file = 'dataset/multiple_choice/pararel_train.json'
 
-# 将数据写入本地JSON文件
-with open(output_file, 'w', encoding='utf-8') as f:
-    json.dump(my_dataset, f, ensure_ascii=False, indent=4)
+# read json file
+with open(input_file, 'r') as file:
+    data = json.load(file)
 
-print(f'save to {output_file}')
+#  get question and answer
+qa_pairs = []
+for item in data:
+    question = item[0]
+    answer = item[1]
+    if random.random() > 0.5:
+        option = [f'{answer}','None of the above is true']
+        answer = 'A'
+    else:
+        option = ['None of the above is true',f'{answer}']
+        answer = 'B'
+    qa_pairs.append({
+        "question": question, 
+        "options": option,
+        "answer": answer
+        })
+
+# 输出整理后的question-answer形式
+# for pair in qa_pairs:
+#     print(f"Question: {pair['question']}\nAnswer: {pair['answer']}\n")
+
+# save
+with open(output_file, 'w',encoding='utf-8') as f:
+    json.dump(qa_pairs, f, indent=4, ensure_ascii=False)
+print(f'the length of dataset is {len(qa_pairs)}')
+print("数据已成功保存到本地JSON文件。")

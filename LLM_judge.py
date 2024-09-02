@@ -1,4 +1,4 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer
 import argparse
 import json
 import pandas as pd
@@ -76,7 +76,8 @@ inputs = tokenizer.apply_chat_template(
 sampling_params = SamplingParams(
     temperature = 0.0, 
     top_p = 1,
-    max_tokens=100)
+    max_tokens=100
+    )
 original_scores = llm.generate(
     prompt_token_ids=inputs, 
     sampling_params=sampling_params,
@@ -86,6 +87,7 @@ scores = []
 for original_score in original_scores:
     score = original_score.outputs[0].text
     scores.append(score)
+
 # get the label
 labels = []
 pattern = r'1: (\d+) 2: (\d+) 3: (\d+)'
@@ -110,18 +112,42 @@ for score in scores:
         for index in range(3):
             label.append(0)
     labels.append(label) 
-print(f'the successful rate is:{100*correct/total}%')
+print(f'total:{total},original successful rate: {100*correct/total}%')
+# get the confidence if it has
+if 'confidence' in df.columns:
+    pattern = r"1:\s*([^2]*)2:\s*([^3]*)3:\s*([^1]*)"
+    confidences = df['confidence'].tolist()
+    total = 0
+    sure = 0
+    unsure = 0
+    correct = 0
+    for confidence, label in zip(confidences,labels):
+        matches = re.findall(pattern, confidence)
+        if matches:
+            match = matches[-1]
+            for index in range(3):
+                confidence_tmp = match[index]
+                if ('unsure' in confidence_tmp) or ('not sure' in confidence_tmp):
+                    total += 1
+                    unsure += 1
+                else: # if you don't show unsure, then you are sure
+                    total += 1
+                    sure += 1
+                    correct += label[index]
+        else:
+            print(f'string:{confidence} Wrong Format!!!')
+            for index in range(3):
+                total += 1
+                sure += 1
+                correct += label[index]
+    print(f'sure case:{sure}, unsure case:{unsure}, total case:{total}, successful rate:{100*correct/sure}%')
+    
 # save to the output file
-for question,answer,output,score,label in zip(questions,answers,outputs,scores,labels):
-    output_data.append({
-        'question': question, 
-        'output': output, 
-        'answer': answer,
-        'score' : score,
-        'label' : label
-    })
+for entry,score,label in zip(data,scores,labels):
+    entry['score'] = score
+    entry['label'] = label
 #   print(response)
 with open(output_file,'w') as file:
-    json.dump(output_data, file, ensure_ascii=False, indent=4)
+    json.dump(data, file, ensure_ascii=False, indent=4)
 
 print(f"save to {output_file}")

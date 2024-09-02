@@ -7,57 +7,25 @@ import torch
 import json
 import argparse
 import os
+import numpy as np
+import re
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
 output_file = "models/llama3_gsm"
 
-sampling_params = SamplingParams(
-    temperature=0,
-    max_tokens=256,
-)
+pattern = r"1:\s*([^2]*)2:\s*([^3]*)3:\s*([^1]*)"
+confidence = '1: a 2: b 3: c 1: I am sure 2: I am sure 3: I am sure'
+# confidence = '1: I am sure 2: I am sure 3: I am sure'
+matches = re.findall(pattern, confidence)
+if matches:
+    # match = re.search(pattern, matches[-1])
+    match = matches[-1]
+    print(matches)
+    print(match)
 
-model = LLM(
-    model=model_name, 
-    enable_lora=True,
-    max_num_seqs = 1
-    )
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-# 假设你的 question 列表如下
-questions = [
-    "What is the capital of France? Answer: ",
-    "How many continents are there? Answer: ",
-    "Who wrote 'Pride and Prejudice'? Answer: ",
-]
-# 逐个输入进行处理（不使用padding）
-results = []
-for i,question in enumerate(questions):
-    question = {
-        'role': 'user',
-        'content' : question,
-    }
-    questions[i] = question
 
-# 对每个问题进行分词
-inputs = tokenizer.apply_chat_template(
-    conversation=questions,
-    padding = False,
-    add_generation_prompt=True, 
-    return_tensors=None,
-    return_dict=False,
-    )
-
-# 推理
-results = model.generate(
-        prompt_token_ids=inputs,
-        sampling_params=sampling_params,
-        use_tqdm=True,
-        lora_request=LoRARequest("lora_adapter", 1, output_file)
-        )
-# 输出结果
-for result in results:
-    print(result.outputs[0].text)
 
 
 

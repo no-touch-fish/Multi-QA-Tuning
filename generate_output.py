@@ -1,13 +1,12 @@
 import pandas as pd
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import PeftModel
+from transformers import AutoTokenizer
 import torch
 import json
-from tqdm import tqdm
 from vllm import LLM, SamplingParams
 from vllm.lora.request import LoRARequest
 import argparse
 import os
+import math
 
 parser = argparse.ArgumentParser(
     description="""parameter"""
@@ -52,6 +51,12 @@ parser.add_argument(
     action='store_true', 
     help="Generate using lora fine-tuned model",
 )
+parser.add_argument(
+    '--lora_path',
+    type = str,
+    default = None,
+    help = "the path to the lora model",
+)
 args = parser.parse_args()
 
 data_file = args.data_path
@@ -62,6 +67,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 output_file = args.save_path
 case = args.case
 batch_size = args.batch_size
+lora_path = args.lora_path
 
 # load dataset
 with open(data_file, 'r') as file:
@@ -112,7 +118,7 @@ def generate_vllm(inputs,model_name,batch_size):
     return generation
 
 def generate_lora(questions,model_name,batch_size):
-    lora_file = "models/llama3_gsm"
+    lora_file = lora_path
     inputs = get_generate_input(questions,model_name)
     sampling_params = SamplingParams(
         temperature=0,
@@ -132,12 +138,18 @@ def generate_lora(questions,model_name,batch_size):
     generation = []
     for result in results:
         generation.append(result.outputs[0].text)
-    # get the confidence
+    # get the confidence and logprob
+    sampling_params = SamplingParams(
+        temperature=0,
+        max_tokens=256,
+        logprobs=5,
+        )
     confidence = []
-    additional_part = 'Are you sure you accurately answered the question based on your internal knowledge?'
+    probs = []
+    additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure. 2: I am sure/unsure. 3: I am sure/unsure.'
     prompts = []
     for question, output in zip(questions,generation):
-        prompts.append(f'Q:{question}A:{output}{additional_part}')
+        prompts.append(f'Question:{question}\nAnswer:{output}.{additional_part}')
     inputs = get_generate_input(prompts,model_name)
     results = model.generate(
         prompt_token_ids=inputs,
@@ -147,51 +159,57 @@ def generate_lora(questions,model_name,batch_size):
         )
     for result in results:
         confidence.append(result.outputs[0].text)
+        probs.append(get_prob(result.outputs[0].logprobs))
+    return probs,confidence, generation
 
-    return confidence, generation
-
-def generate_confidence(output_data,model_name,batch_size):
-    results = []
-    # combine question and answer together
-    additional_part = 'Are you sure you accurately answered the question based on your internal knowledge?'
-    prompts = []
-    for entry in output_data:
-        prompts.append(f'Q:{entry["question"]}A:{entry["output"]}{additional_part}')
-    inputs = get_generate_input(prompts,model_name)
-    results = generate_lora(inputs,model_name,1)
-    return results
+# need to fix the bug
+def get_prob(logprobs):
+    prob_list = []
+    for index,logprob in enumerate(logprobs):
+        if index > 20:
+            break
+        for key in logprob:
+            if logprob[key].decoded_token == ' sure':
+                prob = math.exp(logprob[key].logprob)
+                prob_list.append({' sure':prob})
+                break
+            elif logprob[key].decoded_token == ' unsure':
+                prob = math.exp(logprob[key].logprob)
+                prob_list.append({' unsure':prob})
+    return prob_list
 
 # generate the output
-
 if args.generate_vllm:
     inputs = get_generate_input(questions,model_name)
     generations = generate_vllm(inputs,model_name,batch_size)
 elif args.lora_model:
-    confidence, generations = generate_lora(questions,model_name,batch_size)
+    probs,confidence, generations = generate_lora(questions,model_name,batch_size)
 
 # get the output
 output_data = []
 if case == 'choice':
     original_options = df['original_options'].tolist()
-    for question, generation, answer,original_option in zip(questions, generations, answers,original_options):
+    for question, generation, answer,original_option in zip(questions, generations, answers, original_options):
         output_data.append({
             'question': question, 
             'original_options':original_option,
-            'output': generation, 
-            'answer': answer
+            'answer': answer,
+            'output': generation
         })
 elif case == 'blank':
     for question, generation, answer in zip(questions, generations, answers):
         output_data.append({
             'question': question, 
-            'output': generation, 
-            'answer': answer
+            'answer': answer,
+            'output': generation
             })
 
 # if lora model, we also need to generate the confident level
 if args.lora_model:
-    for entry,item in zip(output_data,confidence):
+    for entry,item,prob in zip(output_data,confidence,probs):
         entry['confidence'] = item
+        # entry['prob'] = prob
+
 
 # save the output
 with open(output_file, 'w') as file:

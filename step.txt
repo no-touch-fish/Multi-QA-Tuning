@@ -5,10 +5,18 @@ python template_choice.py --data_path dataset/multiple_choice/gsm_test.json --sa
 
 python template.py --data_path dataset/blank/gsm_test.json --save_path dataset/blank/processed_gsm_test.json
 
+python template_choice.py --data_path dataset/multiple_choice/gsm_train.json --save_path dataset/multiple_choice/processed_gsm_train.json
+
+python template.py --data_path dataset/blank/gsm_train.json --save_path dataset/blank/processed_gsm_train.json
+
 (MATH)
 
 (pararel)
-python template_choice.py --data_path dataset/multiple_choice/pararel_test.json --save_path dataset/multiple_choice/processed_pararel_test.json --length 30000
+python template_choice.py --data_path dataset/multiple_choice/pararel_train.json --save_path dataset/multiple_choice/processed_pararel_train.json
+
+python template.py --data_path dataset/blank/pararel_train.json --save_path dataset/blank/processed_pararel_train.json
+
+python template_choice.py --data_path dataset/multiple_choice/pararel_test.json --save_path dataset/multiple_choice/processed_pararel_test.json
 
 python template.py --data_path dataset/blank/pararel_test.json --save_path dataset/blank/processed_pararel_test.json
 
@@ -16,24 +24,26 @@ python template.py --data_path dataset/blank/pararel_test.json --save_path datas
 python template_choice.py --data_path dataset/multiple_choice/mmlu_pro_test.json --save_path dataset/multiple_choice/processed_mmlu_pro_test.json
 
 (MMLU)
+python template_choice.py --data_path dataset/multiple_choice/mmlu_train.json --save_path dataset/multiple_choice/processed_mmlu_train.json
+
 python template_choice.py --data_path dataset/multiple_choice/mmlu_test.json --save_path dataset/multiple_choice/processed_mmlu_test.json
 
 2: generate the output
 (gsm)
-python generate_output.py --data_path dataset/multiple_choice/processed_gsm_test.json --save_path result/multiple_choice/gsm.json --generate_vllm
+python generate_output.py --data_path dataset/multiple_choice/processed_gsm_train.json --save_path result/multiple_choice/gsm.json --generate_vllm
 
-python generate_output.py --data_path dataset/blank/processed_gsm_test.json --save_path result/blank/gsm.json --case blank --batch_size 4 --generate_vllm --gpu 0
+python generate_output.py --data_path dataset/blank/processed_gsm_train.json --save_path result/blank/gsm.json --case blank --batch_size 4 --generate_vllm --gpu 0
 
 (pararel)
-python generate_output.py --data_path dataset/multiple_choice/processed_pararel_test.json --save_path result/multiple_choice/pararel.json --generate_vllm --gpu 3
+python generate_output.py --data_path dataset/multiple_choice/processed_pararel_train.json --save_path result/multiple_choice/pararel.json --generate_vllm --gpu 0
 
-python generate_output.py --data_path dataset/blank/processed_pararel_test.json --save_path result/blank/pararel.json --case blank --generate_vllm --gpu 2
+python generate_output.py --data_path dataset/blank/processed_pararel_train.json --save_path result/blank/pararel.json --case blank --generate_vllm --gpu 0
 
 (MMLU-PRO)
-python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_pro_test.json --save_path result/multiple_choice/mmlu_pro.json  --gpu 2
+python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_pro_test.json --save_path result/multiple_choice/mmlu_pro.json --generate_vllm --gpu 0
 
 (MMLU)
-python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_test.json --save_path result/multiple_choice/mmlu.json  --gpu 2
+python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_train.json --save_path result/multiple_choice/mmlu.json  --generate_vllm --gpu 0
 
 3: compare the output and ground truth label
 (multiple_choice)
@@ -50,26 +60,76 @@ python LLM_judge.py --data_path result/blank/gsm.json --gpu 0
 
 python LLM_judge.py --data_path result/blank/pararel.json --gpu 0
 
-python LLM_judge.py --data_path result/multiple_choice/mmlu.json --save_path result/test.json --batch_size 16 --gpu 0
 ------------------------------------------------------------------------------------------------------------
 4: divide the dataset into certain and uncertain
 (gsm)
-python divide_dataset.py --data_path dataset/multiple_choice/processed_gsm_test.json --result result/multiple_choice/gsm.json --save_path dataset/multiple_choice/gsm_split/gsm --case choice
+python divide_dataset.py --data_path dataset/multiple_choice/processed_gsm_train.json --result result/multiple_choice/gsm.json --save_path dataset/multiple_choice/gsm_split/gsm --case choice
 
-python divide_dataset.py --data_path dataset/blank/processed_gsm_test.json --result result/blank/gsm.json --save_path dataset/blank/gsm_split/gsm --case blank
+python divide_dataset.py --data_path dataset/blank/processed_gsm_train.json --result result/blank/gsm.json --save_path dataset/blank/gsm_split/gsm --case blank
 
 (pararel)
-python divide_dataset.py --data_path dataset/blank/processed_pararel_test.json --result result/blank/pararel.json --save_path dataset/blank/pararel_split/pararel --case blank
+python divide_dataset.py --data_path dataset/blank/processed_pararel_train.json --result result/blank/pararel.json --save_path dataset/blank/pararel_split/pararel --case blank
 
+python divide_dataset.py --data_path dataset/multiple_choice/processed_pararel_train.json --result result/multiple_choice/pararel.json --save_path dataset/multiple_choice/pararel_split/pararel --case choice
+
+(MMLU)
+python divide_dataset.py --data_path dataset/multiple_choice/processed_mmlu_train.json --result result/multiple_choice/mmlu.json --save_path dataset/multiple_choice/mmlu_split/mmlu --case choice
 
 5: fine-tune the model and save and model
 (gsm)
-python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/llama3_gsm --batch_size 1 --case blank --gpu 0
+python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/blank/llama3_gsm --batch_size 1 --case blank --gpu 0
 
+python fine_tune.py --data_path dataset/multiple_choice/gsm_split/gsm --save_path models/multiple_choice/llama3_gsm --batch_size 1 --case choice --gpu 0
+
+(pararel)
+python fine_tune.py --data_path dataset/blank/pararel_split/pararel --save_path models/blank/llama3_pararel --batch_size 1 --case blank --gpu 0
+
+python fine_tune.py --data_path dataset/multiple_choice/pararel_split/pararel --save_path models/multiple_choice/llama3_pararel --batch_size 1 --case choice --gpu 0
+
+(MMLU)
+python fine_tune.py --data_path dataset/multiple_choice/mmlu_split/mmlu --save_path models/multiple_choice/llama3_mmlu --batch_size 1 --case choice --gpu 0
 
 6: generate the result again
 (gsm)
-python generate_output.py --data_path dataset/blank/processed_gsm_test.json --save_path fine_tune_result/test.json --case blank --batch_size 4 --lora_model --gpu 0
+python generate_output.py --data_path dataset/blank/processed_gsm_test.json --save_path fine_tune_result/blank/gsm.json --case blank --batch_size 4 --lora_model --lora_path models/blank/llama3_gsm --gpu 0
 
+python generate_output.py --data_path dataset/multiple_choice/processed_gsm_test.json --save_path fine_tune_result/multiple_choice/gsm.json --case choice --batch_size 4 --lora_model --lora_path models/multiple_choice/llama3_gsm --gpu 0
+
+(pararel)
+python generate_output.py --data_path dataset/blank/processed_pararel_test.json --save_path fine_tune_result/blank/pararel.json --case blank --batch_size 4 --lora_model --lora_path models/blank/llama3_pararel --gpu 0
+
+python generate_output.py --data_path dataset/multiple_choice/processed_pararel_test.json --save_path fine_tune_result/multiple_choice/pararel.json --case choice --batch_size 4 --lora_model --lora_path models/multiple_choice/llama3_pararel --gpu 0
+
+(MMLU)
+python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_test.json --save_path fine_tune_result/multiple_choice/mmlu.json --case choice --batch_size 4 --lora_model --lora_path models/multiple_choice/llama3_mmlu --gpu 0
 
 7: compare the output with the ground truth label again
+(LLM-based):
+python LLM_judge.py --data_path fine_tune_result/blank/gsm.json --gpu 0
+
+python LLM_judge.py --data_path fine_tune_result/blank/pararel.json --gpu 0
+
+(multiple_choice)
+python multiple_choice_compare.py --data_path fine_tune_result/multiple_choice/gsm.json
+
+python multiple_choice_compare.py --data_path fine_tune_result/multiple_choice/pararel.json
+
+python multiple_choice_compare.py --data_path fine_tune_result/multiple_choice/mmlu.json
+
+8: calculate the AP score
+(blank)
+python calculate_ap.py --data_path fine_tune_result/blank/gsm.json --lora_path models/blank/llama3_gsm --case blank 
+
+python calculate_ap.py --data_path fine_tune_result/blank/pararel.json --lora_path models/blank/llama3_pararel --case blank 
+
+(choice)
+python calculate_ap.py --data_path fine_tune_result/multiple_choice/gsm.json --lora_path models/multiple_choice/llama3_gsm --case choice 
+
+python calculate_ap.py --data_path fine_tune_result/multiple_choice/pararel.json --lora_path models/multiple_choice/llama3_pararel --case choice
+
+python calculate_ap.py --data_path fine_tune_result/multiple_choice/mmlu.json --lora_path models/multiple_choice/llama3_mmlu --case choice
+
+
+
+
+

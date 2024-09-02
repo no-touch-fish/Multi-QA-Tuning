@@ -1,66 +1,26 @@
 import json
-import re
-'''
-def process_qa_pair(qa_pair):
+import random
 
-    question = qa_pair['question']
-    answer = qa_pair['answer']
+input_file = 'dataset/gsm_test.jsonl'
+output_file = 'dataset/multiple_choice/gsm_test.json'
 
-    # find the question (last sentense) in question
-    index = question.rfind('?')
-    while (question[index] != '.'):
-        index -= 1
-        # the case that maybe we can just ignore
-        if index == 0:
-            return None
-    # add 1 to avoid the "."
-    last_question = question[index + 1:].strip()
-    context = question[:index+1].strip()
-
-    # get the question in answer
-    answer_parts = answer.split('\n')
-    question_list = []
-    answer_list = []
-    clean_answer_list = []
-    for part in answer_parts:
-        index = part.rfind('?')
-        question_list.append(part[:index + 1].strip())
-        answer_list.append(part[index + 1:].strip())
-    # only left the result in answer
-    for answer in answer_list:
-        index = answer.rfind('>>')
-        numbers = re.findall(r'\d+', answer[index+1:])
-        if numbers:
-            clean_answer_list.append(max(numbers, key=int))
-        else: 
-            index = answer.rfind('=')
-            numbers = re.findall(r'\d+', answer[index+1:])
-            if numbers:
-                clean_answer_list.append(max(numbers, key=int))
-            else:
-                return None
-    # create new Q-A pair
-    additional_part = ' Directly Answer these questions. Give me one-word-answer for each question in following format: **answer**. \n'
-    new_qa_pair = {
-        'question': context + ' ' + ' '.join(question_list).strip() + ' ' + additional_part,
-        'answer': ' \n '.join(clean_answer_list[:-1]).strip()
-    }
-    # print(new_qa_pair)
-    return new_qa_pair
-'''
 def process_qa_pair(qa_pair):
     question = qa_pair['question']
     answer = qa_pair['answer']
     index = answer.rfind('#')
     answer = answer[index + 2:]
-    # option = [f'{answer}','None of the above is true']
+    if random.random() > 0.5:
+        option = [f'{answer}','None of the above is true']
+        answer = 'A'
+    else:
+        option = ['None of the above is true',f'{answer}']
+        answer = 'B'
     new_qa_pair = {
         'question': question,
-        # 'options' : option,
+        'options' : option,
         'answer' : answer
     }
     return new_qa_pair
-
 
 def process_json(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
@@ -72,8 +32,7 @@ def process_json(input_file, output_file):
         json.dump(processed_data, f, ensure_ascii=False, indent=4)
 
 
-input_file = 'dataset/gsm_original.jsonl'
-output_file = 'dataset/blank/gsm_test.json'
+
 
 process_json(input_file, output_file)
 
