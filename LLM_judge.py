@@ -90,7 +90,7 @@ for original_score in original_scores:
 
 # get the label
 labels = []
-pattern = r'1: (\d+) 2: (\d+) 3: (\d+)'
+pattern = r'Score: 1: (\d+) 2: (\d+) 3: (\d+)'
 total = 0
 correct = 0
 for score in scores:

@@ -20,9 +20,6 @@ python template_choice.py --data_path dataset/multiple_choice/pararel_test.json 
 
 python template.py --data_path dataset/blank/pararel_test.json --save_path dataset/blank/processed_pararel_test.json
 
-(MMLU-PRO)
-python template_choice.py --data_path dataset/multiple_choice/mmlu_pro_test.json --save_path dataset/multiple_choice/processed_mmlu_pro_test.json
-
 (MMLU)
 python template_choice.py --data_path dataset/multiple_choice/mmlu_train.json --save_path dataset/multiple_choice/processed_mmlu_train.json
 
@@ -39,9 +36,6 @@ python generate_output.py --data_path dataset/multiple_choice/processed_pararel_
 
 python generate_output.py --data_path dataset/blank/processed_pararel_train.json --save_path result/blank/pararel.json --case blank --generate_vllm --gpu 0
 
-(MMLU-PRO)
-python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_pro_test.json --save_path result/multiple_choice/mmlu_pro.json --generate_vllm --gpu 0
-
 (MMLU)
 python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_train.json --save_path result/multiple_choice/mmlu.json  --generate_vllm --gpu 0
 
@@ -50,8 +44,6 @@ python generate_output.py --data_path dataset/multiple_choice/processed_mmlu_tra
 python multiple_choice_compare.py --data_path result/multiple_choice/gsm.json
 
 python multiple_choice_compare.py --data_path result/multiple_choice/pararel.json
-
-python multiple_choice_compare.py --data_path result/multiple_choice/mmlu_pro.json
 
 python multiple_choice_compare.py --data_path result/multiple_choice/mmlu.json
 

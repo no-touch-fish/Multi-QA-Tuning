@@ -128,6 +128,7 @@ def tokenize_function_qa(example):
 
     instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQuestion:{example['question']}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
     response = tokenizer(f"Answer:{example['answer']}<|eot_id|>", add_special_tokens=False)
+    # response = tokenizer(f"Answer:{example['answer']}.{prompt}{example['confidence']}<|eot_id|>", add_special_tokens=False)
 
     input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
     attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]  # 因为eos token咱们也是要关注的所以 补充为1
@@ -154,7 +155,7 @@ def tokenize_function_confidence(example):
     MAX_LENGTH = 512
     input_ids, attention_mask, labels = [], [], []
 
-    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQuestion:{example['question']}\nAnswer:{example['answer']}{prompt}.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
+    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQuestion:{example['question']}\nAnswer:{example['answer']}.{prompt}.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
     response = tokenizer(f"{example['confidence']}<|eot_id|>", add_special_tokens=False)
 
     input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
@@ -186,16 +187,18 @@ with open(uncertain_file, 'r',encoding='utf-8') as file:
     uncertain_data = json.load(file)
 print(f'the length of certain:{len(certain_data)}, the length of uncertain:{len(uncertain_data)}')
 # balance, combine and shuffle the dataset
-data = certain_data + uncertain_data
-# data = balance_data(certain_data,uncertain_data)
+# data = certain_data + uncertain_data
+data = balance_data(certain_data,uncertain_data)
 random.shuffle(data)
 combine_data = preprocess_data(data)
+# combine_data = data
 data = Dataset.from_list(combine_data)
 tokenized_data_confidence = data.map(tokenize_function_confidence)
 tokenized_data_qa = data.map(tokenize_function_qa)
 
 # combine two dataset together
 tokenized_data = concatenate_datasets([tokenized_data_confidence, tokenized_data_qa])
+# tokenized_data = tokenized_data_qa
 print(f'the length of dataset is: {len(tokenized_data)}')
 
 # fine tune
@@ -219,8 +222,8 @@ for i, example in enumerate(tokenized_data):
         filtered_labels = [label for label in example["labels"] if label >= 0]
         label_text = tokenizer.decode(filtered_labels, skip_special_tokens=True)
         save_data.append({
-            'question': input_text,
-            'answer' : label_text
+            'input': input_text,
+            'label' : label_text
         })
 
 output_file = 'dataset/test.json'

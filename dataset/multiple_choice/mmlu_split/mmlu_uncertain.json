@@ -33,25 +33,14 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Find the degree for the given field extension Q(sqrt(2)) over Q.",
-        "options": [
-            "0",
-            "2",
-            "1",
-            "3"
-        ],
-        "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Statement 1 | Every free abelian group is torsion free. Statement 2 | Every finitely generated torsion-free abelian group is a free abelian group.",
+        "question": "Statement 1 | If G, H and K are groups of order 4, at least two of them are isomorphic. Statement 2 | If Z_r + Z_s is isomorphic to a subgroup Z_m + Z_n, then r divides m and s divides n.",
         "options": [
             "True, True",
             "False, False",
             "True, False",
             "False, True"
         ],
-        "answer": "A",
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -138,17 +127,6 @@
             "transitive",
             "reflexive",
             "symmetric"
-        ],
-        "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "How many homomorphisms are there of Z into Z_2?",
-        "options": [
-            "1",
-            "2",
-            "infinitely many",
-            "0"
         ],
         "answer": "B",
         "confidence": "I am unsure"
@@ -1155,6 +1133,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "The famous Drake equation attempts to answer the following question:",
+        "options": [
+            "Will the Sun become a black hole?",
+            "Is the universe infinitely large?",
+            "How old is the visible universe?",
+            "Are we alone in the universe?"
+        ],
+        "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Imagine that the Earth was instantly moved to an orbit three times further away from the Sun. How much longer would a year be?",
         "options": [
             "exactly 3 times longer",
@@ -1218,6 +1207,17 @@
             "because the Moon's rotational and orbital periods are equal"
         ],
         "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "The second cosmic velocity (or escape velocity) is the speed required by an object to escape the gravitational field of a celestial body with mass M and radius R. Which formula correctly calculates this velocity? (G: gravitational constant)",
+        "options": [
+            "v = sqrt(GM/R)",
+            "v = 2sqrt(GM/R)",
+            "v = sqrt(2GM/R)",
+            "v = sqrt(GM/2R)"
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -1837,17 +1837,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "The rise in business led, private regulation can be attributed to: encouragement of a _______ approach from industry, _________ and _______ achievement of objectives.",
-        "options": [
-            "Faster, Cost effectiveness, Slower",
-            "Faster, Heightened costs, Slower",
-            "Proactive, Cost effectiveness, Faster",
-            "Proactive, Heightened costs, Faster"
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
         "question": " The ________ perspective on sustainability resulted from growth models that analysed the carrying capacity of the planet, overall concluding that the finite capacity of the earth and_______, ________ and _______ by current and past generations could reduce quality of life for future generations. This contrasts with the environmental perspective with focuses on the need to maintain and preserve the natural environment.",
         "options": [
             "Economic, Overuse of resources, Overpopulation, Over pollution,",
@@ -2167,17 +2156,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which of the following is not a category used to classify patients according to the Glasgow Coma Scale?",
-        "options": [
-            "Eye opening.",
-            "Verbal response.",
-            "Best motor response.",
-            "Pupil response."
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which of these combinations of clinical features is most suggestive of mixed mitral valve disease with a predominance of mitral regurgitation?",
         "options": [
             "Displaced apex beat; soft first heart sound; pan-systolic murmur; short mid-diastolic murmur",
@@ -2332,6 +2310,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "A change in blood pressure is detected by the:",
+        "options": [
+            "baroreceptors.",
+            "chemoreceptors.",
+            "vasomotor centre.",
+            "cardiovascular centre."
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Blood clots are responsible for repeatedly blocking a catheter. What should you do?",
         "options": [
             "Call for help.",
@@ -2351,17 +2340,6 @@
             "6.25"
         ],
         "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "How long can a cannula remain in situ?",
-        "options": [
-            "24 hours.",
-            "36 hours.",
-            "48 hours.",
-            "96 hours."
-        ],
-        "answer": "D",
         "confidence": "I am unsure"
     },
     {
@@ -2750,6 +2728,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise:",
+        "options": [
+            "frequently rises by 1 - 3 mM.",
+            "remains relatively unchanged.",
+            "frequently falls by 1 - 3 mM.",
+            "falls to hypoglycaemic levels."
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "A surgical support can be used for:",
         "options": [
             "prolapsed stomas.",
@@ -2992,6 +2981,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Cancer cells grown in culture are similar to normal cells grown in culture in that they",
+        "options": [
+            "divide an indefinite number of times",
+            "do not display contact inhibition",
+            "require a surface for attachment in order to grow",
+            "proliferate to the same cell density"
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Which of the following techniques could be used to demonstrate protein binding to specific DNA sequences?",
         "options": [
             "Western blot hybridization",
@@ -3036,14 +3036,14 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "A recent theory concerning an unusual rise in asthma attacks following a thunderstorm proposes that while pollen grains at 5 microns are too large to enter the airways, their exposure to water precipitates the release of starch granules as a result of osmotic shock. The starch granules are small enough to enter the lower airways and trigger an asthmatic attack. If this theory is true, which of the following is a correct statement?",
+        "question": "Hybrids between some related species of plants are sterile because the parent plants had different chromosome numbers. Occasionally the chromosome number of such a hybrid plant doubles spontaneously. Which of the following best describes the descendants of those plants with the double chromosome number?",
         "options": [
-            "The interior of the pollen grains was hypotonic compared to the surrounding environment.",
-            "The interior of the pollen grains had a higher osmotic pressure than did the surrounding environment.",
-            "The pollen grains underwent plasmolysis prior to releasing their contents.",
-            "The pollen grains underwent shrinking before they ruptured and released their contents."
+            "The plant with the double chromosome number would be genetically defective and have no descendants.",
+            "The descendants would be at a selective advantage because of the increased ability to introgress.",
+            "The descendants would be reproductively successful because they could backcross with the parental species.",
+            "The descendants would regain the ability to reproduce sexually because chromosomes could pair normally."
         ],
-        "answer": "B",
+        "answer": "D",
         "confidence": "I am unsure"
     },
     {
@@ -3176,6 +3176,17 @@
             "The number of synapses crossed"
         ],
         "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Gene flow between populations results in",
+        "options": [
+            "an increase in genetic homogeneity in the metapopulation",
+            "an increase in the rate of deleterious mutations in the metapopulation",
+            "an increased likelihood of speciation",
+            "disruption of Hardy-Weinberg equilibrium in the metapopulation"
+        ],
+        "answer": "A",
         "confidence": "I am unsure"
     },
     {
@@ -3784,17 +3795,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the NMR frequency of 31P in a 20.0 T magnetic field?",
-        "options": [
-            "54.91 MHz",
-            "239.2 MHz",
-            "345.0 MHz",
-            "2167 MHz"
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Predict the number of lines in the EPR spectrum of a solution of dimethylnitroxide (CH3)2NO• assuming the lines do not overlap.",
         "options": [
             "21",
@@ -4191,6 +4191,28 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "One approach to handling fuzzy logic data might be to design a computer using ternary (base-3) logic so that data could be stored as “true,” “false,” and “unknown.” If each ternary logic element is called a flit, how many flits are required to represent at least 256 different values?",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Local caching of files is common in distributed file systems, but it has the disadvantage that",
+        "options": [
+            "Temporary inconsistencies among views of a file by different machines can result",
+            "The file system is likely to be corrupted when a computer crashes",
+            "A much higher amount of network traffic results",
+            "Caching makes file migration impossible"
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Array A contains 256 elements of 4 bytes each. Its first element is stored at physical address 4,096.\nArray B contains 512 elements of 4 bytes each. Its first element is stored at physical address 8,192.\nAssume that only arrays A and B can be cached in an initially empty, physically addressed, physically tagged, direct-mapped, 2K-byte cache with an 8-byte block size. The following loop is then executed.\nfor (i = 0; i < 256; i++)\n        A[i] = A[i] + B[2*i];\nDuring the execution of the loop, how many bytes will be written to memory if the cache has a write-through policy?",
         "options": [
             "0",
@@ -4309,17 +4331,6 @@
             "infinity"
         ],
         "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the area of an equilateral triangle whose inscribed circle has radius 2?",
-        "options": [
-            "12",
-            "16",
-            "12*sqrt(3)",
-            "16*sqrt(3)"
-        ],
-        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -4507,17 +4518,6 @@
             "I and II only"
         ],
         "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Let y = f(x) be a solution of the differential equation x dy + (y - xe^x) dx = 0 such that y = 0 when x = 1. What is the value of f(2)?",
-        "options": [
-            "1/(2e)",
-            "1/e",
-            "e^2/2",
-            "2e"
-        ],
-        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -5214,6 +5214,28 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Lactate and hydrogen ions leave the muscle:",
+        "options": [
+            "via a cotransport mechanism with carnosine.",
+            "via an active transport mechanism.",
+            "via a protein transporter molecule.",
+            "by simple diffusion."
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "There are five stages of mitosis that must be carried out correctly for a cell to properly divide. Match the stage of mitosis with its proper component:\nProphase — Dissolution of nucleoli",
+        "options": [
+            "Metaphase — Formation of two distinct nuclear membranes",
+            "Cytokinesis — Separation of sister chromatids to their respective poles",
+            "Telophase — Formation of the equatorial plate",
+            "Anaphase — Separation of the cytoplasm and organelles"
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "A patient comes into the hospital after being bit by a dog who he stated was “acting crazy”. The wound is open and bleeding. Animal control captured the dog and said that it was foaming at the mouth and extremely aggressive. Suspecting a rabies infection, the patient is given a serum that contains rabies antibodies that were grown inside a horse. This is an example of what kind of immunity?",
         "options": [
             "Passive",
@@ -5222,6 +5244,17 @@
             "Artificial"
         ],
         "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "The World Systems Theory divides the world as a unit into three subcategories: core countries, periphery countries, and semi-periphery countries. Which of the following answers correlates best with semi-periphery countries?",
+        "options": [
+            "Strong central government.",
+            "An economy centralized around one natural resource.",
+            "A diversified and developed economy.",
+            "Small percentage of very high class individuals."
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -5588,6 +5621,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "A rod measures 1.00 m in its rest system. How fast must an observer move parallel to the rod to measure its length to be 0.80 m?",
+        "options": [
+            "0.50c",
+            "0.60c",
+            "0.70c",
+            "0.80c"
+        ],
+        "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "The energy required to remove both electrons from the helium atom in its ground state is 79.0 eV. How much energy is required to ionize helium (i.e., to remove one electron)?",
         "options": [
             "24.6 eV",
@@ -5706,17 +5750,6 @@
             "8k"
         ],
         "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "An observer O at rest midway between two sources of light at x = 0 and x = 10 m observes the two sources to flash simultaneously. According to a second observer O', moving at a constant speed parallel to the x-axis, one source of light flashes 13 ns before the other. Which of the following gives the speed of O' relative to O?",
-        "options": [
-            "0.13c",
-            "0.15c",
-            "0.36c",
-            "0.53c"
-        ],
-        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -5849,17 +5882,6 @@
             "19.6 m"
         ],
         "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "A nonrelativistic particle with a charge twice that of an electron moves through a uniform magnetic field. The field has a strength of π/4 tesla and is perpendicular to the velocity of the particle. What is the particle’s mass if it has a cyclotron frequency of 1,600 hertz?",
-        "options": [
-            "2.5 * 10^-23 kg",
-            "1.2 * 10^-22 kg",
-            "3.3 * 10^-22 kg",
-            "5.0 * 10^-21 kg"
-        ],
-        "answer": "A",
         "confidence": "I am unsure"
     },
     {
@@ -6259,17 +6281,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What was the first buffer overflow attack?",
-        "options": [
-            "Love Bug",
-            "SQL Slammer",
-            "Morris Worm",
-            "Code Red"
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "The ______________ can cost you money, by sending text messages from your mobile phone numbers.",
         "options": [
             "IM – Trojans",
@@ -6303,6 +6314,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "The team that wins in a tug-of-war is the team that",
+        "options": [
+            "produces more tension in the rope than the opponent",
+            "pushes hardest on the ground",
+            "Both",
+            "Neither"
+        ],
+        "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "A 10-Ω resistor carries 10 A. The voltage across the resistor is",
         "options": [
             "0",
@@ -6333,17 +6355,6 @@
             "Newton’s laws"
         ],
         "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Sound travels in",
-        "options": [
-            "solids",
-            "liquids",
-            "gases",
-            "All of these"
-        ],
-        "answer": "D",
         "confidence": "I am unsure"
     },
     {
@@ -6520,17 +6531,6 @@
             "Neither of these"
         ],
         "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "To view your full-face image in a steamy mirror compared with the height of your face the minimum height of the patch to wipe away is",
-        "options": [
-            "one-quarter.",
-            "one-half.",
-            "the same.",
-            "dependent on your distance from the mirror."
-        ],
-        "answer": "B",
         "confidence": "I am unsure"
     },
     {
@@ -6996,6 +6996,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "The process of boiling water tends to",
+        "options": [
+            "warm the water",
+            "cool the water",
+            "Both",
+            "Neither"
+        ],
+        "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "When you scale up an object to 3 times its linear size, the surface area increases by",
         "options": [
             "3 and the volume by 9.",
@@ -7194,6 +7205,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Compared with radiation from the Sun, terrestrial radiation has a lower",
+        "options": [
+            "wavelength",
+            "frequency",
+            "Both",
+            "Neither"
+        ],
+        "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "When we speak of time dilation, we mean that time",
         "options": [
             "compresses with speed.",
@@ -7290,6 +7312,17 @@
             "Skewness of one and kurtosis of three."
         ],
         "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "If an estimator is said to be consistent, it is implied that",
+        "options": [
+            "On average, the estimated coefficient values will equal the true values",
+            "The OLS estimator is unbiased and no other unbiased estimator has a smaller variance",
+            "The estimates will converge upon the true values as the sample size increases",
+            "The coefficient estimates will be as close to their true values as possible for small and large samples."
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -7799,6 +7832,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Materials used in heat sink should have",
+        "options": [
+            "high thermal conductivity.",
+            "large surface area.",
+            "high melting point.",
+            "All of these."
+        ],
+        "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Conductor is static and the field is varying then emf will be induced. This principle is called",
         "options": [
             "virtually induced emf.",
@@ -8261,17 +8305,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "A wire carrying current is bent in the form of a circular loop. Then the magnetic field around each portion of the wire will be",
-        "options": [
-            "parallel to the plane of the wire.",
-            "perpendicular to the circumference of the wire.",
-            "parallel to half portion and perpendicular for the other half.",
-            "none of above."
-        ],
-        "answer": "A",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Find the mean of the set of data 18, 9, 9, 10, 11, 14, 30, 19.",
         "options": [
             "9",
@@ -8602,17 +8635,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "A package of paper towels has 12 rolls of paper towels in it. Mr. Kelly wants to put an equal number of rolls of paper towels into 4 rooms. He uses the number sentence below to find the number of rolls of paper towels, t, he should put into each room. 12 ÷ t = 4 Which number sentence shows another way Mr. Kelly can find the number of rolls of paper towels, t, he should put into each room?",
-        "options": [
-            "4 ÷ 12 = t",
-            "4 – t = 12",
-            "4 + 12 = t",
-            "4 × t = 12"
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Solve the equation −47 = g + 24.",
         "options": [
             "−71",
@@ -8745,6 +8767,28 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Abby drives 18 miles round trip between home and work each day. If her daily round trip is rounded to the nearest 5 miles, which of the following is the best estimate of the total number of miles driven in 5 days?",
+        "options": [
+            "75 miles",
+            "100 miles",
+            "125 miles",
+            "180 miles"
+        ],
+        "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Rounded to the nearest 10,000, the population of Louisiana was 4,530,000 in 2010. Which number could be the actual population of Louisiana in 2010?",
+        "options": [
+            "4,500,321",
+            "4,524,491",
+            "4,533,372",
+            "4,535,343"
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Marcus spent $3.25 to wash his car. If one quarter operates the car wash for 60 seconds, how long did it take him to wash his car?",
         "options": [
             "10 minutes",
@@ -8830,17 +8874,6 @@
             "6 × (8 × 12)"
         ],
         "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "A scientist studied the migration patterns of two types of whales. The humpback whales traveled 2,240 miles in 28 days. The gray whales traveled 2,368 miles in 32 days. If the humpback whales had traveled at the same rate for 32 days, how many more miles would they have traveled than the gray whales?",
-        "options": [
-            "128",
-            "192",
-            "280",
-            "408"
-        ],
-        "answer": "B",
         "confidence": "I am unsure"
     },
     {
@@ -9009,17 +9042,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "A tank is in the shape of a triangular prism. If the triangular base has an area of 116 square feet, and the tank is 30 feet tall, how much water would the tank contain when it is full?",
-        "options": [
-            "1725 ft^3",
-            "1740 ft^3",
-            "3480 ft^3",
-            "6960 ft^3"
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "A teacher buys the folders listed below.\n* 5 boxes of red folders with 36 folders in each box\n* 6 boxes of blue folders with 32 folders in each box\nWhich number is closest to the total number of red and blue folders that the teacher buys?",
         "options": [
             "275",
@@ -9050,6 +9072,17 @@
             "5 out of 15"
         ],
         "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Use mental math to find the sum of 11.7 + 3.4 + 6.3.",
+        "options": [
+            "20.3",
+            "20.4",
+            "21.4",
+            "22.4"
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -9273,17 +9306,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "A store has 8 fish tanks that each have 40 liters of water. Whatis the total number of liters of waterin all of the fish tanks?",
-        "options": [
-            "5",
-            "48",
-            "280",
-            "320"
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "You walked your dog 7 over 9 mi in the morning and 5 over 12 mi in the afternoon. How much farther did you walk your dog in the morning than in the afternoon?",
         "options": [
             "13 over 36",
@@ -9306,6 +9328,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Jean threw a softball a distance of 9 feet. Lee threw a softball 3 times as far as Jean. Which equation can be used to determine thedistance, d, that Lee threw the ball?",
+        "options": [
+            "dx3=9",
+            "d+3=9",
+            "3+9=d",
+            "3x9=d"
+        ],
+        "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Use rounding to estimate the sum of 27.94 + 15.35 to the nearest tenth.",
         "options": [
             "43.2",
@@ -9323,17 +9356,6 @@
             "All octagons are polygons because they have at least 3 sides.",
             "All parallelograms are rectangles because they have 2 sets of parallel sides.",
             "All rhombi are squares because they have 4 sides that are all the same length."
-        ],
-        "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Connor is measuring the capacity of a jar. Which unit of measure can he use?",
-        "options": [
-            "Centimeter",
-            "Cup",
-            "Gram",
-            "Pound"
         ],
         "answer": "B",
         "confidence": "I am unsure"
@@ -9369,17 +9391,6 @@
             "5 over 6, 0.75, 1 over 3, 1 over 8"
         ],
         "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Solve the equation 6.73 = z over 7.74. Check your answer.",
-        "options": [
-            "52.0902",
-            "1.0112",
-            "−1.0102",
-            "51.5902"
-        ],
-        "answer": "A",
         "confidence": "I am unsure"
     },
     {
@@ -9853,6 +9864,17 @@
             "Psychology becomes again the path to fundamental problems."
         ],
         "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": " Use indirect truth tables to determine whether each set of propositions is consistent. If the set is consistent, choose an option with a consistent valuation. (There may be other consistent valuations.)\n~N ≡ (O · P)\n~O ⊃ Q\nN · ~Q",
+        "options": [
+            "Inconsistent",
+            "Consistent. Consistent valuation when N, O, and P are true and Q is false",
+            "Consistent. Consistent valuation when N and O are true and P and Q are false",
+            "Consistent. Consistent valuation when N and P are true and O and Q are false"
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -10392,6 +10414,17 @@
             "65.20%"
         ],
         "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "How many children between the ages of 5-14 worked globally as of 2012?",
+        "options": [
+            "5 million",
+            "30 million",
+            "150 million",
+            "500 million"
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -11506,17 +11539,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "In the mid-1900s, the Soviet geneticist Lysenko believed that his winter wheat plants, exposed to ever-colder temperatures, would eventually give rise to ever more cold-tolerant winter wheat. Lysenko's attempts in this regard were most in agreement with the ideas of",
-        "options": [
-            "Cuvier.",
-            "Hutton.",
-            "Lamarck.",
-            "Darwin."
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Two individuals, one with type B blood and one with type AB blood, have a child. The probability that the child has type O blood is",
         "options": [
             "0%",
@@ -11627,28 +11649,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "An eager AP Biology student interested in studying osmosis and the movement of water in solutions took a dialysis bag containing a 0.5 M solution and placed it into a beaker containing a 0.6 M solution. Which of the following is true about water potential?",
-        "options": [
-            "An eager AP Biology student interested in studying osmosis and the movement of water in solutions took a dialysis bag containing a 0.5 M solution and placed it into a beaker containing a 0.6 M solution. It drives the movement of water from a region of lower water potential to a region of higher water potential.",
-            "Solute potential is the only factor that determines the water potential.",
-            "Pressure potential combines with solute potential to determine the water potential.",
-            "Water potential always drives water from an area of lower pressure potential to an area of higher pressure potential."
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which of the following is a frameshift mutation?",
-        "options": [
-            "CAT HAS HIS → CAT HAS HIT",
-            "CAT HAS HIS → CAT HSH ISA",
-            "CAT HAS HIS → CAT HIS HAT",
-            "CAT HAS HIS → CAT WAS HIT"
-        ],
-        "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Crossing-over occurs during which of the following phases in meiosis?",
         "options": [
             "Prophase I",
@@ -11745,6 +11745,17 @@
             "plasmolysis."
         ],
         "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "A child with type A B blood inherits an IA allele from one parent and an IB allele from the other. The child will carry both A and B glycoproteins on the surface of all red blood cells. This pattern of expression is referred to as",
+        "options": [
+            "codominance",
+            "epistasis",
+            "polygenic",
+            "linkage"
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -12122,17 +12133,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "A stock solution of 12.0 M sulfuric acid is made available. What is the best procedure to make up 100. mL of 4.0 M sulfuric acid using the stock solution and water prior to mixing?",
-        "options": [
-            "Add 33.3 mL of water to the flask, and then add 66.7 mL of 12.0 M acid.",
-            "Add 33.3 mL of 12.0 M acid to the flask, and then dilute it with 66.7 mL of water.",
-            "Add 67.7 mL of 12.0 M acid to the flask, and then dilute it with 33.3 mL of water.",
-            "Add 67.7 mL of water to the flask, and then add 33.3 mL of 12.0 M acid."
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Of the following oxo acids, which is predicted to be the strongest acid?",
         "options": [
             "HBrO",
@@ -12425,6 +12425,17 @@
             "Bringing particles together releases energy in proportion to their attractive forces.",
             "The total of the energies in steps 1 to 3 indicates if a solution will form.",
             "Molecules with similar molecular masses are required to form solutions."
+        ],
+        "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Most transition metals share a common oxidation state of +2. Which of the following best explains why?",
+        "options": [
+            "Transition metals all have a minimum of two unpaired electrons.",
+            "Transition metals have unstable configurations and are very reactive.",
+            "Transition metals tend to gain electrons when reacting with other elements.",
+            "Transition metals will lose their outermost s-block electrons when forming bonds."
         ],
         "answer": "D",
         "confidence": "I am unsure"
@@ -13002,17 +13013,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the output of 4*1**4 in python?",
-        "options": [
-            "4",
-            "1",
-            "256",
-            "16"
-        ],
-        "answer": "A",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "In Python 3, b = [11,13,15,17,19,21]; print(b[::2]) outputs what?",
         "options": [
             "[19,21]",
@@ -13101,12 +13101,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "This question refers to the following information.\nRead the following quote.\nI had now decided beyond all question that there existed in the heavens three stars wandering about Jupiter as do Venus and Mercury about the sun, and this became plainer than daylight from observations on similar occasions which followed. Nor were there just three such stars; four wanderers complete their revolutions about Jupiter, and of their alterations as observed more precisely later on we shall give a description here. Also I measured the distances between them by means of the telescope. . . .\nSuch are the observations concerning the four Medicean planets recently first discovered by me, and although from this data their periods have not yet been reconstructed in numerical form, it is legitimate at least to put in evidence some facts worthy of note. Above all, since they sometimes follow and sometimes precede Jupiter by the same intervals, and they remain within very limited distances either to east or west of Jupiter, accompanying that planet in both its retrograde and direct movements in a constant manner, no one can doubt that they complete their revolutions about Jupiter and at the same time effect all together a twelve-year period about the center of the universe.\n—Galileo Galilei, 1610\nWhich of the following is best demonstrated by the passage about intellectual thought at the time?",
+        "question": "This question refers to the following information.\nAddison's Act had been conceived in the belief that, unless working-class aspirations were quickly met after the war, Britain might experience a revolution similar to that in Russia. By 1920 that fear was beginning to recede and Addison's policy was being regarded as extravagant. An immediate victim of the new attitude was the Borough's Kingfield Street scheme, provisional plans for which were approved in September 1920. Much to the Council's surprise, the Government's Housing Board deferred the scheme, \"having regard to the Council's present commitments and the money available at the present time, and in May 1921 the Government announced a drastic curtailment of the housing programme, cutting the housing target by half.\n—Excerpt from a work by English historian Hermione Hobhouse Public Housing in Poplar: The Inter-war Years, 1994\nWhich of the following attitudes prevalent after the First World War is evident in the passage above?",
         "options": [
-            "It led to better scientific tools, which led to a rise in the standard of living during the seventeenth century across Europe.",
-            "The ideas of the ancient Greeks guided all of their ideas.",
-            "It used information obtained through experimentation to conceptualize the universe.",
-            "It provided experimental proof of the theories of ancient thinkers, such as Aristotle, on how the universe worked."
+            "Women's suffrage should increase",
+            "Democratization of society",
+            "Increased disillusionment and cynicism",
+            "The rise of communism as a world power"
         ],
         "answer": "C",
         "confidence": "I am unsure"
@@ -13805,6 +13805,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "The use and spread of English in nineteenth-century India is an example of what type of diffusion?",
+        "options": [
+            "Stimulus",
+            "Contagious",
+            "Hierarchal",
+            "Relocation"
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "The theory that most migration occurs over a short distance and in steps is attributed to",
         "options": [
             "Rostow.",
@@ -14058,12 +14069,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which of the following items below is an absolute location?",
+        "question": "Which one of the following groups is excluded from the caste system of Hinduism?",
         "options": [
-            "10 miles east of Pittsburgh",
-            "Washington",
-            "3 degrees south",
-            "479 Elm Street, Muncie, Indiana"
+            "Scholar-priests",
+            "Warrior-landowners",
+            "Businessmen and farmers",
+            "Untouchables"
         ],
         "answer": "D",
         "confidence": "I am unsure"
@@ -14311,6 +14322,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Which of the following items below is NOT considered a barrier to the diffusion of an innovation?",
+        "options": [
+            "Internet",
+            "Distance",
+            "Cultural obstacles",
+            "Government interference"
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Which of the following statements regarding historical North American migration streams is NOT correct?",
         "options": [
             "Canada's first major migration came from France.",
@@ -14520,17 +14542,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "The primary goal of the Gramm-Rudman Acts of 1985 and 1987 was to",
-        "options": [
-            "strengthen the military",
-            "increase funding for social programs",
-            "reduce the federal deficit",
-            "limit the president's ability to conduct foreign policy"
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which of the following is the most direct result of an electoral system with single-member districts?",
         "options": [
             "Proliferation of many small parties",
@@ -14619,28 +14630,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Unlike in a closed primary election, in an open primary election",
-        "options": [
-            "voters select the winner by caucus instead of by individual ballots",
-            "the election results are not binding",
-            "any registered voter may participate, regardless of party affiliation",
-            "voters may register to vote on the day of the election"
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Every ten years, the majority of state legislatures are responsible for",
-        "options": [
-            "redrawing congressional district boundaries",
-            "electing a new state governor",
-            "evaluating the physical accessibility of polling venues",
-            "deciding where to construct new elementary schools"
-        ],
-        "answer": "A",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which of the following best describes the fate of most popular third-party movements?",
         "options": [
             "They displace one of the two major parties and become major parties themselves.",
@@ -14693,6 +14682,17 @@
             "abolition of slavery"
         ],
         "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which of the following is a significant difference between the Senate and the House of Representatives?",
+        "options": [
+            "Only the House has the power to issue subpoenas.",
+            "Only the Senate may introduce revenue bills.",
+            "States are equally represented in the House, while representation in the Senate is proportional to population.",
+            "The Senate allows unlimited debate, while the House does not."
+        ],
+        "answer": "D",
         "confidence": "I am unsure"
     },
     {
@@ -15169,6 +15169,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Federal election laws require that, in",
+        "options": [
+            "an area that has a substantial community of non-English speakers, voters be provided with ballots in their native language",
+            "an electoral district that has historically low voter turnout, polling places be open for longer than the typical work day",
+            "a state with a budget deficit, a tax be collected from each voter to pay for the cost of the election",
+            "a region with racial diversity, congressional district lines be drawn to guarantee that at least one elected congressperson be of a racial minority"
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "The absence of a political party solely dedicated to labor and working class issues in the United States",
         "options": [
             "proves U.S. politicians are not concerned about serving working-class constituencies",
@@ -15180,14 +15191,14 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which of the following is NOT part of the \"iron triangles\" that influence public policy-making?",
+        "question": "The Civil Rights Act of 1964 was passed to reinforce the",
         "options": [
-            "House committees",
-            "Senate committees",
-            "The courts",
-            "Bureaucratic agencies"
+            "presidential veto",
+            "system of checks and balances",
+            "states' power to challenge federal regulation",
+            "Fourteenth Amendment"
         ],
-        "answer": "C",
+        "answer": "D",
         "confidence": "I am unsure"
     },
     {
@@ -15287,17 +15298,6 @@
             "National program of child immunization"
         ],
         "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "If the economy is experiencing a recession how will a plan to decrease taxes for consumers and increase spending on government purchases affect real gross domestic product (GDP) and the price level?",
-        "options": [
-            "real GDP rises and the price level falls.",
-            "real GDP falls and the price level rises.",
-            "real GDP rises and the price level rises.",
-            "real GDP falls and the price level falls."
-        ],
-        "answer": "C",
         "confidence": "I am unsure"
     },
     {
@@ -15598,6 +15598,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Real GDP",
+        "options": [
+            "is actual GDP as opposed to the estimate made by the BEA.",
+            "is also called current-dollar GDP.",
+            "is GDP adjusted for price changes.",
+            "is not calculated for the United States."
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "The \"crowding-out\" effect is the result of",
         "options": [
             "decreasing interest rates from contractionary fiscal policy.",
@@ -15675,23 +15686,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Which of the following is true about the consumption function?",
+        "options": [
+            "The slope is equal to the MPC.",
+            "The slope is equal to the MPS.",
+            "The slope is equal to MPC + MPS.",
+            "It shifts upward when consumers are more pessimistic about the future."
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Recessions",
         "options": [
             "are a thing of the past.",
             "are very severe depressions.",
             "are marked by a sustained decline in output.",
             "are regular occurrences in capitalist economies."
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When the value of the U.S. dollar appreciates relative to other currencies which of the following is the most likely to occur?",
-        "options": [
-            "Imports into the United States will decrease.",
-            "Exports from the United States will increase.",
-            "U.S. residents will take more vacations in foreign countries.",
-            "More foreign visitors will travel to the United States."
         ],
         "answer": "C",
         "confidence": "I am unsure"
@@ -16643,17 +16654,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "If the U.S. dollar and Chinese yuan are traded in flexible currency markets which of the following causes an appreciation of the dollar relative to the Chinese yuan?",
-        "options": [
-            "Lower interest rates in the United States relative to China",
-            "Lower price levels in China relative to the United States",
-            "Growing American preference to consume more Chinese-made goods",
-            "Rising per capita GDP in China increasing imports from the United States"
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "You hear that the United States has a negative balance in the current account. With this information we conclude that",
         "options": [
             "there is a trade deficit.",
@@ -16706,17 +16706,6 @@
             "saving remains constant."
         ],
         "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Tariffs and quotas",
-        "options": [
-            "result in higher domestic prices.",
-            "promote trade between nations.",
-            "do not necessarily affect domestic prices.",
-            "affect domestic prices: the former raises them while the latter lowers them."
-        ],
-        "answer": "A",
         "confidence": "I am unsure"
     },
     {
@@ -17006,6 +16995,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Find $(2^{20} + 2^{20} + 2^{20} +2^{21}) \\div 2^{17}$.",
+        "options": [
+            "20",
+            "40",
+            "0",
+            "10"
+        ],
+        "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "In Canada in 2014, the average wholesale price of soybeans was $0.24 per pound. In 2015, the average wholesale price of soybeans was $0.16 per pound. If a retailer purchased 20,000 pounds of soybeans in 2014 and in 2015, what was the percent change in the retailer’s expenses from 2014 to 2015?",
         "options": [
             "–8%",
@@ -17116,6 +17116,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "If I roll 5 standard 6-sided dice and multiply the number on the face of each die, what is the probability that the result is a composite number?",
+        "options": [
+            "\\frac{485}{486}",
+            "\\frac{16}{7776}",
+            "\\frac{4}{7776}",
+            "\\frac{2}{7776}"
+        ],
+        "answer": "A",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "A solid is cut out of a sphere of radius 2 by two parallel planes each 1 unit from the center. The volume of this solid is",
         "options": [
             "8π",
@@ -17149,23 +17160,23 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "The quadratic $2x^2+5x+12=19-7x$ has two solutions. What is the positive difference between these solutions?",
-        "options": [
-            "2",
-            "\\sqrt{2}",
-            "5\\sqrt{2}",
-            "5"
-        ],
-        "answer": "C",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "The sum $1^2 + 2^2 + 3^2 + 4^2 + \\cdots + n^2 = n(n+1)(2n+1) \\div 6$. What is the value of $21^2 + 22^2 + \\cdots + 40^2$?",
         "options": [
             "41",
             "22140",
             "19270",
             "2870"
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Six 6-sided dice are rolled. What is the probability that three of the dice show prime numbers and the rest show composite numbers?",
+        "options": [
+            "\\frac{125}{2916}",
+            "\\frac{5}{16}",
+            "\\frac{5}{54}",
+            "\\frac{5}{55}"
         ],
         "answer": "C",
         "confidence": "I am unsure"
@@ -17179,17 +17190,6 @@
             "\\frac{1}{3}"
         ],
         "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "A number $x$ factors as $107\\cdot109^5$, and $107$ and $109$ are primes. What is the exponent of $109$ in the prime factorization of $x^{11}$?",
-        "options": [
-            "9",
-            "55",
-            "21",
-            "11"
-        ],
-        "answer": "B",
         "confidence": "I am unsure"
     },
     {
@@ -17270,6 +17270,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Grady rides his bike $60\\%$ faster than his little brother Noah. If Grady rides $12$ miles further than Noah in two hours, how fast in miles per hour does Noah ride?",
+        "options": [
+            "32",
+            "20",
+            "10",
+            "7.2"
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "A bag has 4 red and 6 blue marbles. A marble is selected and not replaced, then a second is selected. What is the probability that both are the same color?",
         "options": [
             "\\frac{1}{8}",
@@ -17347,17 +17358,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "The graph of the equation $x + 2y + 3 = 0$ is perpendicular to the graph of the equation $ax + 2y + 3 = 0$. What is the value of $a$?",
-        "options": [
-            "-4",
-            "-13",
-            "-9",
-            "-15"
-        ],
-        "answer": "A",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "The $n^{\\text{th}}$ term of a certain geometric series is given by $a\\cdot r^{n-1}$, where $a$ and $r$ are positive integers and $r$ is greater than 1. Bill picks out $k$ different numbers in this sequence, all of which have the same number of digits. What is the largest possible value of $k$?",
         "options": [
             "4",
@@ -17380,12 +17380,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "How many odd perfect squares are between 5 and 211?",
+        "question": "The amount of paint that David needs to cover a cube is directly proportional to the surface area. If David can completely cover a cube of side length 2 feet with exactly 16 quarts of paint, how big a cube (in terms of edge length in feet) can David cover with 169 quarts of paint?",
         "options": [
-            "2",
-            "25",
-            "6",
-            "75"
+            "\\frac{13}{4}",
+            "8",
+            "\\frac{13}{2}",
+            "13"
         ],
         "answer": "C",
         "confidence": "I am unsure"
@@ -18040,17 +18040,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "The elasticity of supply is typically greater when",
-        "options": [
-            "producers have fewer alternative goods to produce.",
-            "producers have less time to respond to price changes.",
-            "producers are operating near the limits of their production.",
-            "producers have more time to respond to price changes."
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which of the following is true?",
         "options": [
             "A marginal social cost = marginal private cost + marginal social benefits.",
@@ -18337,6 +18326,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Normal goods always have a/an",
+        "options": [
+            "elastic demand curve",
+            "inelastic demand curve",
+            "elastic supply curve",
+            "positive income elasticity"
+        ],
+        "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "The market demand curve for labor would shift to the left as the result of",
         "options": [
             "an increase in the price of the good which the labor is producing",
@@ -18400,6 +18400,17 @@
             "a price-taker."
         ],
         "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Nancy has the choice to spend one hour studying for an exam, mowing the lawn for one hour at a wage of $6, or babysitting her niece for one hour at a wage of $8. If we know that Nancy has chosen to study for the exam, which of the following is true?",
+        "options": [
+            "The benefit received from studying is greater than the opportunity cost of $8.",
+            "The opportunity cost of studying is $14, which is less than the benefit received from studying.",
+            "Nancy is indifferent to both studying and mowing the lawn.",
+            "Nancy's behavior is irrational, since babysitting was clearly superior to all other options."
+        ],
+        "answer": "A",
         "confidence": "I am unsure"
     },
     {
@@ -18535,17 +18546,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Unlike a perfectly competitive firm, a monopoly",
-        "options": [
-            "will charge the highest price it can on the demand curve",
-            "has a horizontal marginal revenue curve",
-            "has an upward sloping total revenue curve",
-            "faces a downward sloping demand curve"
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "The law of diminishing marginal utility is most useful for explaining the",
         "options": [
             "law of supply",
@@ -18662,6 +18662,17 @@
             "The price of pencils, a complement to paper, increases.",
             "Improvements in the technology used to produce paper.",
             "Environmental concerns reduce the yearly amount of timber that can be harvested."
+        ],
+        "answer": "D",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "When opportunity cost is constant across all production levels, the productions possibilities frontier is",
+        "options": [
+            "concave to the origin.",
+            "convex to the origin.",
+            "undefined.",
+            "a straight diagonal line sloping downward from left to right."
         ],
         "answer": "D",
         "confidence": "I am unsure"
@@ -18843,28 +18854,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which of the following is true about the relationship of the average total cost (ATC) curve and the marginal cost (MC) curve?",
-        "options": [
-            "ATC and MC are always equal.",
-            "ATC and MC are never equal.",
-            "The ATC curve intersects the MC curve at the minimum point of the MC curve.",
-            "The MC curve intersects the ATC curve at the minimum point of the ATC curve."
-        ],
-        "answer": "D",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "A beam of monochromatic light entering a glass window pane from the air will experience a change in",
-        "options": [
-            "frequency and wavelength",
-            "speed and wavelength",
-            "speed only",
-            "wavelength only"
-        ],
-        "answer": "B",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Data is collected in an experiment preformed on an ideal gas. In the experiment, temperature (in K) is the independent variable and volume (in m^3) is the dependent variable. If a plot is produced where the dependent variable is on the vertical axis, which of the following is true about the slope and y-intercept of the graph?",
         "options": [
             "The slope will be linearly proportional to the pressure of the gas and the intercept will be 0 m^3.",
@@ -18953,17 +18942,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Two electrically charged balls are separated by a short distance, producing a force of 50 μN between them. Keeping the charge of each ball the same, the mass of one of the balls but not the other is doubled. What is the new electric force between the balls?",
-        "options": [
-            "50 μN",
-            "100 μN",
-            "200 μN",
-            "400 μN"
-        ],
-        "answer": "A",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "A moving 1.5-kg cart collides with and sticks to a 0.5-kg cart which was initially at rest. Immediately after the collision, the carts each have the same ______ as each other.",
         "options": [
             "Velocity",
@@ -18992,6 +18970,17 @@
             "ax = 0; ay = g",
             "ax < g; ay < g",
             "ax < g; ay = g"
+        ],
+        "answer": "C",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "A cylinder with a movable piston contains a gas at pressure P = 1 × 10^5 Pa, volume V = 20 cm^3, and temperature T = 273 K. The piston is moved downward in a slow steady fashion allowing heat to escape the gas and the temperature to remain constant. If the final volume of the gas is 5 cm^3, what will be the resulting pressure?",
+        "options": [
+            "0.25 × 10^5 Pa",
+            "2 × 10^5 Pa",
+            "4 × 10^5 Pa",
+            "8 × 10^5 Pa"
         ],
         "answer": "C",
         "confidence": "I am unsure"
@@ -19316,6 +19305,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "A particle's kinetic energy is changing at a rate of –6.0 J/s when its speed is 3.0 m/s. What is the magnitude of the force on the particle at this moment?",
+        "options": [
+            "0.5 N",
+            "2.0 N",
+            "4.5 N",
+            "9.0 N"
+        ],
+        "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What happens to the force of gravitational attraction between two small objects if the mass of each object is doubled and the distance between their centers is doubled?",
         "options": [
             "It is doubled.",
@@ -19335,6 +19335,17 @@
             "P increases by a factor of 4."
         ],
         "answer": "B",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "A beam of monochromatic light entering a glass window pane from the air will experience a change in",
+        "options": [
+            "frequency and wavelength",
+            "frequency and speed",
+            "speed and wavelength",
+            "speed only"
+        ],
+        "answer": "C",
         "confidence": "I am unsure"
     },
     {

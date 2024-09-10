@@ -5,6 +5,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What field does Charles Proteus Steinmetz work in?",
+        "answer": "mathematician",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What field does David Hilbert work in?",
         "answer": "geometry",
         "confidence": "I am unsure"
@@ -145,8 +150,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": " What field does Johann Wolfgang von Goethe work in?",
-        "answer": "anatomy",
+        "question": "What field does Mark Mazower work in?",
+        "answer": "Balkans",
         "confidence": "I am unsure"
     },
     {
@@ -157,21 +162,6 @@
     {
         "question": "What field does Akira Toriyama work in?",
         "answer": "manga",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What field does Ephraim George Squier work in?",
-        "answer": "archaeology",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What field does Henri Victor Regnault work in?",
-        "answer": "chemistry",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What field does Edward Frankland work in?",
-        "answer": "chemistry",
         "confidence": "I am unsure"
     },
     {
@@ -265,6 +255,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What field does Chen Shou work in?",
+        "answer": "history",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What field does Oswald Veblen work in?",
         "answer": "geometry",
         "confidence": "I am unsure"
@@ -335,11 +330,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What field does Rudolf Wagner work in?",
-        "answer": "physiology",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What field does Yuna Kagesaki work in?",
         "answer": "manga",
         "confidence": "I am unsure"
@@ -372,6 +362,11 @@
     {
         "question": "What field does John Henry Poynting work in?",
         "answer": "physics",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What field does Kazimierz Kuratowski work in?",
+        "answer": "topology",
         "confidence": "I am unsure"
     },
     {
@@ -412,11 +407,6 @@
     {
         "question": "What field does Viktor Zhirmunsky work in?",
         "answer": "linguistics",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What field does Bert Sakmann work in?",
-        "answer": "physiology",
         "confidence": "I am unsure"
     },
     {
@@ -470,23 +460,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What field does Kiiti Morita work in?",
+        "answer": "topology",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What field does Ptolemy work in?",
         "answer": "mathematician",
         "confidence": "I am unsure"
     },
     {
+        "question": "What field does Henry Corbin work in?",
+        "answer": "philosophy",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What field does Jernej Kopitar work in?",
         "answer": "linguistics",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What field does Thomas J. Watson work in?",
-        "answer": "IBM",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What field does the Grammy Award for Best Female Country Vocal Performance work in?",
-        "answer": "singing",
         "confidence": "I am unsure"
     },
     {
@@ -540,21 +530,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Louis Jules Trochu?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Valeria Bruni Tedeschi?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Pierre Messmer?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Andrey Malakhov?",
         "answer": "Russian",
         "confidence": "I am unsure"
@@ -570,38 +545,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Muppalaneni Shiva?",
-        "answer": "Telugu",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Claude Aveline?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Jan Commelin?",
         "answer": "Dutch",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Jean Rotrou?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Laura Smet?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Sara Coleridge?",
-        "answer": "English",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Jean-Antoine Chaptal?",
-        "answer": "French",
         "confidence": "I am unsure"
     },
     {
@@ -610,28 +555,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Adrien Duport?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Lionel Jospin?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Dmitry Malikov?",
-        "answer": "Russian",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Michel de Montaigne?",
         "answer": "Latin",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Yevgeny Yevtushenko?",
-        "answer": "Russian",
         "confidence": "I am unsure"
     },
     {
@@ -695,21 +620,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Guy Hocquenghem?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Gilles Quispel?",
-        "answer": "Dutch",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Stefanos Stratigos?",
-        "answer": "Greek",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Michael Albert?",
         "answer": "English",
         "confidence": "I am unsure"
@@ -725,11 +635,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Andy Lau?",
-        "answer": "Cantonese",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Ann Scott?",
         "answer": "French",
         "confidence": "I am unsure"
@@ -737,16 +642,6 @@
     {
         "question": "What is the native language of Twm o'r Nant?",
         "answer": "Welsh",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Paul Bonifas?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Jacques Charles Dupont de l'Eure?",
-        "answer": "French",
         "confidence": "I am unsure"
     },
     {
@@ -765,42 +660,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Achille Varzi?",
-        "answer": "Italian",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Babu Mohan?",
-        "answer": "Telugu",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Marcel Vibert?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Rama Prabha?",
         "answer": "Telugu",
         "confidence": "I am unsure"
     },
     {
         "question": "What is the native language of Jean Marais?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Jean-Marie Guyau?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Michel Delebarre?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Victor de Laprade?",
         "answer": "French",
         "confidence": "I am unsure"
     },
@@ -835,6 +700,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What is the native language of Christine Boisson?",
+        "answer": "French",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the native language of Jean Rollin?",
+        "answer": "French",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the native language of John Calvin?",
         "answer": "French",
         "confidence": "I am unsure"
@@ -860,33 +735,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Gaby Morlay?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Gabrielle Fontan?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Mabrouk El Mechri?",
         "answer": "French",
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Roger Hanin?",
+        "question": "What is the native language of Maurice Bucaille?",
         "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Roland Armontel?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Viacheslav Belavkin?",
-        "answer": "Russian",
         "confidence": "I am unsure"
     },
     {
@@ -905,33 +760,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of J. Robert Oppenheimer?",
-        "answer": "English",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Alain Robbe-Grillet?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Bernadette Lafont?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Eugene Roshal?",
-        "answer": "Russian",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Louis Edmond Duranty?",
         "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Viktor Bychkov?",
-        "answer": "Russian",
         "confidence": "I am unsure"
     },
     {
@@ -947,21 +777,6 @@
     {
         "question": "What is the native language of Pyotr Vyazemsky?",
         "answer": "Russian",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Maurice Schutz?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Bernard Giraudeau?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Pierre Trabaud?",
-        "answer": "French",
         "confidence": "I am unsure"
     },
     {
@@ -1000,23 +815,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What is the native language of Joseph Laniel?",
+        "answer": "French",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the native language of Hamidou Benmassoud?",
+        "answer": "French",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the native language of Henri Gault?",
         "answer": "French",
         "confidence": "I am unsure"
     },
     {
         "question": "What is the native language of Leo Klejn?",
         "answer": "Russian",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Alexander Lebedev?",
-        "answer": "Russian",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Augustin Barruel?",
-        "answer": "French",
         "confidence": "I am unsure"
     },
     {
@@ -1030,37 +845,17 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What is the native language of Nagendra Babu?",
+        "answer": "Telugu",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the native language of Jean-Marie Cavada?",
         "answer": "French",
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Tina Turner?",
-        "answer": "English",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Riebeeck Jan Van?",
-        "answer": "Dutch",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Zelimkhan Yandarbiyev?",
-        "answer": "Russian",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Odette Barencey?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Irma Boom?",
-        "answer": "Dutch",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Nyusha?",
         "answer": "Russian",
         "confidence": "I am unsure"
     },
@@ -1080,17 +875,7 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Marguerite Audoux?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Shy'm?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Colette Darfeuil?",
+        "question": "What is the native language of Adolphe Schneider?",
         "answer": "French",
         "confidence": "I am unsure"
     },
@@ -1115,18 +900,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Christopher Frank?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Simon Dubnow?",
         "answer": "Russian",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Gautier de Metz?",
-        "answer": "French",
         "confidence": "I am unsure"
     },
     {
@@ -1137,11 +912,6 @@
     {
         "question": "What is the native language of Brahmaji?",
         "answer": "Telugu",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Michel Robin?",
-        "answer": "French",
         "confidence": "I am unsure"
     },
     {
@@ -1175,17 +945,27 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Guy Drut?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Boris Asafyev?",
+        "question": "What is the native language of Irina Shayk?",
         "answer": "Russian",
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Samuel Benchetrit?",
+        "question": "What is the native language of Ludivine Sagnier?",
+        "answer": "French",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the native language of John Dalton?",
+        "answer": "English",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the native language of Aleksandr Ptushko?",
+        "answer": "Russian",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the native language of Robin Renucci?",
         "answer": "French",
         "confidence": "I am unsure"
     },
@@ -1210,21 +990,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Annick Alane?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Pierre Brasseur?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Jean-Antoine Roucher?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Jean Bruller?",
         "answer": "French",
         "confidence": "I am unsure"
@@ -1235,52 +1000,7 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Jean Le Poulain?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Julien Carette?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Joop Zoetemelk?",
-        "answer": "Dutch",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Maurice Thorez?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Thoppil Bhasi?",
-        "answer": "Malayalam",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Claude Cerval?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is the native language of Vincent Rottiers?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Maurice Risch?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Raymond Abellio?",
-        "answer": "French",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the native language of Paul Pellisson?",
         "answer": "French",
         "confidence": "I am unsure"
     },
@@ -1295,6 +1015,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What is the native language of Hans Peter Anvin?",
+        "answer": "Swedish",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the native language of Raymond Triboulet?",
         "answer": "French",
         "confidence": "I am unsure"
@@ -1305,8 +1030,18 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What is the native language of Paul Frankeur?",
+        "answer": "French",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the native language of Symeon of Polotsk?",
         "answer": "Russian",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the native language of Isabelle Autissier?",
+        "answer": "French",
         "confidence": "I am unsure"
     },
     {
@@ -1330,17 +1065,22 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Roger Garaudy?",
+        "question": "What is the native language of Alfred Capus?",
         "answer": "French",
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Paul Louis Courier?",
+        "question": "What is the native language of Daniel Darc?",
         "answer": "French",
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the native language of Jalil Lespert?",
+        "question": "What is the native language of Jules Favre?",
+        "answer": "French",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the native language of Nicolas Giraud?",
         "answer": "French",
         "confidence": "I am unsure"
     },
@@ -1430,8 +1170,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Hiroshi Hase work as?",
-        "answer": "politician",
+        "question": "What does Humphrey Cobb work as?",
+        "answer": "screenwriter",
         "confidence": "I am unsure"
     },
     {
@@ -1457,6 +1197,21 @@
     {
         "question": "What does Giacinto Andrea Cicognini work as?",
         "answer": "poet",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Chandan Mitra work as?",
+        "answer": "journalist",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Harshika Poonacha work as?",
+        "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Vauro Senesi work as?",
+        "answer": "journalist",
         "confidence": "I am unsure"
     },
     {
@@ -1490,11 +1245,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Georges Altman work as?",
-        "answer": "journalist",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Colleen Zenk Pinter work as?",
         "answer": "actor",
         "confidence": "I am unsure"
@@ -1507,11 +1257,6 @@
     {
         "question": "What does Nick Lashley work as?",
         "answer": "songwriter",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Muhammad Iqbal work as?",
-        "answer": "poet",
         "confidence": "I am unsure"
     },
     {
@@ -1540,11 +1285,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Luana Walters work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Bombay Jayashri work as?",
         "answer": "composer",
         "confidence": "I am unsure"
@@ -1552,6 +1292,16 @@
     {
         "question": "What does John Clayton Allen work as?",
         "answer": "politician",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Lewis Porter work as?",
+        "answer": "pianist",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Gedeon Burkhard work as?",
+        "answer": "actor",
         "confidence": "I am unsure"
     },
     {
@@ -1610,11 +1360,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Aldo Fiorelli work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Martin Burrell work as?",
         "answer": "politician",
         "confidence": "I am unsure"
@@ -1650,6 +1395,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Joan Marion work as?",
+        "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Michelangelo work as?",
         "answer": "poet",
         "confidence": "I am unsure"
@@ -1667,6 +1417,11 @@
     {
         "question": "What does June Diane Raphael work as?",
         "answer": "screenwriter",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Lee Aaron work as?",
+        "answer": "songwriter",
         "confidence": "I am unsure"
     },
     {
@@ -1695,23 +1450,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Ervin Marton work as?",
-        "answer": "photographer",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Alleppey Vincent work as?",
         "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Carl Mayer work as?",
-        "answer": "screenwriter",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Tariq Saleh work as?",
-        "answer": "journalist",
         "confidence": "I am unsure"
     },
     {
@@ -1900,7 +1640,7 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does A. Edward Sutherland work as?",
+        "question": "What does Anwan Glover work as?",
         "answer": "actor",
         "confidence": "I am unsure"
     },
@@ -1920,8 +1660,28 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Bellina Logan work as?",
+        "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Charmaine Sheh work as?",
+        "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Yuvraj Hans work as?",
+        "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Ken Murray work as?",
         "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Andrea Byrne work as?",
+        "answer": "journalist",
         "confidence": "I am unsure"
     },
     {
@@ -1937,6 +1697,11 @@
     {
         "question": "What does Sahir Ali Bagga work as?",
         "answer": "composer",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Harry Ham work as?",
+        "answer": "actor",
         "confidence": "I am unsure"
     },
     {
@@ -1960,13 +1725,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Enrique Granados work as?",
+        "answer": "composer",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Marcello Fondato work as?",
         "answer": "screenwriter",
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Elmore Leonard work as?",
-        "answer": "novelist",
+        "question": "What does John Mainwaring work as?",
+        "answer": "composer",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Jeff Beal work as?",
+        "answer": "composer",
         "confidence": "I am unsure"
     },
     {
@@ -1990,18 +1765,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Vic Chou work as?",
+        "answer": "model",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Alston G. Dayton work as?",
         "answer": "politician",
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Reza Baraheni work as?",
-        "answer": "novelist",
+        "question": "What does Diana Krall work as?",
+        "answer": "pianist",
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Bec Hewitt work as?",
-        "answer": "actor",
+        "question": "What does Reza Baraheni work as?",
+        "answer": "novelist",
         "confidence": "I am unsure"
     },
     {
@@ -2080,8 +1860,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Rudolf Maister work as?",
-        "answer": "poet",
+        "question": "What does Suzanne Crouch work as?",
+        "answer": "politician",
         "confidence": "I am unsure"
     },
     {
@@ -2175,6 +1955,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Linda Kaye Henning work as?",
+        "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Linda Ulvaeus work as?",
         "answer": "actor",
         "confidence": "I am unsure"
@@ -2217,6 +2002,11 @@
     {
         "question": "What does Subair work as?",
         "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Henry James Byron work as?",
+        "answer": "playwright",
         "confidence": "I am unsure"
     },
     {
@@ -2270,11 +2060,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Jason Paige work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Earl Zindars work as?",
         "answer": "composer",
         "confidence": "I am unsure"
@@ -2300,11 +2085,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Mayra Alejandra work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Ctesias work as?",
         "answer": "physician",
         "confidence": "I am unsure"
@@ -2322,16 +2102,6 @@
     {
         "question": "What does Leopold Gratz work as?",
         "answer": "politician",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Trevor Wright work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Johnny Yune work as?",
-        "answer": "comedian",
         "confidence": "I am unsure"
     },
     {
@@ -2425,11 +2195,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Roger Smalley work as?",
-        "answer": "pianist",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Rayner Taylor work as?",
         "answer": "composer",
         "confidence": "I am unsure"
@@ -2437,6 +2202,11 @@
     {
         "question": "What does Mary-Kate Olsen work as?",
         "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Cristina Peri Rossi work as?",
+        "answer": "novelist",
         "confidence": "I am unsure"
     },
     {
@@ -2475,17 +2245,7 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Cristina Ortiz work as?",
-        "answer": "pianist",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Tracey Ross work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Leo Fong work as?",
         "answer": "actor",
         "confidence": "I am unsure"
     },
@@ -2510,8 +2270,18 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Corinne Luchaire work as?",
+        "answer": "actor",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Louis Alter work as?",
         "answer": "pianist",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Debra Jo Rupp work as?",
+        "answer": "actor",
         "confidence": "I am unsure"
     },
     {
@@ -2555,21 +2325,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Kurt Kreuger work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Sairam Shankar work as?",
-        "answer": "actor",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Niyi Osundare work as?",
-        "answer": "poet",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Yun Chi-ho work as?",
         "answer": "politician",
         "confidence": "I am unsure"
@@ -2610,8 +2365,18 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who does Danny Baker work for?",
+        "answer": "BBC",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where does Jeremy Clarkson work?",
         "answer": "BBC",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who does Peter Barron work for?",
+        "answer": "Google",
         "confidence": "I am unsure"
     },
     {
@@ -2635,18 +2400,13 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who does Craig Mundie work for?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who does Willy Brandt work for?",
         "answer": "Berlin",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who does Arthur Oliver Wheeler work for?",
-        "answer": "Canada",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who does Helen Boaden work for?",
-        "answer": "BBC",
         "confidence": "I am unsure"
     },
     {
@@ -2730,6 +2490,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who does Gordon Bell work for?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who does William S. Paley work for?",
+        "answer": "CBS",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who does Sid Waddell work for?",
         "answer": "BBC",
         "confidence": "I am unsure"
@@ -2790,12 +2560,17 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who does Mal Young work for?",
+        "question": "Who does Armando Iannucci work for?",
         "answer": "BBC",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who does Armando Iannucci work for?",
+        "question": "Who does Alexey Pajitnov work for?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who does Margaret Jay, Baroness Jay of Paddington, work for?",
         "answer": "BBC",
         "confidence": "I am unsure"
     },
@@ -2830,11 +2605,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who does Selina Scott work for?",
-        "answer": "BBC",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who does Glenn Greenwald work for?",
         "answer": "Salon",
         "confidence": "I am unsure"
@@ -2862,6 +2632,16 @@
     {
         "question": "Who does Ed Logg work for?",
         "answer": "Atari",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who does Ray Ozzie work for?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who does Mike Harrington work for?",
+        "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
@@ -2910,18 +2690,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who does Adam Parsons work for?",
-        "answer": "BBC",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who does Charles P. de Saint-Aignan work for?",
         "answer": "IBM",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which organization does Gavin Esler work for?",
-        "answer": "BBC",
         "confidence": "I am unsure"
     },
     {
@@ -2992,6 +2762,16 @@
     {
         "question": "What does Jonathan Coe play?",
         "answer": "satire",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Jam Session play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Steve Lacy play?",
+        "answer": "jazz",
         "confidence": "I am unsure"
     },
     {
@@ -3070,11 +2850,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Bluebird Records play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What instrument does Humphrey Lyttelton play?",
         "answer": "jazz",
         "confidence": "I am unsure"
@@ -3116,6 +2891,11 @@
     },
     {
         "question": "What does Rabih Abou-Khalil play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Ronnie Scott play?",
         "answer": "jazz",
         "confidence": "I am unsure"
     },
@@ -3360,16 +3140,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Henry Kimball Hadley play?",
-        "answer": "opera",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Xavier Leroux play?",
-        "answer": "opera",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Orphan Black play?",
         "answer": "thriller",
         "confidence": "I am unsure"
@@ -3400,18 +3170,18 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Morty Corb play?",
-        "answer": "jazz",
+        "question": "What does Antonio Lotti play?",
+        "answer": "opera",
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Doublemoon play?",
-        "answer": "jazz",
+        "question": "What does Kane O'Hara play?",
+        "answer": "opera",
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Jack Parnell play?",
-        "answer": "jazz",
+        "question": "What does Salvador Espriu play?",
+        "answer": "poetry",
         "confidence": "I am unsure"
     },
     {
@@ -3437,11 +3207,6 @@
     {
         "question": "What is Suddenly Susan playing?",
         "answer": "sitcom",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Lynn Seaton play?",
-        "answer": "jazz",
         "confidence": "I am unsure"
     },
     {
@@ -3620,11 +3385,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What kind of music does Cadet Records play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What instrument does Ryō Kawasaki play?",
         "answer": "jazz",
         "confidence": "I am unsure"
@@ -3660,12 +3420,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Jim Pugliese play?",
-        "answer": "jazz",
+        "question": "What does the Wailers Band play?",
+        "answer": "reggae",
         "confidence": "I am unsure"
     },
     {
-        "question": "What does the Jazztet play?",
+        "question": "What does Jim Pugliese play?",
         "answer": "jazz",
         "confidence": "I am unsure"
     },
@@ -3712,6 +3472,16 @@
     {
         "question": "What roles do Satires plays?",
         "answer": "satire",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Tohpati play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Pascal Dusapin play?",
+        "answer": "opera",
         "confidence": "I am unsure"
     },
     {
@@ -3780,8 +3550,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Ranking Trevor play?",
-        "answer": "reggae",
+        "question": "What does Salvatore Licitra play?",
+        "answer": "opera",
         "confidence": "I am unsure"
     },
     {
@@ -3810,6 +3580,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What role does Animal Farm play?",
+        "answer": "novella",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Ronnie Foster play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Patricia Barber play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Tim Garland play?",
         "answer": "jazz",
         "confidence": "I am unsure"
@@ -3835,8 +3620,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Eek-A-Mouse play?",
-        "answer": "reggae",
+        "question": "What does Martin France play?",
+        "answer": "jazz",
         "confidence": "I am unsure"
     },
     {
@@ -3920,6 +3705,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Piirpauke play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Alberto Mazzucato play?",
         "answer": "opera",
         "confidence": "I am unsure"
@@ -3927,16 +3717,6 @@
     {
         "question": "What does Marcia Griffiths play?",
         "answer": "reggae",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Stephen Hough play?",
-        "answer": "opera",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Iain Ballamy play?",
-        "answer": "jazz",
         "confidence": "I am unsure"
     },
     {
@@ -4135,11 +3915,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Ole Thomsen play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Jimmy Lyons play?",
         "answer": "jazz",
         "confidence": "I am unsure"
@@ -4241,11 +4016,6 @@
     },
     {
         "question": "What does Plenty Plenty Soul play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What instrument does Armen Donelian play?",
         "answer": "jazz",
         "confidence": "I am unsure"
     },
@@ -4465,11 +4235,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What instrument does Booker Ervin play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Ed Greenwood play?",
         "answer": "fantasy",
         "confidence": "I am unsure"
@@ -4492,6 +4257,11 @@
     {
         "question": "What does Lucky Louie play?",
         "answer": "sitcom",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Catullus play?",
+        "answer": "poetry",
         "confidence": "I am unsure"
     },
     {
@@ -4540,11 +4310,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Bunny Berigan play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What instrument does Joseph Jarman play?",
         "answer": "jazz",
         "confidence": "I am unsure"
@@ -4552,6 +4317,16 @@
     {
         "question": "What does Tone Center Records play?",
         "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does The Jazz Knights play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Nic Chagall play?",
+        "answer": "trance",
         "confidence": "I am unsure"
     },
     {
@@ -4615,11 +4390,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Dick Wellstood play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Wolfgang Hohlbein play?",
         "answer": "fantasy",
         "confidence": "I am unsure"
@@ -4650,8 +4420,18 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Missile Gap play?",
-        "answer": "novella",
+        "question": "What does Doug Watkins play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Ed Neumeister play?",
+        "answer": "jazz",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Bodega Band play?",
+        "answer": "jazz",
         "confidence": "I am unsure"
     },
     {
@@ -4670,16 +4450,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Ray Copeland play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What does Skye Records play?",
-        "answer": "jazz",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does Frode Gjerstad play?",
         "answer": "jazz",
         "confidence": "I am unsure"
@@ -4692,16 +4462,6 @@
     {
         "question": "What is the capital of Baku?",
         "answer": "Azerbaijan",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What country is Cairo the capital of?",
-        "answer": "Egypt",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What country is Copenhagen the capital of?",
-        "answer": "Denmark",
         "confidence": "I am unsure"
     },
     {
@@ -4775,6 +4535,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What country is Bishkek the capital of?",
+        "answer": "Kyrgyzstan",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What country is Bucharest the capital of?",
+        "answer": "Romania",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the capital of Melbourne?",
         "answer": "Victoria",
         "confidence": "I am unsure"
@@ -4800,6 +4570,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What country is London the capital of?",
+        "answer": "England",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the capital of Dar es Salaam?",
         "answer": "Tanzania",
         "confidence": "I am unsure"
@@ -4807,6 +4582,11 @@
     {
         "question": "What is the capital of London?",
         "answer": "England",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the capital of Stockholm?",
+        "answer": "Sweden",
         "confidence": "I am unsure"
     },
     {
@@ -4837,11 +4617,6 @@
     {
         "question": "What country is Athens the capital of?",
         "answer": "Greece",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What state is Hobart the capital of?",
-        "answer": "Tasmania",
         "confidence": "I am unsure"
     },
     {
@@ -4935,6 +4710,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Which country is Montevideo the capital of?",
+        "answer": "Uruguay",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What country is Manama the capital of?",
+        "answer": "Bahrain",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is the capital of Bangalore?",
         "answer": "Karnataka",
         "confidence": "I am unsure"
@@ -4967,6 +4752,16 @@
     {
         "question": "What country is Lagos the capital of?",
         "answer": "Nigeria",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What country is Bangkok the capital of?",
+        "answer": "Thailand",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What country is Santiago the capital of?",
+        "answer": "Chile",
         "confidence": "I am unsure"
     },
     {
@@ -5005,13 +4800,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What country is Sofia the capital of?",
-        "answer": "Bulgaria",
+        "question": "Which country is Palermo the capital of?",
+        "answer": "Sicily",
         "confidence": "I am unsure"
     },
     {
-        "question": "Which country is Palermo the capital of?",
-        "answer": "Sicily",
+        "question": "Which country is Tehran the capital of?",
+        "answer": "Iran",
         "confidence": "I am unsure"
     },
     {
@@ -5025,8 +4820,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is the capital of Brisbane?",
-        "answer": "Queensland",
+        "question": "What country is Harare the capital of?",
+        "answer": "Zimbabwe",
         "confidence": "I am unsure"
     },
     {
@@ -5035,18 +4830,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What country is Bern the capital of?",
-        "answer": "Switzerland",
+        "question": "What country is Monrovia the capital of?",
+        "answer": "Liberia",
         "confidence": "I am unsure"
     },
     {
         "question": "What is the capital of Addis Ababa?",
         "answer": "Ethiopia",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What country is Zagreb the capital of?",
-        "answer": "Croatia",
         "confidence": "I am unsure"
     },
     {
@@ -5095,11 +4885,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Devonian named after?",
-        "answer": "Devon",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is the English Channel named after?",
         "answer": "Brittany",
         "confidence": "I am unsure"
@@ -5122,11 +4907,6 @@
     {
         "question": "After whom is GNU named?",
         "answer": "Unix",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is the GNU/Linux naming controversy named after?",
-        "answer": "Linux",
         "confidence": "I am unsure"
     },
     {
@@ -5165,11 +4945,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Cleveland Burke Lakefront Airport named after?",
-        "answer": "Cleveland",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is Hiroshima Prefecture named after?",
         "answer": "Hiroshima",
         "confidence": "I am unsure"
@@ -5177,6 +4952,11 @@
     {
         "question": "Who is Cleveland Hopkins International Airport named after?",
         "answer": "Cleveland",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is the Edo period named after?",
+        "answer": "Edo",
         "confidence": "I am unsure"
     },
     {
@@ -5235,28 +5015,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Mira variable named after?",
-        "answer": "Mira",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is Seattle Pacific University named after?",
-        "answer": "Seattle",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Mare Moscoviense named after?",
-        "answer": "Moscow",
+        "question": "What is USS Dunderberg named after?",
+        "answer": "Swedish",
         "confidence": "I am unsure"
     },
     {
         "question": "Who is Logan International Airport named after?",
         "answer": "Boston",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is 2 Pallas named after?",
-        "answer": "Athena",
         "confidence": "I am unsure"
     },
     {
@@ -5350,18 +5115,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Christmas Eve named after?",
-        "answer": "Christmas",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Milwaukee Mitchell International Airport named after?",
-        "answer": "Milwaukee",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Darlington railway station named after?",
-        "answer": "Darlington",
+        "question": "Who is Shanghai Hongqiao International Airport named after?",
+        "answer": "Shanghai",
         "confidence": "I am unsure"
     },
     {
@@ -5445,6 +5200,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who is Warsaw Chopin Airport named after?",
+        "answer": "Warsaw",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who is Ipswich Airport named after?",
         "answer": "Ipswich",
         "confidence": "I am unsure"
@@ -5515,11 +5275,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Billy Bishop Toronto City Airport named after?",
-        "answer": "Toronto",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is Christchurch International Airport named after?",
         "answer": "Christchurch",
         "confidence": "I am unsure"
@@ -5565,16 +5320,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Hollywood Burbank Airport named after?",
-        "answer": "Hollywood",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Paris-Charles de Gaulle Airport named after?",
-        "answer": "Paris",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is Toronto Pearson International Airport named after?",
         "answer": "Toronto",
         "confidence": "I am unsure"
@@ -5595,8 +5340,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Melbourne Airport named after?",
-        "answer": "Melbourne",
+        "question": "Who is Taipei Songshan Airport named after?",
+        "answer": "Taipei",
         "confidence": "I am unsure"
     },
     {
@@ -5627,16 +5372,6 @@
     {
         "question": "Who is Cornish engine named after?",
         "answer": "Cornwall",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Preston railway station named after?",
-        "answer": "Preston",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is 1862 Apollo named after?",
-        "answer": "Apollo",
         "confidence": "I am unsure"
     },
     {
@@ -5685,6 +5420,26 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who is Dudley railway station named after?",
+        "answer": "Dudley",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is Cambridge named after?",
+        "answer": "Cambridge",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is Cairo International Airport named after?",
+        "answer": "Cairo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is Rosny-sur-Seine named after?",
+        "answer": "Seine",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "After whom is burgomaster named?",
         "answer": "mayor",
         "confidence": "I am unsure"
@@ -5702,11 +5457,6 @@
     {
         "question": "Who is Raffaello MPLM named after?",
         "answer": "Raphael",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Honolulu International Airport named after?",
-        "answer": "Honolulu",
         "confidence": "I am unsure"
     },
     {
@@ -5785,6 +5535,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who is palladium named after?",
+        "answer": "Athena",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who is Chessmaster named after?",
         "answer": "chess",
         "confidence": "I am unsure"
@@ -5815,28 +5570,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Edmonton City Centre (Blatchford Field) Airport named after?",
-        "answer": "Edmonton",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "After whom is Santa Trinita named?",
-        "answer": "Trinity",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Riga International Airport named after?",
-        "answer": "Riga",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is Oral Ak Zhol Airport named after?",
         "answer": "Oral",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Florence Regional Airport named after?",
-        "answer": "Florence",
         "confidence": "I am unsure"
     },
     {
@@ -5845,8 +5580,28 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What is Vienna named after?",
+        "answer": "Wien",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is Odessa named after?",
+        "answer": "Odessa",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is Denver International Airport named after?",
+        "answer": "Denver",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What is Worcester City F.C. named after?",
         "answer": "Worcester",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is New Amsterdam named after?",
+        "answer": "Amsterdam",
         "confidence": "I am unsure"
     },
     {
@@ -5862,16 +5617,6 @@
     {
         "question": "Who is Antwerp named after?",
         "answer": "Antwerp",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Napoleon complex named after?",
-        "answer": "Napoleon",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Aden International Airport named after?",
-        "answer": "Aden",
         "confidence": "I am unsure"
     },
     {
@@ -5900,21 +5645,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "After whom is Bas-Rhin named?",
-        "answer": "Rhine",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is Taieri Gorge Railway named after?",
-        "answer": "Dunedin",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "After whom is West Francia named?",
-        "answer": "Franks",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is Baghdad International Airport named after?",
         "answer": "Baghdad",
         "confidence": "I am unsure"
@@ -5932,16 +5662,6 @@
     {
         "question": "Who is Bristol Cathedral named after?",
         "answer": "Trinity",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is Basel-Stadt named after?",
-        "answer": "Basel",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Leicester railway station named after?",
-        "answer": "Leicester",
         "confidence": "I am unsure"
     },
     {
@@ -5965,11 +5685,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is Macau International Airport named after?",
-        "answer": "Macau",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is Kuwait International Airport named after?",
         "answer": "Kuwait",
         "confidence": "I am unsure"
@@ -5985,11 +5700,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Christianization follow?",
-        "answer": "Christianity",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which religion is Augustine of Hippo a follower of?",
         "answer": "Christianity",
         "confidence": "I am unsure"
@@ -5997,11 +5707,6 @@
     {
         "question": "What do Albanians follow?",
         "answer": "Muslim",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which religion does Bede follow?",
-        "answer": "Christianity",
         "confidence": "I am unsure"
     },
     {
@@ -6120,11 +5825,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is bhikkhu a follower of?",
-        "answer": "Buddhism",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What does David follow?",
         "answer": "Judaism",
         "confidence": "I am unsure"
@@ -6170,11 +5870,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What does Alodia follow?",
-        "answer": "Christianity",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What religion does the Umayyad Caliphate follow?",
         "answer": "Islam",
         "confidence": "I am unsure"
@@ -6192,16 +5887,6 @@
     {
         "question": "What does Talmud Torah school follow?",
         "answer": "Judaism",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which philosophy does Mir Damad follow?",
-        "answer": "Islam",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which religion does Ibn Arabi follow?",
-        "answer": "Islam",
         "confidence": "I am unsure"
     },
     {
@@ -6226,16 +5911,6 @@
     },
     {
         "question": "Which religious tradition does Dayi Daoxin follow?",
-        "answer": "Buddhism",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which religion does Jianzhi Sengcan follow?",
-        "answer": "Buddhism",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Daman Hongren a follower of?",
         "answer": "Buddhism",
         "confidence": "I am unsure"
     },
@@ -6280,7 +5955,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What was Hamiduddin Farahi a follower of?",
+        "question": "What religion does Nicholas V follow?",
+        "answer": "Christianity",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which religion is Ruhollah Khomeini a follower of?",
         "answer": "Islam",
         "confidence": "I am unsure"
     },
@@ -6291,6 +5971,11 @@
     },
     {
         "question": "Which ideology does Peoples Temple follow?",
+        "answer": "Christianity",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which religion does Boniface VIII follow?",
         "answer": "Christianity",
         "confidence": "I am unsure"
     },
@@ -6312,6 +5997,11 @@
     {
         "question": "Which faith does Husayn ibn Ali follow?",
         "answer": "Islam",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What do Albanians follow?",
+        "answer": "Christian",
         "confidence": "I am unsure"
     },
     {
@@ -6395,13 +6085,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which religion is Ja'far ibn Abī Tālib a follower of?",
-        "answer": "Islam",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What religion does Amānullāh Khān follow?",
-        "answer": "Islam",
+        "question": "Which religion does Valmiki follow?",
+        "answer": "Hinduism",
         "confidence": "I am unsure"
     },
     {
@@ -6412,6 +6097,21 @@
     {
         "question": "What religion does Ibn Saud follow?",
         "answer": "Islam",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which religion is Majapahit a follower of?",
+        "answer": "Hinduism",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which religion does Hosni Mubarak follow?",
+        "answer": "Islam",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What is Heidi Baker a follower of?",
+        "answer": "Christian",
         "confidence": "I am unsure"
     },
     {
@@ -6440,18 +6140,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which religion is As-Saffah a follower of?",
+        "question": "Which religion is Uwais Qarni a follower of?",
         "answer": "Islam",
         "confidence": "I am unsure"
     },
     {
-        "question": "Which ideology does Sayyid Qutb follow?",
-        "answer": "Islam",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is Dokka Umarov a follower of?",
-        "answer": "Islam",
+        "question": "What is Jewish cemetery a follower of?",
+        "answer": "Judaism",
         "confidence": "I am unsure"
     },
     {
@@ -6490,18 +6185,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is Jack Ward a follower of?",
-        "answer": "Islam",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What religion is Fatimah bint Asad a follower of?",
-        "answer": "Islam",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What religion is Al-Walid I a follower of?",
-        "answer": "Islam",
+        "question": "What does Saint David follow?",
+        "answer": "Christianity",
         "confidence": "I am unsure"
     },
     {
@@ -6511,16 +6196,6 @@
     },
     {
         "question": "What is Radim Gaudentius a follower of?",
-        "answer": "Christianity",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which ideology does Carlos the Jackal follow?",
-        "answer": "Islam",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What religion did Valdemar IV of Denmark follow?",
         "answer": "Christianity",
         "confidence": "I am unsure"
     },
@@ -6535,11 +6210,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is Swami Vivekananda a follower of?",
-        "answer": "Hinduism",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which culture does South Vietnam follow?",
         "answer": "Buddhism",
         "confidence": "I am unsure"
@@ -6550,18 +6220,23 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which religion does John I of Portugal follow?",
-        "answer": "Christianity",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which religion is Kalabhra a follower of?",
         "answer": "Buddhism",
         "confidence": "I am unsure"
     },
     {
+        "question": "Which religion is Hakham a follower of?",
+        "answer": "Judaism",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What religion is Harun al-Rashid a follower of?",
         "answer": "Islam",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What does Isaiah follow?",
+        "answer": "Judaism",
         "confidence": "I am unsure"
     },
     {
@@ -6577,6 +6252,11 @@
     {
         "question": "Which religion was followed by the Vijayanagara Empire?",
         "answer": "Hinduism",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What religion does Ghazan follow?",
+        "answer": "Islam",
         "confidence": "I am unsure"
     },
     {
@@ -6610,6 +6290,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "What does Rama follow?",
+        "answer": "Hinduism",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which religion does Treta Yuga follow?",
+        "answer": "Hinduism",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which religion is Garuda a follower of?",
+        "answer": "Hinduism",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Chandos Records headquartered?",
         "answer": "Colchester",
         "confidence": "I am unsure"
@@ -6635,8 +6330,18 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Cineflix headquartered?",
+        "answer": "Montreal",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Source Cable headquartered?",
         "answer": "Hamilton",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Redpath Sugar headquartered?",
+        "answer": "Montreal",
         "confidence": "I am unsure"
     },
     {
@@ -6665,8 +6370,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Far East Organization headquartered?",
+        "answer": "Singapore",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Palfinger headquartered?",
         "answer": "Salzburg",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is the Boston Navy Yard headquartered?",
+        "answer": "Boston",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Environics headquartered?",
+        "answer": "Toronto",
         "confidence": "I am unsure"
     },
     {
@@ -6695,11 +6415,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Hapoel Haifa F.C. headquartered?",
-        "answer": "Haifa",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where is British Tanker Company headquartered?",
         "answer": "London",
         "confidence": "I am unsure"
@@ -6715,13 +6430,18 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Markham & Co. headquartered?",
-        "answer": "Chesterfield",
+        "question": "Where is Crawford Composites headquartered?",
+        "answer": "Denver",
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Crawford Composites headquartered?",
-        "answer": "Denver",
+        "question": "Where is Pukka Pies headquartered?",
+        "answer": "Leicestershire",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Deutsche Post AG headquartered?",
+        "answer": "Bonn",
         "confidence": "I am unsure"
     },
     {
@@ -6745,11 +6465,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Halliburton headquartered?",
-        "answer": "Houston",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where is Cleveland City Stars headquartered?",
         "answer": "Cleveland",
         "confidence": "I am unsure"
@@ -6757,6 +6472,11 @@
     {
         "question": "Where is Cable & Wireless Communications headquartered?",
         "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is University of Detroit Mercy headquartered?",
+        "answer": "Detroit",
         "confidence": "I am unsure"
     },
     {
@@ -6775,16 +6495,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Annick Press headquartered?",
-        "answer": "Toronto",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where is the All India Muslim League headquartered?",
-        "answer": "Lucknow",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where is MillerCoors headquartered?",
         "answer": "Chicago",
         "confidence": "I am unsure"
@@ -6797,11 +6507,6 @@
     {
         "question": "Where is Freud Communications headquartered?",
         "answer": "London",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where is Stroytransgaz headquartered?",
-        "answer": "Moscow",
         "confidence": "I am unsure"
     },
     {
@@ -6825,13 +6530,33 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Heart Attack Grill headquartered?",
-        "answer": "Chandler",
+        "question": "Where is Rogers TV headquartered?",
+        "answer": "Ottawa",
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Rogers TV headquartered?",
-        "answer": "Ottawa",
+        "question": "Where is European Business School Paris headquartered?",
+        "answer": "Paris",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is the Union for the Mediterranean headquartered?",
+        "answer": "Barcelona",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Rank Organisation headquartered?",
+        "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Telehouse Europe headquartered?",
+        "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Jordan Marsh headquartered?",
+        "answer": "Boston",
         "confidence": "I am unsure"
     },
     {
@@ -6845,6 +6570,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Columbia Daily Tribune headquartered?",
+        "answer": "Columbia",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Fuji Kyuko headquartered?",
+        "answer": "Japan",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Ladenburg Thalmann headquartered?",
         "answer": "Miami",
         "confidence": "I am unsure"
@@ -6852,11 +6587,6 @@
     {
         "question": "Where is Smurfit-Stone Container headquartered?",
         "answer": "Chicago",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where is the Graduate Institute of International and Development Studies headquartered?",
-        "answer": "Geneva",
         "confidence": "I am unsure"
     },
     {
@@ -6885,13 +6615,33 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Cardiff University headquartered?",
+        "answer": "Cardiff",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is University of Strathclyde headquartered?",
+        "answer": "Glasgow",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Astronomische Gesellschaft headquartered?",
         "answer": "Hamburg",
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Norcem headquartered?",
-        "answer": "Oslo",
+        "question": "Where is Associated British Foods headquartered?",
+        "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Politiken headquartered?",
+        "answer": "Copenhagen",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Dundee F.C. headquartered?",
+        "answer": "Dundee",
         "confidence": "I am unsure"
     },
     {
@@ -6932,11 +6682,6 @@
     {
         "question": "Where is Oslo Commerce School headquartered?",
         "answer": "Oslo",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where is Ferrero SpA headquartered?",
-        "answer": "Alba",
         "confidence": "I am unsure"
     },
     {
@@ -7040,11 +6785,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is the University of Bucharest headquartered?",
-        "answer": "Bucharest",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where is Staver headquartered?",
         "answer": "Chicago",
         "confidence": "I am unsure"
@@ -7057,6 +6797,11 @@
     {
         "question": "Where is B. Hick and Sons headquartered?",
         "answer": "Bolton",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Eesti Televisioon headquartered?",
+        "answer": "Tallinn",
         "confidence": "I am unsure"
     },
     {
@@ -7100,8 +6845,18 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Sun Media Corporation headquartered?",
+        "answer": "Toronto",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is North British Locomotive Company headquartered?",
         "answer": "Glasgow",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is SunTrust Banks headquartered?",
+        "answer": "Atlanta",
         "confidence": "I am unsure"
     },
     {
@@ -7115,6 +6870,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Crossroads Christian Communications headquartered?",
+        "answer": "Burlington",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is the Jane Goodall Institute headquartered?",
         "answer": "Vienna",
         "confidence": "I am unsure"
@@ -7122,6 +6882,21 @@
     {
         "question": "Where is Jewel-Osco headquartered?",
         "answer": "Chicago",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Chello Multicanal headquartered?",
+        "answer": "Madrid",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Prairie Mountain Publishing headquartered?",
+        "answer": "Boulder",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Hasselblad headquartered?",
+        "answer": "Gothenburg",
         "confidence": "I am unsure"
     },
     {
@@ -7170,6 +6945,26 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is UBM plc headquartered?",
+        "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Motosacoche headquartered?",
+        "answer": "Geneva",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is the P2P Foundation headquartered?",
+        "answer": "Amsterdam",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is HSH Nordbank headquartered?",
+        "answer": "Hamburg",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Austereo Radio Network headquartered?",
         "answer": "Melbourne",
         "confidence": "I am unsure"
@@ -7177,6 +6972,11 @@
     {
         "question": "Where is TMF Nederland headquartered?",
         "answer": "Amsterdam",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Keshavarz F.C. headquartered?",
+        "answer": "Tehran",
         "confidence": "I am unsure"
     },
     {
@@ -7235,6 +7035,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is MacMillan Bloedel headquartered?",
+        "answer": "Vancouver",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is World Championship Wrestling headquartered?",
+        "answer": "Atlanta",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Baja Fresh headquartered?",
         "answer": "Irvine",
         "confidence": "I am unsure"
@@ -7260,6 +7070,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Klipfolio Dashboard headquartered?",
+        "answer": "Ottawa",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is the Norwegian Industrial Property Office headquartered?",
+        "answer": "Oslo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Digital Eel headquartered?",
+        "answer": "Seattle",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is LWRC International headquartered?",
         "answer": "Cambridge",
         "confidence": "I am unsure"
@@ -7280,6 +7105,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Northern Championship Wrestling headquartered?",
+        "answer": "Montreal",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Eros International headquartered?",
         "answer": "Mumbai",
         "confidence": "I am unsure"
@@ -7290,13 +7120,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is ISG Business School headquartered?",
-        "answer": "Paris",
+        "question": "Where is Caproni headquartered?",
+        "answer": "Milan",
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Sporting Clube de Goa headquartered?",
-        "answer": "Goa",
+        "question": "Where is ISG Business School headquartered?",
+        "answer": "Paris",
         "confidence": "I am unsure"
     },
     {
@@ -7310,18 +7140,23 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Matson, Inc. headquartered?",
-        "answer": "Hawaii",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where is Popular Prakashan headquartered?",
         "answer": "Mumbai",
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Heilmann & Littmann headquartered?",
+        "answer": "Berlin",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Gulf and Ohio Railways headquartered?",
         "answer": "Knoxville",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Burnham and Root headquartered?",
+        "answer": "Chicago",
         "confidence": "I am unsure"
     },
     {
@@ -7375,18 +7210,13 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where is Kering headquartered?",
+        "answer": "Paris",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where is Caudill Rowlett Scott headquartered?",
         "answer": "Houston",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where is Cognos headquartered?",
-        "answer": "Ottawa",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where is Manchester Business School headquartered?",
-        "answer": "Manchester",
         "confidence": "I am unsure"
     },
     {
@@ -7435,11 +7265,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where is Gillig Corporation headquartered?",
-        "answer": "Hayward",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where is College Football News headquartered?",
         "answer": "Chicago",
         "confidence": "I am unsure"
@@ -7457,6 +7282,21 @@
     {
         "question": "Where is International Airlines Group headquartered?",
         "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Green Ronin Publishing headquartered?",
+        "answer": "Seattle",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is McKendree University headquartered?",
+        "answer": "Lebanon",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where is Cogeco headquartered?",
+        "answer": "Montreal",
         "confidence": "I am unsure"
     },
     {
@@ -7485,6 +7325,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Which company produces the Chevrolet Malibu?",
+        "answer": "Chevrolet",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces Honda Life?",
         "answer": "Honda",
         "confidence": "I am unsure"
@@ -7505,13 +7350,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces Enzo Ferrari?",
-        "answer": "Ferrari",
+        "question": "Who produces the Nissan GT-R?",
+        "answer": "Nissan",
         "confidence": "I am unsure"
     },
     {
-        "question": "Which company produces the Chevrolet Lumina APV?",
-        "answer": "Chevrolet",
+        "question": "Who produces Nissan Stagea?",
+        "answer": "Nissan",
         "confidence": "I am unsure"
     },
     {
@@ -7542,16 +7387,6 @@
     {
         "question": "Who produces the Chrysler 200?",
         "answer": "Chrysler",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": " Who produces the Sega Pico?",
-        "answer": "Sega",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Ferrari Daytona?",
-        "answer": "Ferrari",
         "confidence": "I am unsure"
     },
     {
@@ -7590,28 +7425,18 @@
         "confidence": "I am unsure"
     },
     {
-        "question": " Who produces the Airbus A330?",
-        "answer": "Airbus",
+        "question": "Who produces the Nissan President?",
+        "answer": "Nissan",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Chevrolet Monte Carlo?",
-        "answer": "Chevrolet",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "By whom is the BMW 5 Series Gran Turismo produced?",
-        "answer": "BMW",
+        "question": "Who produces the Honda ST1100?",
+        "answer": "Honda",
         "confidence": "I am unsure"
     },
     {
         "question": "Who produces the Nissan Livina Geniss?",
         "answer": "Nissan",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces Windows Server 2003?",
-        "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
@@ -7655,21 +7480,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Toyota Previa?",
-        "answer": "Toyota",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces Nasr-1?",
-        "answer": "Iran",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produced Dino?",
-        "answer": "Ferrari",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who produces Dino?",
         "answer": "Fiat",
         "confidence": "I am unsure"
@@ -7690,6 +7500,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces the Renault Safrane?",
+        "answer": "Renault",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the Yamaha YZR 500?",
         "answer": "Yamaha",
         "confidence": "I am unsure"
@@ -7702,6 +7517,31 @@
     {
         "question": "Which company produces the Cadillac Series 61?",
         "answer": "Cadillac",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Fiat Cinquecento?",
+        "answer": "Fiat",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": " Who produces the Toyota Stout?",
+        "answer": "Toyota",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produced the Nokia 1100?",
+        "answer": "Nokia",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Suzuki Jimny?",
+        "answer": "Suzuki",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which company produces Toyota Dyna?",
+        "answer": "Toyota",
         "confidence": "I am unsure"
     },
     {
@@ -7725,8 +7565,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Nokia Lumia 630?",
-        "answer": "Nokia",
+        "question": "Who produces Amiibo?",
+        "answer": "Nintendo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the BMW M30?",
+        "answer": "BMW",
         "confidence": "I am unsure"
     },
     {
@@ -7757,6 +7602,11 @@
     {
         "question": "Who produces Toyota Mark X ZiO?",
         "answer": "Toyota",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Nokia N810?",
+        "answer": "Nokia",
         "confidence": "I am unsure"
     },
     {
@@ -7810,18 +7660,48 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces SteadyShot?",
-        "answer": "Sony",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Acura EL?",
+        "question": "Who produces the Honda Civic?",
         "answer": "Honda",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces Nokia 5800 XpressMusic?",
-        "answer": "Nokia",
+        "question": "Who produces the Nissan Armada?",
+        "answer": "Nissan",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the BMW E65?",
+        "answer": "BMW",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces Cadillac V-16?",
+        "answer": "Cadillac",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces Honda Brio?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Toyota FJ Cruiser?",
+        "answer": "Toyota",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Honda Mobilio?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which company produces the Audi A8?",
+        "answer": "Audi",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces Toyota Platz?",
+        "answer": "Toyota",
         "confidence": "I am unsure"
     },
     {
@@ -7885,6 +7765,26 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces the Nokia N8?",
+        "answer": "Nokia",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Volvo C30?",
+        "answer": "Volvo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Sony NEX-7?",
+        "answer": "Sony",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces Cadillac ELR?",
+        "answer": "Cadillac",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the C-40 Clipper?",
         "answer": "Boeing",
         "confidence": "I am unsure"
@@ -7901,6 +7801,36 @@
     },
     {
         "question": "Who produces the Honda Vigor?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Fiat 1100?",
+        "answer": "Fiat",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the BMW 4 Series?",
+        "answer": "BMW",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Honda NSX?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the BMW 3 Series?",
+        "answer": "BMW",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Suzuki Aerio?",
+        "answer": "Suzuki",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Honda NSR250?",
         "answer": "Honda",
         "confidence": "I am unsure"
     },
@@ -7940,6 +7870,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces the Porsche 911 GT3?",
+        "answer": "Porsche",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Toyota Highlander?",
+        "answer": "Toyota",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the Chevrolet Corvette C3?",
         "answer": "Chevrolet",
         "confidence": "I am unsure"
@@ -7965,23 +7905,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Honda CX series?",
-        "answer": "Honda",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the BMW X5?",
-        "answer": "BMW",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who produces the Bentley T-series?",
         "answer": "Bentley",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Audi R8R?",
-        "answer": "Audi",
         "confidence": "I am unsure"
     },
     {
@@ -7990,18 +7915,28 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Chevrolet Captiva?",
-        "answer": "Chevrolet",
+        "question": "Who produces the IBM 5100?",
+        "answer": "IBM",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Chrysler 3.3 & 3.8 engine?",
-        "answer": "Chrysler",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces Toyota Crown?",
+        "question": "Who produces the Toyota Belta?",
         "answer": "Toyota",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Volvo 200 Series?",
+        "answer": "Volvo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produced the M6 Gun Motor Carriage?",
+        "answer": "Dodge",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Nissan Cedric?",
+        "answer": "Nissan",
         "confidence": "I am unsure"
     },
     {
@@ -8055,16 +7990,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Boeing 777?",
-        "answer": "Boeing",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Dodge Caravan?",
-        "answer": "Dodge",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who produces the IBM Personal Computer?",
         "answer": "IBM",
         "confidence": "I am unsure"
@@ -8100,8 +8025,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces Nintendo 3DS?",
+        "answer": "Nintendo",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the Suzuki GT750?",
         "answer": "Suzuki",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Honda Accord?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Chevrolet Biscayne?",
+        "answer": "Chevrolet",
         "confidence": "I am unsure"
     },
     {
@@ -8160,6 +8100,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces iPad 4?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the BMW X1?",
         "answer": "BMW",
         "confidence": "I am unsure"
@@ -8192,6 +8137,11 @@
     {
         "question": "Who produces the Nissan Sunny?",
         "answer": "Nissan",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the BMW 3 Series?",
+        "answer": "BMW",
         "confidence": "I am unsure"
     },
     {
@@ -8240,16 +8190,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Volvo 140 Series?",
-        "answer": "Volvo",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Renault Dauphine?",
-        "answer": "Renault",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which company produces the Hercules Graphics Card?",
         "answer": "Hercules",
         "confidence": "I am unsure"
@@ -8275,6 +8215,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": " Who produces the Chevrolet Equinox?",
+        "answer": "Chevrolet",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Dodge Intrepid?",
+        "answer": "Dodge",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the Toyota RAV4?",
         "answer": "Toyota",
         "confidence": "I am unsure"
@@ -8292,16 +8242,6 @@
     {
         "question": "Who produces the Bentley Continental GT?",
         "answer": "Bentley",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Nissan Pivo?",
-        "answer": "Nissan",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Suzuki RGV500?",
-        "answer": "Suzuki",
         "confidence": "I am unsure"
     },
     {
@@ -8345,33 +8285,23 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Audi RS 4?",
-        "answer": "Audi",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Renault 4CV?",
-        "answer": "Renault",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces Cyber-shot?",
-        "answer": "Sony",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who produces the Toyota Comfort?",
         "answer": "Toyota",
         "confidence": "I am unsure"
     },
     {
-        "question": "By which company is Audi A5 produced?",
-        "answer": "Audi",
+        "question": "Who produces the Renault Symbol?",
+        "answer": "Renault",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Porsche 930?",
-        "answer": "Porsche",
+        "question": "Who produces the Acura ILX?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces Windows Phone 8?",
+        "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
@@ -8395,8 +8325,28 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces the Nokia N900?",
+        "answer": "Nokia",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Acura RL?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the Dodge Spirit?",
         "answer": "Dodge",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Honda Civic (fifth generation)?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Sony Mavica?",
+        "answer": "Sony",
         "confidence": "I am unsure"
     },
     {
@@ -8525,13 +8475,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Toyota MR2?",
-        "answer": "Toyota",
+        "question": "Who produces the Fiat Bravo?",
+        "answer": "Fiat",
         "confidence": "I am unsure"
     },
     {
-        "question": "Which company produces the Mitsubishi F1M?",
-        "answer": "Mitsubishi",
+        "question": "Who produces the Toyota MR2?",
+        "answer": "Toyota",
         "confidence": "I am unsure"
     },
     {
@@ -8565,11 +8515,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces SEAT 133?",
-        "answer": "Fiat",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who produces the Honda N360?",
         "answer": "Honda",
         "confidence": "I am unsure"
@@ -8577,6 +8522,11 @@
     {
         "question": "Who produces Nissan Prairie?",
         "answer": "Nissan",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Porsche 550?",
+        "answer": "Porsche",
         "confidence": "I am unsure"
     },
     {
@@ -8620,6 +8570,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces the Mercury Montclair?",
+        "answer": "Mercury",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces Xbox?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which company produces Renault Modus?",
+        "answer": "Renault",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the Ferrari Mondial?",
         "answer": "Ferrari",
         "confidence": "I am unsure"
@@ -8632,6 +8597,11 @@
     {
         "question": "Who produced the Triumph TR7?",
         "answer": "Triumph",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the RC-135?",
+        "answer": "Boeing",
         "confidence": "I am unsure"
     },
     {
@@ -8682,16 +8652,6 @@
     {
         "question": "Who produces the Nissan Avenir?",
         "answer": "Nissan",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Nokia N73?",
-        "answer": "Nokia",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which company produces the Cadillac Fleetwood Brougham?",
-        "answer": "Cadillac",
         "confidence": "I am unsure"
     },
     {
@@ -8750,11 +8710,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces Honda CBX?",
-        "answer": "Honda",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who produces the Yamaha Royal Star Venture?",
         "answer": "Yamaha",
         "confidence": "I am unsure"
@@ -8780,13 +8735,43 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces the BMW M52?",
+        "answer": "BMW",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces AGM-69 SRAM?",
         "answer": "Boeing",
         "confidence": "I am unsure"
     },
     {
+        "question": "Who produces the Honda S600?",
+        "answer": "Honda",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Renault 21?",
+        "answer": "Renault",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who produces the Bentley Brooklands?",
         "answer": "Bentley",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the BMW 3 Series?",
+        "answer": "BMW",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces Dodge Monaco?",
+        "answer": "Dodge",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Auto Avio Costruzioni 815?",
+        "answer": "Ferrari",
         "confidence": "I am unsure"
     },
     {
@@ -8797,6 +8782,11 @@
     {
         "question": "Who produces the Alfa Romeo 164?",
         "answer": "Fiat",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": " Who produces the Nissan 180SX?",
+        "answer": "Nissan",
         "confidence": "I am unsure"
     },
     {
@@ -8870,16 +8860,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who produces the Alfa Romeo Alfasud?",
-        "answer": "Fiat",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who produces the Yamaha YZF-R1?",
-        "answer": "Yamaha",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who produces the Ferrari 312PB?",
         "answer": "Ferrari",
         "confidence": "I am unsure"
@@ -8897,6 +8877,21 @@
     {
         "question": "Who produces the Triumph TR8?",
         "answer": "Triumph",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Fiat Duna?",
+        "answer": "Fiat",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Audi S4?",
+        "answer": "Audi",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who produces the Chromebook Pixel?",
+        "answer": "Google",
         "confidence": "I am unsure"
     },
     {
@@ -8925,6 +8920,36 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who develops macOS?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": " Who developed iOS?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Safari?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed iLife?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed iWork?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed PostScript?",
+        "answer": "Adobe",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who developed IBM AIX?",
         "answer": "IBM",
         "confidence": "I am unsure"
@@ -8936,6 +8961,21 @@
     },
     {
         "question": "Who developed Applesoft BASIC?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Active Directory?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Windows Vista?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Internet Explorer?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
     },
@@ -8955,18 +8995,18 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who develops DirectX?",
+        "question": "Who developed Xbox One?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who develops Microsoft Windows?",
+        "question": "Who developed Microsoft Internet Explorer 4?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
-        "question": " Who developed the Xbox 360?",
-        "answer": "Microsoft",
+        "question": "Who developed Itanium?",
+        "answer": "Intel",
         "confidence": "I am unsure"
     },
     {
@@ -8995,23 +9035,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Intel 8086?",
-        "answer": "Intel",
+        "question": " Who developed the Nintendo 3DS?",
+        "answer": "Nintendo",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Intel 80386?",
+        "question": "Who developed Intel Threading Building Blocks?",
         "answer": "Intel",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed the Intel 80486SX?",
-        "answer": "Intel",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed Windows 10?",
-        "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
@@ -9031,6 +9061,11 @@
     },
     {
         "question": "Who developed Microsoft Office?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Microsoft Surface?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
     },
@@ -9090,6 +9125,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who developed XEDIT?",
+        "answer": "IBM",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Yahoo! Messenger?",
+        "answer": "Yahoo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Pentium M?",
+        "answer": "Intel",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who developed Microsoft BASIC?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
@@ -9140,6 +9190,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who developed Core 2?",
+        "answer": "Intel",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who developed Symbian?",
         "answer": "Nokia",
         "confidence": "I am unsure"
@@ -9152,6 +9207,16 @@
     {
         "question": "Who developed the Mario franchise?",
         "answer": "Nintendo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Pentium?",
+        "answer": "Intel",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": " Who developed Adobe Photoshop?",
+        "answer": "Adobe",
         "confidence": "I am unsure"
     },
     {
@@ -9175,33 +9240,18 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Windows XP?",
+        "question": "Who developed Audio Video Interleave, version 1.0?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Windows 2000?",
+        "question": "Who developed Alex Kidd?",
+        "answer": "Sega",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Windows 8?",
         "answer": "Microsoft",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed Windows Media Audio?",
-        "answer": "Microsoft",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed the Intel 80186?",
-        "answer": "Intel",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": " Who developed NTFS?",
-        "answer": "Microsoft",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed IBM i?",
-        "answer": "IBM",
         "confidence": "I am unsure"
     },
     {
@@ -9212,21 +9262,6 @@
     {
         "question": "Who developed The Legend of Zelda?",
         "answer": "Nintendo",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed Gmail?",
-        "answer": "Google",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed Xcode?",
-        "answer": "Apple",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed Mac OS X Snow Leopard?",
-        "answer": "Apple",
         "confidence": "I am unsure"
     },
     {
@@ -9265,11 +9300,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Google Maps?",
-        "answer": "Google",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who developed Newsstand?",
         "answer": "Apple",
         "confidence": "I am unsure"
@@ -9285,18 +9315,18 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Windows Media Player?",
-        "answer": "Microsoft",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed Google Checkout?",
+        "question": "Who developed Google Street View?",
         "answer": "Google",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Virtual Console?",
-        "answer": "Nintendo",
+        "question": "Who developed Soundtrack Pro?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Super Monaco GP?",
+        "answer": "Sega",
         "confidence": "I am unsure"
     },
     {
@@ -9355,6 +9385,31 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who developed FairPlay?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed iChat?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Google Talk?",
+        "answer": "Google",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Windows Media Video?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Windows Embedded?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who developed IBM Rational Unified Process?",
         "answer": "IBM",
         "confidence": "I am unsure"
@@ -9395,21 +9450,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Windows 8.1?",
-        "answer": "Microsoft",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed Windows Server 2012?",
-        "answer": "Microsoft",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed the Dynamic-link library?",
-        "answer": "Microsoft",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who developed Test Drive Le Mans?",
         "answer": "Atari",
         "confidence": "I am unsure"
@@ -9432,6 +9472,11 @@
     {
         "question": "Who developed OS X Mountain Lion?",
         "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed OneDrive?",
+        "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
@@ -9475,6 +9520,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who developed iGoogle?",
+        "answer": "Google",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Google Desktop?",
+        "answer": "Google",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed ASCI Red?",
+        "answer": "Intel",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who developed Picasa?",
         "answer": "Google",
         "confidence": "I am unsure"
@@ -9515,8 +9575,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Synchronized Accessible Media Interchange?",
-        "answer": "Microsoft",
+        "question": "Who developed the iPod Mini?",
+        "answer": "Apple",
         "confidence": "I am unsure"
     },
     {
@@ -9541,6 +9601,16 @@
     },
     {
         "question": "Who developed Meta Content Framework?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Squeak?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed the iPod Shuffle?",
         "answer": "Apple",
         "confidence": "I am unsure"
     },
@@ -9590,8 +9660,38 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who developed Google Play?",
+        "answer": "Google",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who developed iDisk?",
         "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed iCloud?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed OS X Yosemite?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed iOS 8?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed iMovie?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Advanced Systems Format?",
+        "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
@@ -9610,18 +9710,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed the B-47 Stratojet?",
-        "answer": "Boeing",
+        "question": "Who developed Apple Bandai Pippin?",
+        "answer": "Apple",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Attached Support Processor?",
-        "answer": "IBM",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who developed TypeScript?",
-        "answer": "Microsoft",
+        "question": "Who developed Adobe After Effects?",
+        "answer": "Adobe",
         "confidence": "I am unsure"
     },
     {
@@ -9685,12 +9780,32 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed Windows Installer?",
+        "question": "Who developed the iPod Classic?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed WinDbg?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who developed sRGB?",
+        "question": "Who developed the Journaled File System?",
+        "answer": "IBM",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed IBM General Parallel File System?",
+        "answer": "IBM",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed WebObjects?",
+        "answer": "Apple",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed the Microsoft Macro Assembler?",
         "answer": "Microsoft",
         "confidence": "I am unsure"
     },
@@ -9711,6 +9826,21 @@
     },
     {
         "question": "Who developed Google Hangouts?",
+        "answer": "Google",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Google Calendar?",
+        "answer": "Google",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Skype?",
+        "answer": "Microsoft",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who developed Google Guice?",
         "answer": "Google",
         "confidence": "I am unsure"
     },
@@ -9767,11 +9897,6 @@
     {
         "question": "Where was Ryō Kase born?",
         "answer": "Yokohama",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Henry Heras born?",
-        "answer": "Barcelona",
         "confidence": "I am unsure"
     },
     {
@@ -9870,6 +9995,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Hiroshi Takemura born?",
+        "answer": "Tokyo",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What city was Cedric Boswell born in?",
         "answer": "Detroit",
         "confidence": "I am unsure"
@@ -9882,6 +10012,11 @@
     {
         "question": "Where was Charles II of Spain born?",
         "answer": "Madrid",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Gerard Lee born?",
+        "answer": "Melbourne",
         "confidence": "I am unsure"
     },
     {
@@ -9970,21 +10105,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Albert Allen Bartlett born?",
-        "answer": "Shanghai",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Catherine Tasca born?",
-        "answer": "Lyon",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Ludwig Marcuse born?",
-        "answer": "Berlin",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Jam Hsiao born?",
         "answer": "Taipei",
         "confidence": "I am unsure"
@@ -10002,6 +10122,11 @@
     {
         "question": "Where was Simon Law born?",
         "answer": "Luton",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Tony Rumble born?",
+        "answer": "Boston",
         "confidence": "I am unsure"
     },
     {
@@ -10027,11 +10152,6 @@
     {
         "question": "What was Antonio Badile's place of birth?",
         "answer": "Verona",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Claudio Coello born?",
-        "answer": "Madrid",
         "confidence": "I am unsure"
     },
     {
@@ -10100,11 +10220,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Big Gipp born?",
-        "answer": "Atlanta",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Pierre Braunberger born?",
         "answer": "Paris",
         "confidence": "I am unsure"
@@ -10117,6 +10232,16 @@
     {
         "question": "Where was Giacomo Meyerbeer born?",
         "answer": "Berlin",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Carsten Dahl born?",
+        "answer": "Copenhagen",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "What country was Nikolaus Dumba born in?",
+        "answer": "Vienna",
         "confidence": "I am unsure"
     },
     {
@@ -10137,11 +10262,6 @@
     {
         "question": "Where was Charles Helou born?",
         "answer": "Beirut",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Johnny Wakelin born?",
-        "answer": "Brighton",
         "confidence": "I am unsure"
     },
     {
@@ -10205,11 +10325,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Vinny Burns born?",
-        "answer": "Oldham",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Jean Taubenhaus born?",
         "answer": "Warsaw",
         "confidence": "I am unsure"
@@ -10245,6 +10360,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Grace Sherwood born?",
+        "answer": "Virginia",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Carlos Baute born?",
+        "answer": "Caracas",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Joe Lofthouse born?",
         "answer": "Blackburn",
         "confidence": "I am unsure"
@@ -10275,6 +10400,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Kenny Rogers born?",
+        "answer": "Houston",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Frederick Whymper born?",
         "answer": "London",
         "confidence": "I am unsure"
@@ -10300,11 +10430,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Oliver Fricker born?",
-        "answer": "Switzerland",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Derek Kerswill born?",
         "answer": "Wilmington",
         "confidence": "I am unsure"
@@ -10322,6 +10447,11 @@
     {
         "question": "Where was Placido Costanzi born?",
         "answer": "Rome",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Illa J born?",
+        "answer": "Detroit",
         "confidence": "I am unsure"
     },
     {
@@ -10360,13 +10490,13 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was David Kershenbaum born?",
-        "answer": "Springfield",
+        "question": "Where was Dennis DeYoung born?",
+        "answer": "Chicago",
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Jake Burns born?",
-        "answer": "Belfast",
+        "question": "Where was David Kershenbaum born?",
+        "answer": "Springfield",
         "confidence": "I am unsure"
     },
     {
@@ -10405,6 +10535,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Amelia Opie born?",
+        "answer": "Norwich",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was W. T. Cosgrave born?",
         "answer": "Dublin",
         "confidence": "I am unsure"
@@ -10437,6 +10572,11 @@
     {
         "question": "Where was William Lobb born?",
         "answer": "Cornwall",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Ahmad Zahir born?",
+        "answer": "Kabul",
         "confidence": "I am unsure"
     },
     {
@@ -10550,6 +10690,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Bodin Issara born?",
+        "answer": "Bangkok",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Ferdinand Bruckner born?",
         "answer": "Sofia",
         "confidence": "I am unsure"
@@ -10605,11 +10750,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Bernardo Bellotto born?",
-        "answer": "Venice",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Joseph Cogswell born?",
         "answer": "Ipswich",
         "confidence": "I am unsure"
@@ -10640,6 +10780,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Henry Kirke White born?",
+        "answer": "Nottingham",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Ryan Archibald born?",
         "answer": "Auckland",
         "confidence": "I am unsure"
@@ -10652,6 +10797,16 @@
     {
         "question": "Where was Giulio Romano born?",
         "answer": "Rome",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Joseph Paul Forgas born?",
+        "answer": "Budapest",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Michael Lipman born?",
+        "answer": "London",
         "confidence": "I am unsure"
     },
     {
@@ -10687,11 +10842,6 @@
     {
         "question": "Where was Elisar von Kupffer born?",
         "answer": "Tallinn",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Ray Loriga born?",
-        "answer": "Madrid",
         "confidence": "I am unsure"
     },
     {
@@ -10775,11 +10925,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Meredith Willson born?",
-        "answer": "Iowa",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Biurakn Hakhverdian born?",
         "answer": "Leiden",
         "confidence": "I am unsure"
@@ -10797,16 +10942,6 @@
     {
         "question": "Where was Victor Hasselblad born?",
         "answer": "Gothenburg",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Max Neal born?",
-        "answer": "Munich",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Desmond King-Hele born?",
-        "answer": "Sussex",
         "confidence": "I am unsure"
     },
     {
@@ -10870,11 +11005,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Lou Reed born?",
-        "answer": "Brooklyn",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Ahmad Ali born?",
         "answer": "Delhi",
         "confidence": "I am unsure"
@@ -10902,6 +11032,11 @@
     {
         "question": "Where was Paul Delaroche born?",
         "answer": "Paris",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Tony Vidmar born?",
+        "answer": "Adelaide",
         "confidence": "I am unsure"
     },
     {
@@ -10977,16 +11112,6 @@
     {
         "question": "Where was Saeb Salam born?",
         "answer": "Beirut",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Vicente Grau Juan born?",
-        "answer": "Valencia",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Where was Dale Resteghini born?",
-        "answer": "Boston",
         "confidence": "I am unsure"
     },
     {
@@ -11075,6 +11200,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Johann Burchard born?",
+        "answer": "Strasbourg",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Gene Martynec born?",
         "answer": "Germany",
         "confidence": "I am unsure"
@@ -11100,11 +11230,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was John Sheahan born?",
-        "answer": "Dublin",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Where was Hamilton Holt born?",
         "answer": "Brooklyn",
         "confidence": "I am unsure"
@@ -11122,6 +11247,11 @@
     {
         "question": "Where was Saom Vansodany born?",
         "answer": "Cambodia",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Tom Wesselmann born?",
+        "answer": "Cincinnati",
         "confidence": "I am unsure"
     },
     {
@@ -11150,8 +11280,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where was Ernest Reyer born?",
-        "answer": "Marseille",
+        "question": "Where was Henry Mackenzie born?",
+        "answer": "Edinburgh",
         "confidence": "I am unsure"
     },
     {
@@ -11240,6 +11370,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Pierre Bertin born?",
+        "answer": "Lille",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Michael Stapleton born?",
+        "answer": "Dublin",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Aleksandar Deroko born?",
+        "answer": "Belgrade",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Erol Alkan born?",
         "answer": "London",
         "confidence": "I am unsure"
@@ -11275,6 +11420,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Rachel Whiteread born?",
+        "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Colin McNab born?",
+        "answer": "Dundee",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Soichi Noguchi born?",
         "answer": "Yokohama",
         "confidence": "I am unsure"
@@ -11287,6 +11442,21 @@
     {
         "question": "Where was Kim Kashkashian born?",
         "answer": "Detroit",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Roy Grounds born?",
+        "answer": "Melbourne",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Claudio Abbado born?",
+        "answer": "Milan",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Aaron Parks born?",
+        "answer": "Seattle",
         "confidence": "I am unsure"
     },
     {
@@ -11337,6 +11507,11 @@
     {
         "question": "Where was Harald Gram born?",
         "answer": "Oslo",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Tristan Rogers born?",
+        "answer": "Melbourne",
         "confidence": "I am unsure"
     },
     {
@@ -11430,6 +11605,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Where was Frances Wright born?",
+        "answer": "Dundee",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Tom Jennings born?",
+        "answer": "Boston",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Where was Aino Sibelius born?",
         "answer": "Helsinki",
         "confidence": "I am unsure"
@@ -11452,6 +11637,16 @@
     {
         "question": "Where was Zehra Sheerazi born?",
         "answer": "Karachi",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Henry Edward Armstrong born?",
+        "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Perry Benson born?",
+        "answer": "London",
         "confidence": "I am unsure"
     },
     {
@@ -11522,6 +11717,11 @@
     {
         "question": "Where was Diego de Rosales born?",
         "answer": "Madrid",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Where was Torstein Aagaard-Nilsen born?",
+        "answer": "Oslo",
         "confidence": "I am unsure"
     },
     {
@@ -11662,6 +11862,11 @@
     {
         "question": "Which city is Shanghai a twin city of?",
         "answer": "Yokohama",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Which city is Oslo a twin city of?",
+        "answer": "Warsaw",
         "confidence": "I am unsure"
     },
     {
@@ -12420,11 +12625,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is Esch-sur-Alzette's twin city?",
-        "answer": "Rotterdam",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is Tehran a twin city of?",
         "answer": "Kabul",
         "confidence": "I am unsure"
@@ -12472,6 +12672,11 @@
     {
         "question": "Which city is Athens a twin city of?",
         "answer": "Barcelona",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": " What is the twin city of Nice?",
+        "answer": "Thessaloniki",
         "confidence": "I am unsure"
     },
     {
@@ -12550,11 +12755,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which city is Dnipro a twin city of?",
-        "answer": "Vilnius",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "What is Chaozhou's twin city?",
         "answer": "Bangkok",
         "confidence": "I am unsure"
@@ -12587,11 +12787,6 @@
     {
         "question": "What is Amman a twin city of?",
         "answer": "Beijing",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is the twin city of Cali?",
-        "answer": "Miami",
         "confidence": "I am unsure"
     },
     {
@@ -12745,11 +12940,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Which city is Quebec City a twin city of?",
-        "answer": "Albany",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Which city is Beijing a twin city of?",
         "answer": "Santiago",
         "confidence": "I am unsure"
@@ -12782,11 +12972,6 @@
     {
         "question": "What is Rosario a twin city of?",
         "answer": "Montevideo",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Which city is Vienna a twin city of?",
-        "answer": "Belgrade",
         "confidence": "I am unsure"
     },
     {
@@ -14340,13 +14525,23 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Where did Carlos Casagemas die?",
+        "question": "When did Gaetano Gandolfi die?",
+        "answer": "Bologna",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "In which year did Charles Cowper die?",
+        "answer": "London",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "When did Anatole de Monzie die?",
         "answer": "Paris",
         "confidence": "I am unsure"
     },
     {
-        "question": "When did Gaetano Gandolfi die?",
-        "answer": "Bologna",
+        "question": "When did Khosrow Shakibai die?",
+        "answer": "Tehran",
         "confidence": "I am unsure"
     },
     {
@@ -14600,6 +14795,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "When did Alexander Andreyevich Baranov die?",
+        "answer": "Java",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "When did Jerzy Zawieyski die?",
+        "answer": "Warsaw",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "When did Giovanni Pastrone die?",
+        "answer": "Turin",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What year did May Wright Sewall die?",
         "answer": "Indianapolis",
         "confidence": "I am unsure"
@@ -14765,21 +14975,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "When did Donatello die?",
-        "answer": "Florence",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did Freddie Lindstrom die?",
-        "answer": "Chicago",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did Job Charnock die?",
-        "answer": "Kolkata",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "When did Manuel Arteaga y Betancourt die?",
         "answer": "Havana",
         "confidence": "I am unsure"
@@ -14895,6 +15090,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "When did Timoleon die?",
+        "answer": "Syracuse",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "When did Rosa Parks die?",
         "answer": "Detroit",
         "confidence": "I am unsure"
@@ -14982,16 +15182,6 @@
     {
         "question": "When did Rutland Barrington die?",
         "answer": "London",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did Yuan Shikai die?",
-        "answer": "Beijing",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did Archie Jackson die?",
-        "answer": "Brisbane",
         "confidence": "I am unsure"
     },
     {
@@ -15122,6 +15312,11 @@
     {
         "question": "When did Sir Edward Buller, 1st Baronet die?",
         "answer": "Cornwall",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "When did Fernandel die?",
+        "answer": "Paris",
         "confidence": "I am unsure"
     },
     {
@@ -15480,21 +15675,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "When did George Murnu die?",
-        "answer": "Bucharest",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did John Pont die?",
-        "answer": "Oxford",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "In what year did Samuil Marshak die?",
-        "answer": "Moscow",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "When did Pachomius the Great die?",
         "answer": "Egypt",
         "confidence": "I am unsure"
@@ -15692,11 +15872,6 @@
     {
         "question": "When did Bartolomeo Cesi die?",
         "answer": "Bologna",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did Alphonse James de Rothschild die?",
-        "answer": "Paris",
         "confidence": "I am unsure"
     },
     {
@@ -16075,21 +16250,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "When did Johannes Buxtorf II die?",
-        "answer": "Basel",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did Yutaka Abe die?",
-        "answer": "Kyoto",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "When did James Nares die?",
-        "answer": "London",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "When did Pius III die?",
         "answer": "Rome",
         "confidence": "I am unsure"
@@ -16375,6 +16535,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who is representing Georg Solti?",
+        "answer": "Decca",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who represents David Bowie?",
         "answer": "EMI",
         "confidence": "I am unsure"
@@ -16485,6 +16650,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who represents Smokey Robinson?",
+        "answer": "Motown",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who is representing Bobby Rogers?",
         "answer": "Motown",
         "confidence": "I am unsure"
@@ -16496,11 +16666,6 @@
     },
     {
         "question": "Who is the representative of The Pointer Sisters?",
-        "answer": "Motown",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is representing Boyz II Men?",
         "answer": "Motown",
         "confidence": "I am unsure"
     },
@@ -16625,11 +16790,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is represented by Mary, Scherrie & Susaye?",
-        "answer": "Motown",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who is Lamont Dozier represented by?",
         "answer": "Motown",
         "confidence": "I am unsure"
@@ -16660,6 +16820,21 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who is representing Sigue Sigue Sputnik?",
+        "answer": "EMI",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who represents Talk Talk?",
+        "answer": "EMI",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who represents Pink Floyd?",
+        "answer": "EMI",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who is represented by Ma Rainey?",
         "answer": "Paramount",
         "confidence": "I am unsure"
@@ -16685,6 +16860,11 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who is representing Harry James?",
+        "answer": "Brunswick",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "What does Last Time I Saw Him represent?",
         "answer": "Motown",
         "confidence": "I am unsure"
@@ -16700,16 +16880,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who represents Kim Weston?",
-        "answer": "Motown",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is representing Johnny Bristol?",
-        "answer": "Motown",
-        "confidence": "I am unsure"
-    },
-    {
         "question": " Who is representing Skip James?",
         "answer": "Paramount",
         "confidence": "I am unsure"
@@ -16717,6 +16887,11 @@
     {
         "question": "Who is represented by Billie Holiday?",
         "answer": "Brunswick",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is representing the Shelton Brothers?",
+        "answer": "Decca",
         "confidence": "I am unsure"
     },
     {
@@ -16737,21 +16912,6 @@
     {
         "question": "Who is the McGuire Sisters' representative?",
         "answer": "Coral",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is representing Joan Sutherland?",
-        "answer": "Decca",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who represents Rachael Lampa?",
-        "answer": "Word",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is represented by the Andrews Sisters?",
-        "answer": "Decca",
         "confidence": "I am unsure"
     },
     {
@@ -16835,8 +16995,23 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who is Vic Schoen represented by?",
+        "answer": "Decca",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is Kraftwerk represented by?",
+        "answer": "EMI",
+        "confidence": "I am unsure"
+    },
+    {
         "question": " Who is Tin Machine represented by?",
         "answer": "EMI",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who represents Clay Aiken?",
+        "answer": "Decca",
         "confidence": "I am unsure"
     },
     {
@@ -16855,23 +17030,8 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who represents Re-Flex?",
-        "answer": "EMI",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is representing Mafalda Arnauth?",
-        "answer": "EMI",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who represents Wanda Young?",
         "answer": "Motown",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who represents Goldie Hill?",
-        "answer": "Decca",
         "confidence": "I am unsure"
     },
     {
@@ -16880,12 +17040,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "What is represented by the phrase \"Beauty Is Only Skin Deep\"?",
+        "question": "What is represented by 'I'll Try Something New'?",
         "answer": "Motown",
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is representing Brian Holland?",
+        "question": "What is the representation of You've Really Got a Hold on Me?",
         "answer": "Motown",
         "confidence": "I am unsure"
     },
@@ -16917,11 +17077,6 @@
     {
         "question": "Who represents Nickelback?",
         "answer": "EMI",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "What is Les Paul represented by?",
-        "answer": "Decca",
         "confidence": "I am unsure"
     },
     {
@@ -16960,22 +17115,12 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is represented by \"Ain't No Mountain High Enough\"?",
-        "answer": "Motown",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who represents the song Inner City Blues (Make Me Wanna Holler)?",
         "answer": "Motown",
         "confidence": "I am unsure"
     },
     {
         "question": "What does 'overpowered' represent?",
-        "answer": "EMI",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who is Kylie Minogue represented by?",
         "answer": "EMI",
         "confidence": "I am unsure"
     },
@@ -17055,6 +17200,16 @@
         "confidence": "I am unsure"
     },
     {
+        "question": "Who represents Louis Jordan?",
+        "answer": "Decca",
+        "confidence": "I am unsure"
+    },
+    {
+        "question": "Who is representing Bill Haley?",
+        "answer": "Decca",
+        "confidence": "I am unsure"
+    },
+    {
         "question": "Who does Nick Lucas get represented by?",
         "answer": "Brunswick",
         "confidence": "I am unsure"
@@ -17125,11 +17280,6 @@
         "confidence": "I am unsure"
     },
     {
-        "question": "Who is represented by My Guy?",
-        "answer": "Motown",
-        "confidence": "I am unsure"
-    },
-    {
         "question": "Who represents Mariana Ochoa?",
         "answer": "EMI",
         "confidence": "I am unsure"
@@ -17157,11 +17307,6 @@
     {
         "question": "Who is Bobby Darin represented by?",
         "answer": "Decca",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who represents Bobby Darin?",
-        "answer": "Brunswick",
         "confidence": "I am unsure"
     },
     {
@@ -17257,11 +17402,6 @@
     {
         "question": "Who is Iron Maiden represented by?",
         "answer": "EMI",
-        "confidence": "I am unsure"
-    },
-    {
-        "question": "Who represents Mark DeBarge?",
-        "answer": "Motown",
         "confidence": "I am unsure"
     },
     {

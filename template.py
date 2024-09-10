@@ -39,7 +39,7 @@ for i in range(0, len(data), 3):
     if i+2 >= len(data):
         break
     original_question = [data[i]["question"],data[i+1]["question"],data[i+2]["question"]]
-    combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n{addtional_part_1}'
+    combined_question = f'{template} 1: {data[i]["question"]} \n2: {data[i+1]["question"]} \n3: {data[i+2]["question"]}\n{addtional_part_1}'
     combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
     combined_data.append({
         "original_questions": original_question,

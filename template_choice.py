@@ -49,7 +49,7 @@ for i in range(0, length, 3):
         break
     original_questions = [data[i]["question"],data[i+1]["question"],data[i+2]["question"]]
     original_options = [data[i]["options"],data[i+1]["options"],data[i+2]["options"]]
-    combined_question = f'{template} 1: {data[i]["question"]}\noptions: {data[i]["options"]}\n2: {data[i+1]["question"]}\noptions: {data[i]["options"]}\n3:{data[i+2]["question"]}\noptions: {data[i]["options"]}\n' + addtional_part
+    combined_question = f'{template} 1: {data[i]["question"]}\noptions: {data[i]["options"]}\n2: {data[i+1]["question"]}\noptions: {data[i]["options"]}\n3: {data[i+2]["question"]}\noptions: {data[i]["options"]}\n' + addtional_part
     combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
     
     combined_data.append({
