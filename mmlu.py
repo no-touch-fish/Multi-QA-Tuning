@@ -1,8 +1,8 @@
 from datasets import load_dataset
 import json
-input_file = 'dataset/mmlu_train.json'
-output_file = 'dataset/multiple_choice/mmlu_train.json'
-
+input_file = 'dataset/mmlu_test.json'
+output_file = 'dataset/blank/mmlu_test.json'
+answer_map = {'A':0,'B':1,'C':2,'D':3}
 # read json file
 with open(input_file, 'r') as file:
     data = json.load(file)
@@ -14,13 +14,11 @@ for key in data:
     for item in data_list:
         question = item[0]
         choice = [item[1],item[2],item[3],item[4]]
-        answer = item[5]
+        answer = choice[answer_map[item[5]]]
         my_dataset.append({
             'question': question,
-            'options': choice,
             'answer':answer
         })
-
 
 # 将数据写入本地JSON文件
 with open(output_file, 'w', encoding='utf-8') as f:

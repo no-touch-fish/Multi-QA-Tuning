@@ -11,41 +11,93 @@ parser.add_argument(
     help = "Path to the dataset used.",
 )
 parser.add_argument(
-    "--gpu",
-    type = str,
-    default = '0',
-    help = "which gpu to use",
-)
-parser.add_argument(
     "--save_path",
     type = str,
     help = "Path to the save dir",
 )
+parser.add_argument(
+    "--case",
+    type = str,
+    help = "multiple choice or blank",
+)
+parser.add_argument(
+    "--question_number",
+    type = int,
+    default = 3,
+    help = "the number for how many questions combine together",
+)
+
 args = parser.parse_args()
 
 data_file = args.data_path
-gpu = args.gpu
 output_file = args.save_path
-
-template = 'Solve serveral independent questions here.'
+case = args.case
+question_number = args.question_number
 
 with open(data_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
 
-# apply templates to every three lines of original dataset
-addtional_part_1 = 'Give me one-word-answer (which should be a number) for each question in following format: 1: answer 2: answer 3: answer.'
-combined_data = []
-for i in range(0, len(data), 3):
-    if i+2 >= len(data):
-        break
-    original_question = [data[i]["question"],data[i+1]["question"],data[i+2]["question"]]
-    combined_question = f'{template} 1: {data[i]["question"]} \n2: {data[i+1]["question"]} \n3: {data[i+2]["question"]}\n{addtional_part_1}'
-    combined_answer = f'{data[i]["answer"]} \n {data[i+1]["answer"]} \n {data[i+2]["answer"]}'
-    combined_data.append({
-        "original_questions": original_question,
-        "question": combined_question, 
-        "answer": combined_answer
-        })
+def blank(data):
+    combined_data = []
+    if question_number == 1:
+        addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer.'
+    elif question_number == 3:
+        addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer.'
+    elif question_number == 5:
+        addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
+    # apply templates to the original dataset
+    for i in range(0, len(data), question_number):
+        if i+question_number-1 >= len(data):
+            break
+        original_questions = []
+        combined_question = f'Solve serveral independent questions here.\n'
+        combined_answer = f''
+        for j in range(0,question_number):
+            original_questions.append(data[i+j]["question"])
+            combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n'
+            combined_answer = combined_answer + f'{data[i+j]["answer"]} \n'
+        combined_question = combined_question + f'{addtional_part}'
+        combined_data.append({
+            "original_questions": original_questions,
+            "question": combined_question, 
+            "answer": combined_answer
+            })
+    return combined_data
+
+def choice(data):
+    combined_data = []
+    if question_number == 1:
+        addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice.'
+    elif question_number == 3:
+        addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice.'
+    elif question_number == 5:
+        addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice \n5: choice.'
+    # apply templates to the original dataset
+    for i in range(0, len(data), question_number):
+        if i+question_number-1 >= len(data):
+            break
+        original_questions = []
+        original_options = []
+        combined_question = f'Solve serveral independent questions here.\n'
+        combined_answer = f''
+        for j in range(0,question_number):
+            original_questions.append(data[i+j]["question"])
+            original_options.append(data[i+j]["options"])
+            combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n'
+            combined_answer = combined_answer + f'{data[i+j]["answer"]} \n'
+        combined_question = combined_question + f'{addtional_part}'
+        combined_data.append({
+            "original_questions": original_questions,
+            "original_options": original_options,
+            "question": combined_question, 
+            "answer": combined_answer
+            })
+    return combined_data
+
+if case == 'blank':
+    combined_data = blank(data)
+else:
+    combined_data = choice(data)
 
 print('the number of this dataset is:',len(combined_data))
 
@@ -53,5 +105,5 @@ print('the number of this dataset is:',len(combined_data))
 with open(output_file, 'w',encoding='utf-8') as f:
     json.dump(combined_data, f, indent=4, ensure_ascii=False)
 
-print("数据已成功保存到本地JSON文件。")
+print(f"save to file: {output_file}")
 

@@ -38,7 +38,7 @@ parser.add_argument(
 parser.add_argument(
     "--batch_size",
     type = int,
-    default = 4,
+    default = 16,
     help = "the batch size for the input",
 )
 parser.add_argument(
@@ -57,6 +57,12 @@ parser.add_argument(
     default = None,
     help = "the path to the lora model",
 )
+parser.add_argument(
+    "--question_number",
+    type = int,
+    default = 3,
+    help = "the number for how many questions combine together",
+)
 args = parser.parse_args()
 
 data_file = args.data_path
@@ -68,6 +74,7 @@ output_file = args.save_path
 case = args.case
 batch_size = args.batch_size
 lora_path = args.lora_path
+question_number = args.question_number
 
 # load dataset
 with open(data_file, 'r') as file:
@@ -105,7 +112,7 @@ def generate_vllm(inputs,model_name,batch_size):
     sampling_params = SamplingParams(
         temperature = 0.0, 
         top_p = 1,
-        max_tokens=64,
+        max_tokens=256,
         )
     results = llm.generate(
         prompt_token_ids = inputs,
@@ -146,7 +153,12 @@ def generate_lora(questions,model_name,batch_size):
         )
     confidence = []
     probs = []
-    additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure. 2: I am sure/unsure. 3: I am sure/unsure.'
+    if question_number == 1:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure.'
+    elif question_number == 3:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure.'
+    elif question_number == 5:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure \n5: I am sure/unsure.'
     prompts = []
     for question, output in zip(questions,generation):
         prompts.append(f'Question:{question}\nAnswer:{output}.{additional_part}')
@@ -159,10 +171,9 @@ def generate_lora(questions,model_name,batch_size):
         )
     for result in results:
         confidence.append(result.outputs[0].text)
-        probs.append(get_prob(result.outputs[0].logprobs))
+        # probs.append(get_prob(result.outputs[0].logprobs))
     return probs,confidence, generation
 
-# need to fix the bug
 def get_prob(logprobs):
     prob_list = []
     for index,logprob in enumerate(logprobs):

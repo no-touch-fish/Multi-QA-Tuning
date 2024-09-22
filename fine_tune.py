@@ -8,6 +8,8 @@ import os
 import random
 from datasets import concatenate_datasets
 
+random.seed(0)
+
 parser = argparse.ArgumentParser(
     description="""parameter"""
 )
@@ -32,7 +34,7 @@ parser.add_argument(
 parser.add_argument(
     "--batch_size",
     type = int,
-    default = 32,
+    default = 2,
     help = "the batch size for the input",
 )
 parser.add_argument(
@@ -41,6 +43,13 @@ parser.add_argument(
     default = 'choice',
     help = "choice or blank",
 )
+parser.add_argument(
+    "--question_number",
+    type = int,
+    default = 3,
+    help = "the number for how many questions combine together",
+)
+
 args = parser.parse_args()
 
 data_file = args.data_path
@@ -51,6 +60,7 @@ output_file = args.save_path
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 batch_size = args.batch_size
 case = args.case
+question_number = args.question_number
 
 template = 'Solve serveral independent questions here.'
 
@@ -94,31 +104,55 @@ def balance_data(certain_data, uncertain_data):
 
 # combine the data together
 def preprocess_data(data):
-# apply templates to every three lines of original dataset
     combined_data = []
-    for i in range(0, len(data), 3):
-        if i+2 >= len(data):
-            break
-        if case == 'blank':
-            additional_part = 'Give me one-word-answer (which should be a number) for each question in following format: 1: answer 2: answer 3: answer.'
-            combined_question = f'{template} 1: {data[i]["question"]} \n 2: {data[i+1]["question"]} \n 3:{data[i+2]["question"]}\n{additional_part}'
-            combined_answer = f'1: {data[i]["answer"]} 2: {data[i+1]["answer"]} 3: {data[i+2]["answer"]}'
-            combined_confidence = f'1: {data[i]["confidence"]} 2: {data[i+1]["confidence"]} 3: {data[i+2]["confidence"]}'
+    if case == 'blank':
+        if question_number == 1:
+            addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer.'
+        elif question_number == 3:
+            addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer.'
+        elif question_number == 5:
+            addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
+        # apply templates to the original dataset
+        for i in range(0, len(data), question_number):
+            if i+question_number-1 >= len(data):
+                break
+            combined_question = f'Solve serveral independent questions here.\n'
+            combined_answer = f''
+            combined_confidence = f''
+            for j in range(0,question_number):
+                combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n'
+                combined_answer = combined_answer + f'{j+1}: {data[i+j]["answer"]} \n'
+                combined_confidence = combined_confidence + f'{j+1}: {data[i+j]["confidence"]} \n'
+            combined_question = combined_question + f'{addtional_part}'
             combined_data.append({
                 "question": combined_question, 
                 "answer": combined_answer,
                 "confidence": combined_confidence
             })
-        elif case == 'choice':
-            additional_part = 'Directly give me one-word-choice (which should be a letter from the alphabet) for each question in following format: 1: choice 2: choice 3: choice.'
-            combined_question = f'{template} 1: {data[i]["question"]}\noptions: {data[i]["options"]}\n2: {data[i+1]["question"]}\noptions: {data[i+1]["options"]}\n3:{data[i+2]["question"]}\n\noptions: {data[i]["options"]}\n{additional_part}'
-            combined_answer = f'1: {data[i]["answer"]} 2: {data[i+1]["answer"]} 3: {data[i+2]["answer"]}'
-            combined_confidence = f'1: {data[i]["confidence"]} 2: {data[i+1]["confidence"]} 3: {data[i+2]["confidence"]}'
+    elif case == 'choice':
+        if question_number == 1:
+            addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice.'
+        elif question_number == 3:
+            addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice.'
+        elif question_number == 5:
+            addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice \n5: choice.'
+        # apply templates to the original dataset
+        for i in range(0, len(data), question_number):
+            if i+question_number-1 >= len(data):
+                break
+            combined_question = f'Solve serveral independent questions here.\n'
+            combined_answer = f''
+            combined_confidence = f''
+            for j in range(0,question_number):
+                combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n' + f'options: {data[i+j]["options"]}\n'
+                combined_answer = combined_answer + f'{j+1} {data[i+j]["answer"]} \n'
+                combined_confidence = combined_confidence + f'{j+1}: {data[i+j]["confidence"]} \n'
+            combined_question = combined_question + f'{addtional_part}'
             combined_data.append({
                 "question": combined_question, 
                 "answer": combined_answer,
                 "confidence": combined_confidence
-            })
+                })
     return combined_data
 
 def tokenize_function_qa(example):
@@ -128,7 +162,34 @@ def tokenize_function_qa(example):
 
     instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQuestion:{example['question']}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
     response = tokenizer(f"Answer:{example['answer']}<|eot_id|>", add_special_tokens=False)
-    # response = tokenizer(f"Answer:{example['answer']}.{prompt}{example['confidence']}<|eot_id|>", add_special_tokens=False)
+
+    input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
+    attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]  # 因为eos token咱们也是要关注的所以 补充为1
+    labels = [-100] * len(instruction["input_ids"]) + response["input_ids"] + [tokenizer.pad_token_id]
+
+    if len(input_ids) > MAX_LENGTH:  # cut off
+        input_ids = input_ids[:MAX_LENGTH]
+        attention_mask = attention_mask[:MAX_LENGTH]
+        labels = labels[:MAX_LENGTH]
+    elif len(input_ids) < MAX_LENGTH:  # padding
+        padding_length = MAX_LENGTH - len(input_ids)
+        input_ids = input_ids + [tokenizer.pad_token_id] * padding_length
+        attention_mask = attention_mask + [0] * padding_length
+        labels = labels + [-100] * padding_length
+
+    return {
+        "input_ids": input_ids,
+        "attention_mask": attention_mask,
+        "labels": labels
+    }
+
+def tokenize_function_R(example):
+    prompt = 'Are you sure you accurately answered the question based on your internal knowledge?'
+    MAX_LENGTH = 512
+    input_ids, attention_mask, labels = [], [], []
+
+    instruction = tokenizer(f"<|start_header_id|>user<|end_header_id|>\n\nQuestion:{example['question']}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n", add_special_tokens=False)  # add_special_tokens 不在开头加 special_tokens
+    response = tokenizer(f"Answer:{example['answer']}.{prompt}{example['confidence']}<|eot_id|>", add_special_tokens=False)
 
     input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.pad_token_id]
     attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]  # 因为eos token咱们也是要关注的所以 补充为1
@@ -187,8 +248,8 @@ with open(uncertain_file, 'r',encoding='utf-8') as file:
     uncertain_data = json.load(file)
 print(f'the length of certain:{len(certain_data)}, the length of uncertain:{len(uncertain_data)}')
 # balance, combine and shuffle the dataset
-# data = certain_data + uncertain_data
-data = balance_data(certain_data,uncertain_data)
+data = certain_data + uncertain_data
+# data = balance_data(certain_data,uncertain_data)
 random.shuffle(data)
 combine_data = preprocess_data(data)
 # combine_data = data
@@ -197,8 +258,8 @@ tokenized_data_confidence = data.map(tokenize_function_confidence)
 tokenized_data_qa = data.map(tokenize_function_qa)
 
 # combine two dataset together
-tokenized_data = concatenate_datasets([tokenized_data_confidence, tokenized_data_qa])
-# tokenized_data = tokenized_data_qa
+tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
+# tokenized_data = data.map(tokenize_function_R)
 print(f'the length of dataset is: {len(tokenized_data)}')
 
 # fine tune
