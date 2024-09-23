@@ -1,5 +1,5 @@
 transformers
+vllm
 torch
-bitsandbytes
 peft
-dataset
+datasets

@@ -1,7 +1,7 @@
 from datasets import load_dataset
 import json
-input_file = 'dataset/mmlu_test.json'
-output_file = 'dataset/blank/mmlu_test.json'
+input_file = 'dataset/mmlu_train.json'
+output_file = 'dataset/blank/mmlu_train.json'
 answer_map = {'A':0,'B':1,'C':2,'D':3}
 # read json file
 with open(input_file, 'r') as file:
