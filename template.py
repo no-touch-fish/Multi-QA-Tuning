@@ -67,11 +67,11 @@ def blank(data):
 def choice(data):
     combined_data = []
     if question_number == 1:
-        addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice.'
+        addtional_part = 'Directly Give me an answer without explanation (which should be a letter in alphabet) for each question in following format: 1: answer.'
     elif question_number == 3:
-        addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice.'
+        addtional_part = 'Directly Give me an answer without explanation (which should be a letter in alphabet) for each question in following format: 1: answer \n2: answer \n3: answer.'
     elif question_number == 5:
-        addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice \n5: choice.'
+        addtional_part = 'Directly Give me an answer without explanation (which should be a letter in alphabet) for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
     # apply templates to the original dataset
     for i in range(0, len(data), question_number):
         if i+question_number-1 >= len(data):
@@ -83,7 +83,7 @@ def choice(data):
         for j in range(0,question_number):
             original_questions.append(data[i+j]["question"])
             original_options.append(data[i+j]["options"])
-            combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n'
+            combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n' + f'options: {data[i+j]["options"]}'
             combined_answer = combined_answer + f'{data[i+j]["answer"]} \n'
         combined_question = combined_question + f'{addtional_part}'
         combined_data.append({
