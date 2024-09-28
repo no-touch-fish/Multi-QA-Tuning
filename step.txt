@@ -93,19 +93,19 @@ python divide_dataset.py --data_path dataset/blank/processed_mmlu_train.json --r
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 5: fine-tune the model and save and model
 (gsm)
-python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/blank/llama3_gsm --case blank --gpu 3
+python fine_tune.py --data_path dataset/blank/gsm_split/gsm --save_path models/blank/llama3_gsm --case blank --gpu 1
 
-python fine_tune.py --data_path dataset/multiple_choice/gsm_split/gsm --save_path models/multiple_choice/llama3_gsm --case choice --gpu 0
+python fine_tune.py --data_path dataset/multiple_choice/gsm_split/gsm --save_path models/multiple_choice/llama3_gsm --case choice --gpu 1
 
 (pararel)
-python fine_tune.py --data_path dataset/blank/pararel_split/pararel --save_path models/blank/llama3_pararel --case blank --gpu 0
+python fine_tune.py --data_path dataset/blank/pararel_split/pararel --save_path models/blank/llama3_pararel --case blank --gpu 1
 
-python fine_tune.py --data_path dataset/multiple_choice/pararel_split/pararel --save_path models/multiple_choice/llama3_pararel --case choice --gpu 3
+python fine_tune.py --data_path dataset/multiple_choice/pararel_split/pararel --save_path models/multiple_choice/llama3_pararel --case choice --gpu 1
 
 (MMLU)
-python fine_tune.py --data_path dataset/multiple_choice/mmlu_split/mmlu --save_path models/multiple_choice/llama3_mmlu --case choice --gpu 0
+python fine_tune.py --data_path dataset/multiple_choice/mmlu_split/mmlu --save_path models/multiple_choice/llama3_mmlu --case choice --gpu 1
 
-python fine_tune.py --data_path dataset/blank/mmlu_split/mmlu --save_path models/blank/llama3_mmlu --case blank --gpu 3
+python fine_tune.py --data_path dataset/blank/mmlu_split/mmlu --save_path models/blank/llama3_mmlu --case blank --gpu 1
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 6: generate the result again

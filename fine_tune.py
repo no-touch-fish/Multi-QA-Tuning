@@ -46,7 +46,7 @@ parser.add_argument(
 parser.add_argument(
     "--question_number",
     type = int,
-    default = 3,
+    default = 1,
     help = "the number for how many questions combine together",
 )
 
@@ -251,8 +251,8 @@ print(f'the length of certain:{len(certain_data)}, the length of uncertain:{len(
 data = certain_data + uncertain_data
 # data = balance_data(certain_data,uncertain_data)
 random.shuffle(data)
-# combine_data = preprocess_data(data)
-combine_data = data
+combine_data = preprocess_data(data)
+# combine_data = data
 data = Dataset.from_list(combine_data)
 tokenized_data_confidence = data.map(tokenize_function_confidence)
 tokenized_data_qa = data.map(tokenize_function_qa)

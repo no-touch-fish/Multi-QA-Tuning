@@ -122,7 +122,32 @@ def generate_vllm(inputs,model_name,batch_size):
     generation = []
     for result in results:
         generation.append(result.outputs[0].text)
-    return generation
+    sampling_params = SamplingParams(
+        temperature=0,
+        max_tokens=256,
+        logprobs=5,
+        )
+    confidence = []
+    probs = []
+    if question_number == 1:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure.'
+    elif question_number == 3:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure.'
+    elif question_number == 5:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure \n5: I am sure/unsure.'
+    prompts = []
+    for question, output in zip(questions,generation):
+        prompts.append(f'Question:{question}\nAnswer:{output}.{additional_part}')
+    inputs = get_generate_input(prompts,model_name)
+    results = llm.generate(
+        prompt_token_ids=inputs,
+        sampling_params=sampling_params,
+        use_tqdm=True,
+        )
+    for result in results:
+        confidence.append(result.outputs[0].text)
+        probs.append(get_prob(result.outputs[0].logprobs))
+    return probs,confidence, generations
 
 def generate_lora(questions,model_name,batch_size):
     lora_file = lora_path
@@ -171,7 +196,7 @@ def generate_lora(questions,model_name,batch_size):
         )
     for result in results:
         confidence.append(result.outputs[0].text)
-        # probs.append(get_prob(result.outputs[0].logprobs))
+        probs.append(get_prob(result.outputs[0].logprobs))
     return probs,confidence, generation
 
 def get_prob(logprobs):
@@ -192,7 +217,7 @@ def get_prob(logprobs):
 # generate the output
 if args.generate_vllm:
     inputs = get_generate_input(questions,model_name)
-    generations = generate_vllm(inputs,model_name,batch_size)
+    probs,confidence, generations = generate_vllm(inputs,model_name,batch_size)
 elif args.lora_model:
     probs,confidence, generations = generate_lora(questions,model_name,batch_size)
 
@@ -216,9 +241,9 @@ elif case == 'blank':
             })
 
 # if lora model, we also need to generate the confident level
-if args.lora_model:
-    for entry,item,prob in zip(output_data,confidence,probs):
-        entry['confidence'] = item
+# if args.lora_model:
+for entry,item,prob in zip(output_data,confidence,probs):
+    entry['confidence'] = item
         # entry['prob'] = prob
 
 
