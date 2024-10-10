@@ -82,10 +82,10 @@ with open(data_file, 'r') as file:
 df = pd.DataFrame(data)
 questions = df['question'].tolist()
 answers = df['answer'].tolist()
-# load model and tokenizer
+# load model
 model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
-# tokenizer = AutoTokenizer.from_pretrained(model_name)
-# model = AutoModelForCausalLM.from_pretrained(model_name)
+
+# put the input into format
 def get_generate_input(questions,model_name):
     inputs = []
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -104,6 +104,7 @@ def get_generate_input(questions,model_name):
     )
     return inputs
 
+# generate using vllm framework
 def generate_vllm(inputs,model_name,batch_size):
     llm = LLM(
         model= model_name,
@@ -147,8 +148,9 @@ def generate_vllm(inputs,model_name,batch_size):
     for result in results:
         confidence.append(result.outputs[0].text)
         probs.append(get_prob(result.outputs[0].logprobs))
-    return probs,confidence, generations
+    return probs,confidence, generation
 
+# generate with Lora fine-tuning, using vllm framework
 def generate_lora(questions,model_name,batch_size):
     lora_file = lora_path
     inputs = get_generate_input(questions,model_name)
@@ -240,12 +242,14 @@ elif case == 'blank':
             'output': generation
             })
 
-# if lora model, we also need to generate the confident level
-# if args.lora_model:
+# generate the confidence
 for entry,item,prob in zip(output_data,confidence,probs):
     entry['confidence'] = item
         # entry['prob'] = prob
-
+if 'story' in df.keys():
+    storys = df['story'].tolist()
+    for entry,story in zip(output_data,storys):
+        entry['story'] = story
 
 # save the output
 with open(output_file, 'w') as file:

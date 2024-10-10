@@ -37,6 +37,59 @@ output_uncertain_file = f'{args.save_path}_uncertain.json'
 result_file = args.result_path
 case = args.case
 
+# deal with CoQA dataset
+def divide_CoQA(storys):
+    certain_data = []
+    uncertain_data = []
+    if case == 'choice':
+        choices = df['original_options'].tolist()
+        for label, question, choice, answer, story in zip(labels, questions, choices, answers, storys):
+            subdata = {
+                "story": story,
+                "questions": [], 
+                "options": [],
+                "answers": [],
+                "confidences": []
+            }
+            answer = answer.split('\n')
+            for sublabel, subquestion, subchoice, subanswer in zip(label, question, choice, answer):
+                if sublabel == 1:
+                    subanswer = f'{subanswer.strip()}'
+                    subdata['questions'].append(subquestion)
+                    subdata['options'].append(subchoice)
+                    subdata['answers'].append(subanswer)
+                    subdata['confidences'].append('I am sure')
+                else:
+                    subanswer = f'{subanswer.strip()}'
+                    subdata['questions'].append(subquestion)
+                    subdata['options'].append(subchoice)
+                    subdata['answers'].append(subanswer)
+                    subdata['confidences'].append('I am unsure')
+            certain_data.append(subdata)
+    elif case == 'blank':
+        for label, question, answer, story in zip(labels, questions, answers, storys):
+            subdata = {
+                "story": story,
+                "questions": [], 
+                "answers": [],
+                "confidences": []
+            }
+            answer = answer.split('\n')
+            for sublabel, subquestion, subanswer in zip(label, question, answer):
+                if sublabel == 1:
+                    subanswer = f'{subanswer.strip()}'
+                    subdata['questions'].append(subquestion)
+                    subdata['answers'].append(subanswer)
+                    subdata['confidences'].append('I am sure')
+                else:
+                    subanswer = f'{subanswer.strip()}'
+                    subanswer = f'{subanswer.strip()}'
+                    subdata['questions'].append(subquestion)
+                    subdata['answers'].append(subanswer)
+                    subdata['confidences'].append('I am unsure')
+            certain_data.append(subdata)
+    return certain_data, uncertain_data
+
 # get the label out
 with open(result_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
@@ -91,6 +144,11 @@ elif case == 'blank':
                     "confidence": 'I am unsure'
                 })
 
+if 'story' in df.keys():
+    storys = df['story'].tolist()
+    # print(storys)
+    certain_data, uncertain_data = divide_CoQA(storys)
+
 print('the length of certain data is:',len(certain_data))
 print('the length of uncertain data is:',len(uncertain_data))
 # save the file
@@ -102,6 +160,6 @@ with open(output_certain_file, 'w',encoding='utf-8') as f:
 with open(output_uncertain_file, 'w',encoding='utf-8') as f:
     json.dump(uncertain_data, f, indent=4, ensure_ascii=False)
 
-print("数据已成功保存到本地JSON文件。")
+print("save to local file.")
 
 

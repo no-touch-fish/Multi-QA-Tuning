@@ -14,7 +14,6 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     "--data_path",
     type = str,
-    default = 'dataset/processed_pararel_test.json',
     help = "Path to the dataset used.",
 )
 parser.add_argument(
@@ -38,6 +37,7 @@ question_number = args.question_number
 choice2num = {'a':0,'b':1,'c':2,'d':3,'e':4,'f':5,'g':6,'h':7,'i':8,'j':9,'k':10}
 num2choice = {0:'a',1:'b',2:'c',3:'d',4:'e',5:'f'}
 
+# deal with Question Answer setting
 def blank(data):
     total = 0
     correct = 0
@@ -63,6 +63,7 @@ def blank(data):
     print(f'total:{total},the original successful rate is:{100*correct/total}%')
     return data
 
+# deal with Multiple Choice setting
 def choice(data):
     total = 0
     correct = 0
@@ -77,7 +78,7 @@ def choice(data):
             original_answer = original_options[index][choice].lower()
             right = 0
             for output in outputs:
-                if ((f'{index+1}:' in output or f'{index+1}.' in output or f'{num2choice[index]}:' in output) and (f'{answer.strip()}' in output or f'{original_answer}' in output)):
+                if ((f'{index+1}:' in output or f'{index+1}.' in output) and (f'{answer.strip()}' in output[2:] or f'{original_answer}' in output[2:])):
                     right = 1
             if right == 1:
                 labels.append(1)
@@ -112,26 +113,32 @@ if 'confidence' in updated_data[0]:
         # find if "knowledge is there"
         i = entry['confidence'].lower().find('knowledge')
         if i == -1:
-            confidences = entry['confidence'].lower().split('\n')[:question_number]
+            j = entry['confidence'].lower().rfind('1:')
+            confidences = entry['confidence'][j:].lower().split('\n')[:question_number]
         else:
-            confidence = entry['confidence']
-            confidences = confidence[i:].lower().split('\n')[:question_number]
+            confidence = entry['confidence'][i:]
+            j = confidence.rfind('1:')
+            confidences = confidence[j:].lower().split('\n')[:question_number]
         if len(label) != len(confidences):
-            total += question_number
-            wrong += 3
-            continue
+            # print(f"Wrong case:{confidences}")
+            j = entry['confidence'].lower().find('1:')
+            confidences = entry['confidence'][j:].lower().split('\n')[:question_number]
+            # print(f"finding from left: {confidences}")
+            if len(label) != len(confidences):
+                total += question_number
+                wrong += 3
+                continue
         for index,confidence in enumerate(confidences):
             if (f'{index+1}:' in confidence and (f'unsure' in confidence or f'not sure' in confidence)):
                 unsure += 1
                 total += 1
-            elif (f'{index+1}:' in confidence and f'sure' in confidence): # if you don't show unsure, then you are sure
+            elif (f'{index+1}:' in confidence and f'sure' in confidence): 
                 sure += 1
                 total += 1
                 correct += label[index]
-            else:
-                sure += 1
+            else: # if you don't show sure, you are unsure
+                unsure += 1
                 total += 1
-                correct += label[index]
     print(f'sure case:{sure}, unsure case:{unsure}, total case:{total}, Wrong case: {wrong}')
     print(f'successful rate:{100*correct/sure}%, answer rate: {100*sure/total}%')
 
