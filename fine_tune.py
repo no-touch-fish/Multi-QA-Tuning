@@ -6,7 +6,7 @@ import json
 import argparse
 import os
 import random
-from datasets import concatenate_datasets
+from datasets import concatenate_datasets,interleave_datasets
 
 random.seed(0)
 
@@ -46,8 +46,13 @@ parser.add_argument(
 parser.add_argument(
     "--question_number",
     type = int,
-    default = 5,
+    default = 3,
     help = "the number for how many questions combine together",
+)
+parser.add_argument(
+    '--MTI', 
+    action='store_true', 
+    help="too lazy to add a new dataset",
 )
 
 args = parser.parse_args()
@@ -62,8 +67,9 @@ batch_size = args.batch_size
 case = args.case
 question_number = args.question_number
 
-template = 'Solve several independent questions here.'
+template = 'Solve several questions here.'
 MAX_LENGTH = 1200
+batch_size = 1
 
 # Lora config
 lora_config = LoraConfig(
@@ -87,13 +93,37 @@ training_args = TrainingArguments(
 )
 
 # load the model and the tokenizer
+
 model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+# model_name = 'Qwen/Qwen2-7B-Instruct'
+
 model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id =  tokenizer.eos_token_id
 
 model = get_peft_model(model, lora_config)
+
+# deal with MTI dataset
+def preprocess_MTI(data_file):
+    combine_data = []
+    with open(data_file, 'r',encoding='utf-8') as file:
+        data = json.load(file)
+    print(f'the length of data is:{len(data)}')
+    for subdata in data:
+        answers = subdata['answer'].split('\n')
+        confidence = []
+        for i in range(3):
+            if subdata['label'][i] == 1:
+                confidence.append('I am sure')
+            else:
+                confidence.append('I am unsure')
+        combine_data.append({
+            "question": subdata['question'], 
+            "answer": f'1: <task1>{answers[0]}<task1/> \n2: <task2>{answers[1]}<task2/> \n3: <task3>{answers[2]}<task3/>',
+            "confidence": f'1: {confidence[0]} \n2: {confidence[1]} \n3: {confidence[2]}'
+        })
+    return combine_data
 
 # combine data from CoQA together
 def preprocess_CoQA(data):
@@ -110,7 +140,7 @@ def preprocess_CoQA(data):
             for i in range(0, len(subdata['questions']), question_number):
                 if i+question_number-1 >= len(data):
                     break
-                combined_question = f"{subdata['story']}\n" + f'Solve serveral independent questions here.\n'
+                combined_question = f"{subdata['story']}\n" + f'Solve serveral questions here.\n'
                 combined_answer = f''
                 combined_confidence = f''
                 for j in range(0,question_number):
@@ -135,7 +165,7 @@ def preprocess_CoQA(data):
             for i in range(0, len(subdata['questions']), question_number):
                 if i+question_number-1 >= len(data):
                     break
-                combined_question = f"{subdata['story']}\n" + f'Solve several independent questions here.\n'
+                combined_question = f"{subdata['story']}\n" + f'Solve several questions here.\n'
                 combined_answer = f''
                 combined_confidence = f''
                 for j in range(0,question_number):
@@ -148,6 +178,36 @@ def preprocess_CoQA(data):
                     "answer": combined_answer,
                     "confidence": combined_confidence
                 })
+    return combined_data
+
+# combine data from CoT format together
+def preprocess_CoT(data):
+    combined_data = []
+    if case == 'blank':
+        if question_number == 1:
+            addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer."
+        elif question_number == 3:
+            addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer."
+        elif question_number == 5:
+            addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer."
+        # apply templates to the original dataset
+        for i in range(0, len(data), question_number):
+            if i+question_number-1 >= len(data):
+                break
+            combined_question = f'{data[0]["context"]}Solve serveral questions here.\n'
+            # combined_question = f'Solve serveral questions here.\n'
+            combined_answer = f''
+            combined_confidence = f''
+            for j in range(0,question_number):
+                combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n'
+                combined_answer = combined_answer + f'{j+1}: {data[i+j]["cot"]} \n'
+                combined_confidence = combined_confidence + f'{j+1}: {data[i+j]["confidence"]} \n'
+            combined_question = combined_question + f'{addtional_part}'
+            combined_data.append({
+                "question": combined_question, 
+                "answer": combined_answer,
+                "confidence": combined_confidence
+            })
     return combined_data
 
 # combine the data together
@@ -164,7 +224,7 @@ def preprocess_data(data):
         for i in range(0, len(data), question_number):
             if i+question_number-1 >= len(data):
                 break
-            combined_question = f'Solve serveral independent questions here.\n'
+            combined_question = f'Solve serveral questions here.\n'
             combined_answer = f''
             combined_confidence = f''
             for j in range(0,question_number):
@@ -188,12 +248,12 @@ def preprocess_data(data):
         for i in range(0, len(data), question_number):
             if i+question_number-1 >= len(data):
                 break
-            combined_question = f'Solve several independent questions here.\n'
+            combined_question = f'Solve several questions here.\n'
             combined_answer = f''
             combined_confidence = f''
             for j in range(0,question_number):
                 combined_question = combined_question + f'{j+1}: {data[i+j]["question"]} \n' + f'options: {data[i+j]["options"]}\n'
-                combined_answer = combined_answer + f'{j+1} {data[i+j]["answer"]} \n'
+                combined_answer = combined_answer + f'{j+1}: {data[i+j]["answer"]} \n'
                 combined_confidence = combined_confidence + f'{j+1}: {data[i+j]["confidence"]} \n'
             combined_question = combined_question + f'{addtional_part}'
             combined_data.append({
@@ -215,9 +275,14 @@ def tokenize_function_qa(example):
 
     if len(input_ids) > MAX_LENGTH:  # cut off
         print('truncation happen')
-        input_ids = input_ids[:MAX_LENGTH]
-        attention_mask = attention_mask[:MAX_LENGTH]
-        labels = labels[:MAX_LENGTH]
+        return {
+            "input_ids": [],
+            "attention_mask": [],
+            "labels": []
+        }
+        # input_ids = input_ids[:MAX_LENGTH]
+        # attention_mask = attention_mask[:MAX_LENGTH]
+        # labels = labels[:MAX_LENGTH]
     elif len(input_ids) < MAX_LENGTH:  # padding
         padding_length = MAX_LENGTH - len(input_ids)
         input_ids = input_ids + [tokenizer.pad_token_id] * padding_length
@@ -243,9 +308,14 @@ def tokenize_function_R(example):
 
     if len(input_ids) > MAX_LENGTH:  # cut off
         print('truncation happen')
-        input_ids = input_ids[:MAX_LENGTH]
-        attention_mask = attention_mask[:MAX_LENGTH]
-        labels = labels[:MAX_LENGTH]
+        return {
+            "input_ids": [],
+            "attention_mask": [],
+            "labels": []
+        }
+        # input_ids = input_ids[:MAX_LENGTH]
+        # attention_mask = attention_mask[:MAX_LENGTH]
+        # labels = labels[:MAX_LENGTH]
     elif len(input_ids) < MAX_LENGTH:  # padding
         padding_length = MAX_LENGTH - len(input_ids)
         input_ids = input_ids + [tokenizer.pad_token_id] * padding_length
@@ -271,9 +341,14 @@ def tokenize_function_confidence(example):
 
     if len(input_ids) > MAX_LENGTH:  # cut off
         print('truncation happen')
-        input_ids = input_ids[:MAX_LENGTH]
-        attention_mask = attention_mask[:MAX_LENGTH]
-        labels = labels[:MAX_LENGTH]
+        return {
+            "input_ids": [],
+            "attention_mask": [],
+            "labels": []
+        }
+        # input_ids = input_ids[:MAX_LENGTH]
+        # attention_mask = attention_mask[:MAX_LENGTH]
+        # labels = labels[:MAX_LENGTH]
     elif len(input_ids) < MAX_LENGTH:  # padding
         padding_length = MAX_LENGTH - len(input_ids)
         input_ids = input_ids + [tokenizer.pad_token_id] * padding_length
@@ -287,49 +362,50 @@ def tokenize_function_confidence(example):
     }
 
 # load the data
-certain_file = f'{data_file}_certain.json'
-uncertain_file = f'{data_file}_uncertain.json'
-with open(certain_file, 'r',encoding='utf-8') as file:
-    certain_data = json.load(file)
-with open(uncertain_file, 'r',encoding='utf-8') as file:
-    uncertain_data = json.load(file)
-print(f'the length of certain:{len(certain_data)}, the length of uncertain:{len(uncertain_data)}')
-# get the multiple problem dataset
-data = certain_data + uncertain_data
-random.shuffle(data)
-if 'story' in data[0].keys():
+if args.MTI:
+    data = preprocess_MTI(data_file)
+else:
+    certain_file = f'{data_file}_certain.json'
+    uncertain_file = f'{data_file}_uncertain.json'
+    with open(certain_file, 'r',encoding='utf-8') as file:
+        certain_data = json.load(file)
+    with open(uncertain_file, 'r',encoding='utf-8') as file:
+        uncertain_data = json.load(file)
+    print(f'the length of certain:{len(certain_data)}, the length of uncertain:{len(uncertain_data)}')
+    # get the multiple problem dataset
+    data = certain_data + uncertain_data
+    random.shuffle(data)
+
+if args.MTI:
+    combine_data = data
+elif 'story' in data[0].keys():
     combine_data = preprocess_CoQA(data)
+elif 'cot' in data[0].keys():
+    combine_data = preprocess_CoT(data)
 else:
    combine_data = preprocess_data(data)
+
 data = Dataset.from_list(combine_data)
 tokenized_data_confidence = data.map(tokenize_function_confidence)
 tokenized_data_qa = data.map(tokenize_function_qa)
 
 # MP Tuning
-# print('Doing MP Tuning!')
+print('Doing MP Tuning!')
 # tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
-# R-Tuning (S: question number = 1 || M: question number = 3)
-print(f'Doing R-Tuning with number: {question_number}')
-tokenized_data = data.map(tokenize_function_R)
+# R-Tuning (S: question number = 1 / M: question number = 3)
+# print(f'Doing R-Tuning with number: {question_number}')
+# tokenized_data = data.map(tokenize_function_R)
+# tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 # Vanilla
 # print(f'Doing Vanilla')
 # tokenized_data = tokenized_data_qa
+# tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 print(f'the length of dataset is: {len(tokenized_data)}')
-
-# fine tune
-trainer = Trainer(
-    model=model,  # model
-    args=training_args,  # args
-    train_dataset=tokenized_data,  # dataset
-)
-trainer.train()
-
-# save the model
-trainer.model.save_pretrained(output_file)
-tokenizer.save_pretrained(output_file)
 
 # check the training data
 save_data = []
@@ -343,7 +419,20 @@ for i, example in enumerate(tokenized_data):
             'label' : label_text
         })
 
-output_file = 'dataset/test.json'
-with open(output_file, 'w',encoding='utf-8') as f:
+data_output_file = 'dataset/test.json'
+with open(data_output_file, 'w',encoding='utf-8') as f:
     json.dump(save_data, f, indent=4, ensure_ascii=False)
+
+# fine tune
+trainer = Trainer(
+    model=model,  # model
+    args=training_args,  # args
+    train_dataset=tokenized_data,  # dataset
+)
+trainer.train()
+
+# save the model
+trainer.model.save_pretrained(output_file)
+tokenizer.save_pretrained(output_file)
+
 print('finish fine tune!')

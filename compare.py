@@ -37,6 +37,32 @@ question_number = args.question_number
 choice2num = {'a':0,'b':1,'c':2,'d':3,'e':4,'f':5,'g':6,'h':7,'i':8,'j':9,'k':10}
 num2choice = {0:'a',1:'b',2:'c',3:'d',4:'e',5:'f'}
 
+# deal with MTI dataset
+def MTI(data):
+    total = 0
+    correct = 0
+    for entry in data:
+        answers = entry.get('answer', '').lower().split('\n')
+        outputs = entry.get('output', '').lower().split('\n')
+        # check the answer
+        labels = []
+        for index,answer in enumerate(answers):
+            right = 0
+            for output in outputs:
+                if (f'task{index+1}' in output and  (f'{answer.strip()}' in output.replace(",", "") or f'{answer.strip()}' in output)):
+                    right = 1
+            if right == 1:
+                labels.append(1)
+                total += 1
+                correct += 1
+            else:
+                labels.append(0)
+                total += 1
+        # add the label
+        entry['label'] = labels
+    print(f'total:{total},the original successful rate is:{100*correct/total}%')
+    return data
+
 # deal with Question Answer setting
 def blank(data):
     total = 0
@@ -49,7 +75,7 @@ def blank(data):
         for index,answer in enumerate(answers):
             right = 0
             for output in outputs:
-                if (f'{index+1}: {answer.strip()}' in output):
+                if (f'{index+1}:' in output and  (f'{answer.strip()}' in output.replace(",", "") or f'{answer.strip()}' in output)):
                     right = 1
             if right == 1:
                 labels.append(1)
@@ -97,7 +123,9 @@ with open(data_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 # compare the answer
-if case == 'blank':
+if case == 'MTI':
+    updated_data = MTI(data)
+elif case == 'blank':
     updated_data = blank(data)
 else:
     updated_data = choice(data)

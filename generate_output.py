@@ -84,6 +84,8 @@ questions = df['question'].tolist()
 answers = df['answer'].tolist()
 # load model
 model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
+# model_name = 'Qwen/Qwen2-7B-Instruct'
+
 
 # put the input into format
 def get_generate_input(questions,model_name):
@@ -113,7 +115,7 @@ def generate_vllm(inputs,model_name,batch_size):
     sampling_params = SamplingParams(
         temperature = 0.0, 
         top_p = 1,
-        max_tokens=256,
+        max_tokens=1024,
         )
     results = llm.generate(
         prompt_token_ids = inputs,
@@ -156,7 +158,7 @@ def generate_lora(questions,model_name,batch_size):
     inputs = get_generate_input(questions,model_name)
     sampling_params = SamplingParams(
         temperature=0,
-        max_tokens=256,
+        max_tokens=1024,
         )
     model = LLM(
         model=model_name, 
@@ -245,7 +247,7 @@ elif case == 'blank':
 # generate the confidence
 for entry,item,prob in zip(output_data,confidence,probs):
     entry['confidence'] = item
-        # entry['prob'] = prob
+    # entry['prob'] = prob
 if 'story' in df.keys():
     storys = df['story'].tolist()
     for entry,story in zip(output_data,storys):

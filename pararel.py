@@ -1,22 +1,25 @@
 import json
 import random
 
-input_file = 'dataset/pararel_test.json'
-output_file = 'dataset/blank/pararel_test.json'
+input_file = 'dataset/pararel_train.json'
+output_file = 'dataset/blank/pararel_train.json'
 random.seed(0)
 
 # read json file
 with open(input_file, 'r') as file:
     data = json.load(file)
-
+context = ""
 #  get question and answer
 qa_pairs = []
 for item in data:
+    context = ""
     question = item[0]
     answer = item[1]
     qa_pairs.append({
+        "context": context,
         "question": question, 
-        "answer": answer
+        "answer": answer,
+        "context": context
         })
 
 # for pair in qa_pairs:

@@ -1,0 +1,51 @@
+# MMLU
+Here are some examples for you as reference.
+Solve several questions here.
+1: Who was the first President of the United States?
+options: [Abraham Lincoln, George Washington, Thomas Jefferson, Franklin D. Roosevelt]
+2: In which year did World War II end?
+options: [1945, 1939, 1918, 1963]
+3: Which country is the origin of the French Revolution?
+Options: [Germany, France, Italy, United Kingdom]
+Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer \n2: answer \n3: answer.
+Answer: 
+1: B 
+2: A 
+3: B
+Solve several questions here.
+1: What is the capital of France?
+options: [Berlin, Madrid, Paris, Rome]
+2: Who wrote the play "Romeo and Juliet"?
+options: [William Shakespeare, Charles Dickens, Leo Tolstoy, Mark Twain]
+3: What is the largest planet in our solar system?
+options: [Earth, Mars, Jupiter, Saturn]
+Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer \n2: answer \n3: answer.
+Answer: 
+1: C 
+2: A 
+3: C
+Solve several questions here.
+1: What is the chemical symbol for water?
+options: [H2O, CO2, NaCl, O2]
+2: Which element has the atomic number 1?
+options: [Hydrogen, Helium, Oxygen, Carbon]
+3: What is the speed of light in a vacuum?
+options: [300,000 km/s, 150,000 km/s, 1,000 km/s, 299,792 km/s]
+Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer \n2: answer \n3: answer.
+Answer: 
+1: A 
+2: A 
+3: D
+Only response to the content below.
+# GSM
+Here are some examples for you as reference.
+Solve several questions here.
+1: Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?
+2: Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?
+3: Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?
+Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer.
+Answer: 
+1: Natalia sold 48/2 = <<48/2=24>>24 clips in May. Natalia sold 48+24 = <<48+24=72>>72 clips altogether in April and May. #### 72
+2: Weng earns 12/60 = $<<12/60=0.2>>0.2 per minute. Working 50 minutes, she earned 0.2 x 50 = $<<0.2*50=10>>10. #### 10
+3: In the beginning, Betty has only 100 / 2 = $<<100/2=50>>50. Betty's grandparents gave her 15 * 2 = $<<15*2=30>>30. This means, Betty needs 100 - 50 - 30 - 15 = $<<100-50-30-15=5>>5 more. #### 5
+Only response to the content below.

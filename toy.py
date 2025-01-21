@@ -1,29 +1,29 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
-from vllm import LLM, SamplingParams
-from vllm.lora.request import LoRARequest
-from peft import LoraConfig, get_peft_model, PeftModel
-from datasets import Dataset
-import torch
-import json
-import argparse
+from functools import lru_cache
 import os
-import numpy as np
+import json
+from glob import glob
+import random
 import re
+from tqdm import tqdm
+from itertools import groupby
+import numpy as np
+import requests
+from transformers import pipeline
+import torch
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-output_file = "models/llama3_gsm"
+def reduce_CoT(cot):
+    output = []
+    while '**' in cot:
+        index_1 = cot.find('**')
+        index_2 = cot.find('\n')
+        output.append(cot[index_1+2:index_2])
+        cot = cot[index_2+1:]
+    output.append(" " + cot)
+    return ("").join(output)
 
-pattern = r"1:\s*([^2]*)2:\s*([^3]*)3:\s*([^1]*)"
-confidence = '1: a 2: b 3: c 1: I am sure 2: I am sure 3: I am sure'
-# confidence = '1: I am sure 2: I am sure 3: I am sure'
-matches = re.findall(pattern, confidence)
-if matches:
-    # match = re.search(pattern, matches[-1])
-    match = matches[-1]
-    print(matches)
-    print(match)
-
+cot = "How much money does Betty have in the beginning? ** In the beginning, Betty has only 100 / 2 = $<<100/2=50>>50.\nHow much money did Betty's grandparents give her? ** Betty's grandparents gave her 15 * 2 = $<<15*2=30>>30.\nHow much more money does Betty need to buy the wallet? ** This means, Betty needs 100 - 50 - 30 - 15 = $<<100-50-30-15=5>>5 more.\n#### 5"
+cot = reduce_CoT(cot)
+print(cot)
 
 
 

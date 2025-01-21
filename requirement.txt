@@ -1,5 +1,0 @@
-transformers
-vllm
-torch
-peft
-datasets

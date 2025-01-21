@@ -37,6 +37,34 @@ output_uncertain_file = f'{args.save_path}_uncertain.json'
 result_file = args.result_path
 case = args.case
 
+# deal with CoT case
+def divide_CoT(cots,context):
+    certain_data = []
+    uncertain_data = []
+    for label, question, answer, cot in zip(labels, questions, answers,cots):
+        answer = answer.split('\n')
+        cot = cot.split('\n')
+        for sublabel, subquestion, subanswer, subcot in zip(label, question, answer, cot):
+            if sublabel == 1:
+                subanswer = f'{subanswer.strip()}'
+                certain_data.append({
+                    "context": context,
+                    "question": subquestion, 
+                    "answer": subanswer,
+                    "cot": subcot,
+                    "confidence": 'I am sure'
+                })
+            else:
+                subanswer = f'{subanswer.strip()}'
+                uncertain_data.append({
+                    "context": context,
+                    "question": subquestion, 
+                    "answer": subanswer,
+                    "cot": subcot,
+                    "confidence": 'I am unsure'
+                })
+    return certain_data, uncertain_data
+
 # deal with CoQA dataset
 def divide_CoQA(storys):
     certain_data = []
@@ -101,17 +129,31 @@ with open(data_file, 'r',encoding='utf-8') as file:
 df = pd.DataFrame(data)
 questions = df['original_questions'].tolist()
 answers = df['answer'].tolist()
+
+if 'context' in df.columns:
+    context = df['context'].tolist()
+if 'cot' in df.columns:
+    cots = df['cot'].tolist()
+
 # divide the data
 certain_data = []
 uncertain_data = []
-if case == 'choice':
+if 'story' in df.keys():
+    storys = df['story'].tolist()
+    certain_data, uncertain_data = divide_CoQA(storys)
+elif 'cot' in df.keys():
+    cots = df['cot'].tolist()
+    certain_data, uncertain_data = divide_CoT(cots,context[0])
+elif case == 'choice':
     choices = df['original_options'].tolist()
+    context = df['context'].tolist()[0]
     for label, question, choice, answer in zip(labels, questions, choices, answers):
         answer = answer.split('\n')
         for sublabel, subquestion, subchoice, subanswer in zip(label, question, choice, answer):
             if sublabel == 1:
                 subanswer = f'{subanswer.strip()}'
                 certain_data.append({
+                    "context": context,
                     "question": subquestion, 
                     "options": subchoice,
                     "answer": subanswer,
@@ -143,11 +185,6 @@ elif case == 'blank':
                     "answer": subanswer,
                     "confidence": 'I am unsure'
                 })
-
-if 'story' in df.keys():
-    storys = df['story'].tolist()
-    # print(storys)
-    certain_data, uncertain_data = divide_CoQA(storys)
 
 print('the length of certain data is:',len(certain_data))
 print('the length of uncertain data is:',len(uncertain_data))
