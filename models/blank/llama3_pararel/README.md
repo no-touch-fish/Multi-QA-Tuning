@@ -1,5 +1,5 @@
 ---
-base_model: Qwen/Qwen2-7B-Instruct
+base_model: meta-llama/Meta-Llama-3-8B-Instruct
 library_name: peft
 ---
 

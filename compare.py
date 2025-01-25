@@ -167,11 +167,14 @@ if 'confidence' in updated_data[0]:
             else: # if you don't show sure, you are unsure
                 unsure += 1
                 total += 1
-    print(f'sure case:{sure}, unsure case:{unsure}, total case:{total}, Wrong case: {wrong}')
-    print(f'successful rate:{100*correct/sure}%, answer rate: {100*sure/total}%')
 
 # save the data
 with open(data_path, 'w', encoding='utf-8') as f:
     json.dump(updated_data, f, ensure_ascii=False, indent=4)
-
 print("Finish comparing")
+
+if 'confidence' in updated_data[0]:
+    print(f'sure case:{sure}, unsure case:{unsure}, total case:{total}, Wrong case: {wrong}')
+    print(f'successful rate:{100*correct/sure}%, answer rate: {100*sure/total}%')
+
+

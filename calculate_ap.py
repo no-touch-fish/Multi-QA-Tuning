@@ -155,6 +155,7 @@ def divide_content(content):
     # deal with context
     if content.find('Only response to the content below') != -1:
         content = content[content.find('Only response to the content below')+8:]
+
     index_1 = content.find('1:')
     index_2 = content.find('2:')
     index_3 = content.find('3:')
@@ -169,6 +170,11 @@ def divide_content(content):
         output_list.append(content[index_3+3:index_3 + index_end-1])
     return output_list
 
+def divide_content_2(content):
+    output_list = content.split('\n')
+    print(output_list)
+    return output_list
+
 # function to get the prob of first index
 def get_prob(logprobs):
     prob_dic = {' sure': 0, ' unsure': 0}
@@ -180,7 +186,7 @@ def get_prob(logprobs):
             if logprob[key].decoded_token == ' sure':
                 prob = math.exp(logprob[key].logprob)
                 # print(f'sure prob:{prob}')
-                prob_dic[' sure'] = prob
+                prob_dic[' sure'] += prob
             if logprob[key].decoded_token == ' confident':
                 prob = math.exp(logprob[key].logprob)
                 # print(f'confident prob:{prob}')
@@ -189,7 +195,7 @@ def get_prob(logprobs):
             if logprob[key].decoded_token == ' unsure':
                 prob = math.exp(logprob[key].logprob)
                 # print(f'unsure prob:{prob}')
-                prob_dic[' unsure'] = prob
+                prob_dic[' unsure'] += prob
             if logprob[key].decoded_token == ' not':
                 prob = math.exp(logprob[key].logprob)
                 # print(f'not prob:{prob}')
@@ -312,8 +318,11 @@ else:
             question_list = divide_content(question)
             output_list = divide_content(output)
         if output_list == None:
-            print('wrong answer format, not count!')
-            continue
+            output_list = divide_content_2(output)
+            if output_list == None or len(output_list) != 3:
+                # print(f'wrong answer format ({output}), not count!')
+                print(f'wrong answer format, not count!')
+                continue
         for index in range(3):
             if args.MTI:
                 prompt = ''
