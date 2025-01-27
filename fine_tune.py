@@ -391,15 +391,15 @@ tokenized_data_confidence = data.map(tokenize_function_confidence)
 tokenized_data_qa = data.map(tokenize_function_qa)
 
 # MP Tuning
-# print('Doing MP Tuning!')
-# # tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
-# tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
-# tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
+print('Doing MP Tuning!')
+# tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 # R-Tuning (S: question number = 1 / M: question number = 3)
-print(f'Doing R-Tuning with number: {question_number}')
-tokenized_data = data.map(tokenize_function_R)
-tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
+# print(f'Doing R-Tuning with number: {question_number}')
+# tokenized_data = data.map(tokenize_function_R)
+# tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 # Vanilla
 # print(f'Doing Vanilla')
