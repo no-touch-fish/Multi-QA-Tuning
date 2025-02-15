@@ -49,6 +49,7 @@ def MTI(data):
         for index,answer in enumerate(answers):
             right = 0
             for output in outputs:
+                # if (f'task{index+1}' in output and  (f'{answer.strip()}' in output.replace(",", "") or f'{answer.strip()}' in output)) or (f'{answer.strip()}' in output.replace(",", "") or f'{answer.strip()}' in output):
                 if (f'task{index+1}' in output and  (f'{answer.strip()}' in output.replace(",", "") or f'{answer.strip()}' in output)):
                     right = 1
             if right == 1:
@@ -154,7 +155,7 @@ if 'confidence' in updated_data[0]:
             # print(f"finding from left: {confidences}")
             if len(label) != len(confidences):
                 total += question_number
-                wrong += 3
+                wrong += question_number
                 continue
         for index,confidence in enumerate(confidences):
             if (f'{index+1}:' in confidence and (f'unsure' in confidence or f'not sure' in confidence)):

@@ -14,7 +14,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -32,7 +32,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -67,8 +67,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -86,7 +86,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -120,9 +120,9 @@
             "Virginia Tech"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -139,7 +139,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -176,7 +176,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -210,8 +210,8 @@
             "Velvet"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -230,7 +230,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -264,8 +264,8 @@
             "Herbert Neckel"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -300,9 +300,9 @@
             "RTE Studios"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -372,7 +372,7 @@
             "Brazil"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -480,9 +480,9 @@
             "Barry Bonds, Hank Aaron, Babe Ruth, Willie Mays, Alex Rodriguez, Ken Griffey, Jr., Jim Thome, Sammy Sosa, Frank Robinson, Mark McGwire, Harmon Killebrew, Rafael Palmeiro, Reggie Jackson, Manny Ramirez, Mike Schmidt, Mickey Mantle, Jimmie Foxx, Ted Williams, Willie McCovey, Frank Thomas, Ernie Banks, Eddie Mathews, Mel Ott, Gary Sheffield, Eddie Murray"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -498,7 +498,7 @@
             "Doug Ireland"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am sure"
         ]
@@ -534,7 +534,7 @@
             "1926"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -570,8 +570,8 @@
             "Matt Jackson+, Nick Jackson+, El Generico, Super Dragon, Scott Lost, Chris Bosh, Paul London, Davey Richards, Kevin Steen, Player Uno, Stupefied, Joey Ryan, Roderick Strong, Quicksilver, B-Boy, Pac, Excalibur, Human Tornado, Jimmy Jacobs, Tyler Black, Jack Evans, Homicide, Scorpio Sky, Brian Cage, Michael Elgin"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -589,7 +589,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -626,7 +626,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -661,7 +661,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -678,7 +678,7 @@
             "Omagbemi Dudu"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -696,7 +696,7 @@
             "Aberdeenshire Canal"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -750,7 +750,7 @@
             "Feudinge (Ruppersbach), Ilse, Banfe, Laasphe, Perf, Dautphe, Wetschaft, Ohm, Allna, Zwester Ohm, Salzbode, Lumda, Wieseck, Bieber, Kleebach, Wetzbach, Dill, Solmsbach, Iserbach (Mottbach), Ulmbach, Kallenbach, Weil, Kerkerbach, Emsbach, Elbbach, Aar, Dorsbach, Gelbach (Aubach), Muhlbach, Emsbach"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -769,7 +769,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -804,7 +804,7 @@
             "Canada (CAN)"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -823,7 +823,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -859,7 +859,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -914,7 +914,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -984,7 +984,7 @@
             "Zack Bowman"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -1003,8 +1003,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
-            "I am sure"
+            "I am sure",
+            "I am unsure"
         ]
     },
     {
@@ -1020,7 +1020,7 @@
             "2,433"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -1039,7 +1039,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -1057,7 +1057,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -1128,9 +1128,9 @@
             "Sacre Bleu Cross, Le Quiet Squad, Bomb Voyage, Le Pig-Al Patrol, Le Bowser Bagger, Le Escape Goat, Le Cop on Le Rocks, Crow De Guerre, Canadian Can-Can, Tour de Farce, The Shooting of Caribou Lou"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -1165,8 +1165,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -1182,7 +1182,7 @@
             "Shipon Junction"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -1200,8 +1200,8 @@
             "Ben Hogan, 70-72-70-68=280, Skee Riegel, 73-68-70-71=282, Lloyd Mangrum, 69-74-70-73=286, Lew Worsham, 71-71-72-72=286, Dave Douglas, 74-69-72-73=288, Lawson Little, 72-73-72-72=289, Jim Ferrier, 74-70-74-72=290, Johnny Bulla, 71-72-73-75=291, Byron Nelson, 71-73-73-74=291, Sam Snead, 69-74-68-80=291"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -1255,7 +1255,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -1308,8 +1308,8 @@
             "1981/82, 1982/83, 1983/84, 1984/85, 1985/86, 1986/87, 1987/88, 1988/89, 1989/90, 1990/91, 1991/92, 1992/93, 1993/94, 1994/95, 1995/96, 1996/97, 1997/98"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -1362,8 +1362,8 @@
             "30 August - 20 September 1995"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -1417,8 +1417,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -1452,7 +1452,7 @@
             "Mario Dominguez"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am sure"
         ]
@@ -1508,7 +1508,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -1543,7 +1543,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -1616,7 +1616,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -1650,8 +1650,8 @@
             "Petter Solberg"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -1670,7 +1670,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -1686,7 +1686,7 @@
             "MD 213, US 301  DE 71  DE 896, Norfolk Southern Railway, DE 1, U.S. 13, DE 9"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -1706,7 +1706,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -1740,7 +1740,7 @@
             "1995/96, 1996/97, 1997/98"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am sure"
         ]
@@ -1760,7 +1760,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -1796,7 +1796,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -1814,7 +1814,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -1850,7 +1850,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -1957,8 +1957,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -1994,7 +1994,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -2028,7 +2028,7 @@
             "Moms Radio 101.5 Tacloban"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -2210,7 +2210,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -2226,7 +2226,7 @@
             "1:25:23"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -2245,7 +2245,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -2264,7 +2264,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -2281,7 +2281,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -2299,7 +2299,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -2335,7 +2335,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -2408,7 +2408,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -2498,7 +2498,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -2516,7 +2516,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -2624,7 +2624,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -2641,7 +2641,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -2694,7 +2694,7 @@
             "Transrapid 03"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am sure"
         ]
@@ -2713,7 +2713,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -2803,7 +2803,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -2892,7 +2892,7 @@
             "8, 6, 4, 3, 2, , , , , , 1, , , ,"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -2910,7 +2910,7 @@
             "Cathedral of Christ the King, Saint Brigid Catholic Church"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -2964,8 +2964,8 @@
             "Ep. 8"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -2984,7 +2984,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -3018,9 +3018,9 @@
             "Crimson Classic"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -3056,7 +3056,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -3072,7 +3072,7 @@
             "Crest Whitestrips Classic previously Crest Whitestrips, Crest Whitestrips Professional, Crest Whitestrips Supreme, Crest Whitestrips Premium, Crest Whitestrips Pro previously Crest Whitestrips Premium Plus, Crest Whitestrips Renewal, Crest Whitestrips Daily Multicare, Crest Whitestrips Advanced Seal, Crest Whitestrips 3D Vivid, Crest Whitestrips 3D Advanced Vivid, Crest Whitestrips 3D Professional Effects, Crest 3D White 2 Hour Express, Crest 3D Intensive Professional Effects"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -3126,9 +3126,9 @@
             "January 15, 1949"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -3162,7 +3162,7 @@
             "PKN Orlen SA, PGE SA, PGNiG SA, KGHM Polska Miedz SA"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -3182,7 +3182,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -3198,7 +3198,7 @@
             "Lotto-Belisol"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -3218,7 +3218,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -3234,9 +3234,9 @@
             "Ukrainian"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -3254,7 +3254,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -3272,7 +3272,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -3325,7 +3325,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -3343,7 +3343,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -3360,7 +3360,7 @@
             "Yamato highland"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -3378,8 +3378,8 @@
             "Pinamar Open, South Open, Parana Open, Norpatagonico Open, Center Open, Angel Cabrera Classic, Chaco Open, North Open, Metropolitano Open, Misiones Open, Carlos Franco Invitational, Salta Open, Tandil Open, Argentine Masters, Mendoza Open, Roberto de Vicenzo Classic, San Luis Open, Abierto del Litoral, Argentine Open"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -3416,7 +3416,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -3468,7 +3468,7 @@
             "Gene Anderson"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -3506,7 +3506,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -3542,7 +3542,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -3560,7 +3560,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -3578,7 +3578,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -3594,7 +3594,7 @@
             "30.4%"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -3649,7 +3649,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -3667,8 +3667,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -3684,8 +3684,8 @@
             "2:12:59, 2:15:31, 2:11:24, 2:21:08"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -3793,7 +3793,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -3866,7 +3866,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -3883,8 +3883,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -3918,7 +3918,7 @@
             "Epsilon Canis Majoris"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -3990,7 +3990,7 @@
             "Same Old Drama"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -4010,7 +4010,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4028,7 +4028,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4044,7 +4044,7 @@
             "The Furrowed Field"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -4063,7 +4063,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -4134,9 +4134,9 @@
             "Dominican Republic"
         ],
         "confidences": [
+            "I am sure",
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4189,7 +4189,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -4224,7 +4224,7 @@
             "Freakonomics"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -4315,7 +4315,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -4387,7 +4387,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -4423,7 +4423,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -4458,9 +4458,9 @@
             "Twelfth Night, The Time of Your Life"
         ],
         "confidences": [
+            "I am sure",
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4548,9 +4548,9 @@
             "Robert W. Watson"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4567,7 +4567,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -4585,7 +4585,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -4603,7 +4603,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -4657,7 +4657,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -4674,7 +4674,7 @@
             "2"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -4712,7 +4712,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4784,7 +4784,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4838,7 +4838,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -4945,7 +4945,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -4963,8 +4963,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -4980,7 +4980,7 @@
             "7th (2000-01), 9, 8th (2001-02), 14, 9th (2002-03), 12, 10th (2003-04), 13, 11th (2004-05), 11, 12th (2005-06), 20, 2006-07, 11, 2007-08, 23, 2008-09, 20, 2009-10, 21, 2010-11, 19, 2011-12, 18, 2012-13, 20"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -5017,8 +5017,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -5034,9 +5034,9 @@
             "Charles Francis"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am sure",
+            "I am unsure"
         ]
     },
     {
@@ -5054,7 +5054,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -5090,7 +5090,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -5125,7 +5125,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -5251,8 +5251,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -5287,8 +5287,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -5322,8 +5322,8 @@
             "Little Child, One Step Out of Time, Why Me?"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -5341,7 +5341,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -5377,7 +5377,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -5413,8 +5413,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
-            "I am sure"
+            "I am sure",
+            "I am unsure"
         ]
     },
     {
@@ -5432,7 +5432,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -5539,7 +5539,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -5576,7 +5576,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -5592,7 +5592,7 @@
             "New Zealand"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -5612,7 +5612,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -5628,7 +5628,7 @@
             "Alberto Garcia, Antonio David Jimenez, Jesus Espana, John Mayock, Michael Buchleitner, Mohammed Mourhit, Sergey Ivanov, Mindaugas Pukstas, Irba Lakhal, Joakim Johansson, Harald Steindorfer, Ferdinando Vicari, Martin Steinbauer, Christos Papapetrou"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am sure"
         ]
@@ -5682,7 +5682,7 @@
             "Double R Racing"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -5701,8 +5701,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -5718,7 +5718,7 @@
             "World Record, World Record, Asian Record, Asian Record, Asian Record, Games Record, Games Record, Games Record"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -5774,7 +5774,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -5826,7 +5826,7 @@
             "Germany"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -5862,7 +5862,7 @@
             "Air Force Institute of Technology, California Institute of Technology, California Polytechnic State University, California State Polytechnic University, Pomona, Clarkson University, Colorado School of Mines, Colorado Technical University, Florida Institute of Technology, Georgia Institute of Technology, Illinois Institute of Technology, Massachusetts Institute of Technology, Michigan Technological University, Missouri University of Science and Technology, Montana Tech of the University of Montana, New Jersey Institute of Technology, New Mexico Institute of Mining and Technology, Oregon Institute of Technology, Polytechnic Institute of New York University, Rensselaer Polytechnic Institute, Rochester Institute of Technology, Rose-Hulman Institute of Technology, South Dakota School of Mines and Technology, Southern Polytechnic State University, Stevens Institute of Technology, Texas Tech University, University of Wisconsin-Stout, Virginia Polytechnic Institute and State University, Worcester Polytechnic Institute"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -5971,7 +5971,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -5988,7 +5988,7 @@
             "Sweden, Sweden, Estonia, United Kingdom, French Navy, United Kingdom, Estonia, Belgium, Soviet Union"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -6062,7 +6062,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6096,7 +6096,7 @@
             "Farmer"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -6114,9 +6114,9 @@
             "County Cricket, 1873-1973, 400th Anniversary, birth of Inigo Jones, 19th Commonwealth Parliamentary Conference, Royal Wedding (The Princess Anne), British Trees, Fire Service Anniversary, Medieval Warriors, Winston Churchill Centenary, Bicentenary, birth J. M. W. Turner, European Architectural Year, Sailing, 150th Anniversary of Public Railways, Jane Austen Bicentenary, Social Reformers, American Bicentenary, Roses"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6134,7 +6134,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6152,7 +6152,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6188,7 +6188,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6258,9 +6258,9 @@
             "68,733, 71,496, 67,196, 68,603, 78,973, 67,352, 67,413, 70,035, 44,218, 78,731, 47,125, 53,220"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6277,7 +6277,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -6314,7 +6314,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -6367,7 +6367,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -6386,7 +6386,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -6402,7 +6402,7 @@
             "Bangalore"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -6439,7 +6439,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -6476,7 +6476,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6510,9 +6510,9 @@
             "1(0)"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -6528,7 +6528,7 @@
             "September 2, September 9, September 16, September 23, September 30, October 7, October 14, October 21, October 28, November 4, November 11, November 25, December 30"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am sure"
         ]
@@ -6600,9 +6600,9 @@
             "Danilo Ildefonso, Noy Castillo, Ali Peek, Brixter Encarnacion, William Antonio, Banjo Calpito, Henry Fernandez, Steven Smith"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6654,7 +6654,7 @@
             "Psikyo Shooting Collection Vol. 1: Strikers 1945 I & II"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -6673,7 +6673,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -6709,7 +6709,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -6782,7 +6782,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -6798,9 +6798,9 @@
             "Super Star"
         ],
         "confidences": [
+            "I am sure",
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -6853,7 +6853,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -6870,8 +6870,8 @@
             "Paul Tracy"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -6996,8 +6996,8 @@
             "Glacial Aerial Tramway Kaprun III, Mississippi Aerial River Transit, Torre Jaume I"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -7086,7 +7086,7 @@
             "Sale United"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -7159,8 +7159,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -7178,7 +7178,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -7267,7 +7267,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -7302,7 +7302,7 @@
             "Re-elected, Retired Jacksonian gain, Re-elected, Re-elected, Re-elected, Retired Jacksonian gain, Lost re-election Jacksonian gain, Re-elected, Re-elected, Re-elected, Retired Adams gain, Re-elected, Re-elected, Re-elected, Re-elected, Retired Adams gain, Retired Adams gain, Re-elected, Re-elected, Re-elected, Re-elected, Retired Adams gain"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -7356,9 +7356,9 @@
             "September 3, September 12, September 19, September 26, October 10, October 17, October 24, October 31, November 7, November 14, November 21, November 28, December 23"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -7392,8 +7392,8 @@
             "0, 2"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -7412,7 +7412,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -7430,7 +7430,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -7466,7 +7466,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -7518,7 +7518,7 @@
             "CD"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -7572,7 +7572,7 @@
             "SD Eibar"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -7627,7 +7627,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -7662,7 +7662,7 @@
             "September 26"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -7699,8 +7699,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -7825,8 +7825,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -7934,7 +7934,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -7951,7 +7951,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -8150,7 +8150,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -8347,8 +8347,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -8366,7 +8366,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -8384,7 +8384,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -8402,7 +8402,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -8418,7 +8418,7 @@
             "Mexico"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -8436,9 +8436,9 @@
             "5th"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -8456,7 +8456,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -8474,7 +8474,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -8508,7 +8508,7 @@
             "Walter Schellenberg"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -8527,8 +8527,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
-            "I am sure"
+            "I am sure",
+            "I am unsure"
         ]
     },
     {
@@ -8544,7 +8544,7 @@
             "Sao Paulo, Brazil, Goiania, Brazil, Ribeirao Preto, Brazil, Ribeirao Preto, Brazil, Antalya 15, Turkey, Caserta, Italy, Lenzerheide, Switzerland"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -8600,7 +8600,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -8636,7 +8636,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -8672,7 +8672,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -8708,7 +8708,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -8743,7 +8743,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -8779,8 +8779,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -8797,7 +8797,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -8888,7 +8888,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -8940,7 +8940,7 @@
             "1:28.695"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -8960,7 +8960,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9031,7 +9031,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -9050,7 +9050,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9102,9 +9102,9 @@
             "1-2, 3, 4-6, 7-8, 9-12"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -9139,7 +9139,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -9174,9 +9174,9 @@
             "Rita Elizabeth Meda Cojulun"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -9193,7 +9193,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -9211,7 +9211,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -9248,7 +9248,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9264,9 +9264,9 @@
             "Michigan Tech"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -9300,7 +9300,7 @@
             "01.9"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -9319,7 +9319,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -9356,7 +9356,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9372,7 +9372,7 @@
             "Methodist College Belfast, Royal Belfast Academical Institution, Campbell College, Coleraine Academical Institution, The Royal School, Armagh, Portora Royal School, Bangor Grammar School, Ballymena Academy, Rainey Endowed School, Foyle College, Belfast Royal Academy, Regent House Grammar School, Royal School Dungannon, Annadale Grammar School (now Wellington College), Ballyclare High School, Belfast Boys Model School, Grosvenor High School, Wallace High School, Derry Academy, Dalriada School, Galway Grammar School, Lurgan College, Omagh Academy, Sullivan Upper School"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -9390,7 +9390,7 @@
             "1890, 1872, 1987, 1902, 1935, 1987, 1999, 1976, 1972, 1872, 1976, 1968, 1976, 1902, 1894, 1991, , 1990, 1886, 1886, 1873, 1868, 1874, 1880, 1900, 1910, 1918, 1920, , 1985"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -9409,8 +9409,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -9428,7 +9428,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -9444,7 +9444,7 @@
             "53:26"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -9516,7 +9516,7 @@
             ", Aparna Popat, Jitender Kumar, Jaspal Rana, Jaspal Rana Satendra Kumar, Dharmaraj Wilson, Arumugam K. Pandian, Arumugam K. Pandian, Satheesha Rai, Satheesha Rai"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -9535,7 +9535,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -9570,7 +9570,7 @@
             "U+22A1"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -9607,8 +9607,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -9624,9 +9624,9 @@
             "Egypt"
         ],
         "confidences": [
+            "I am sure",
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9678,9 +9678,9 @@
             "Sebastian Vettel"
         ],
         "confidences": [
+            "I am sure",
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9698,7 +9698,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9750,7 +9750,7 @@
             "Rari class, Malabar class, UT507 class, UT515 class, UT710 class, UT711 class, ,"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -9786,9 +9786,9 @@
             "1962-63"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -9806,7 +9806,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9822,9 +9822,9 @@
             "20.3%, 29.3%, 22.6%, 18.2%, 18.2%, 103.1%, 26.0%"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am sure",
+            "I am unsure"
         ]
     },
     {
@@ -9842,7 +9842,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9878,7 +9878,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9894,8 +9894,8 @@
             "180, 146"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -9950,7 +9950,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -9984,9 +9984,9 @@
             "Tampa Bay Lightning"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am sure",
+            "I am unsure"
         ]
     },
     {
@@ -10021,8 +10021,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -10076,7 +10076,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -10110,7 +10110,7 @@
             "Outstanding Rock Artist/Group"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -10164,9 +10164,9 @@
             "Lorenzo Lanzi"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -10183,7 +10183,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -10200,8 +10200,8 @@
             "2-2"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -10220,7 +10220,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -10273,7 +10273,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -10291,8 +10291,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -10308,9 +10308,9 @@
             "Alan Buck, Sandy Kennon, Duncan Forbes, John Fowler, Brian Hall, Mick Loughton, Ray Price, David Raine, Barrie Aitchison, Bobby Blackwood, Arthur Kaye, John Mansfield, Derek Trevis, Peter Bullock, Reg Stratton"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -10326,7 +10326,7 @@
             "7-1, Hamilton Academical, 1-2, Arbroath, 1-1, Falkirk, 1-1, Hibernian, 5-2, Kilmarnock, 5-1, Raith Rovers, 1-4, Celtic, 0-0, Rangers"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -10344,9 +10344,9 @@
             "Asian Junior Championships"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -10363,8 +10363,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -10380,7 +10380,7 @@
             "Athens, Greece"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -10399,8 +10399,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -10454,7 +10454,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -10472,7 +10472,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -10506,9 +10506,9 @@
             "October 2"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -10543,8 +10543,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -10615,7 +10615,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -10652,7 +10652,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -10669,7 +10669,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -10687,7 +10687,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -10704,7 +10704,7 @@
             "IF Friska Viljor (N)"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -10848,9 +10848,9 @@
             "Baylor*, at Michigan State, Stanford*, Florida State*, Wisconsin, at #15 Illinois, at Indiana, Purdue, Minnesota, at Northwestern, #13 Michigan, vs. BYU*"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -10886,7 +10886,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -10922,7 +10922,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -10939,8 +10939,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -10992,8 +10992,8 @@
             "Socialist Alternative"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -11029,7 +11029,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -11048,7 +11048,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11064,9 +11064,9 @@
             "Veteran"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -11082,8 +11082,8 @@
             "2001"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -11118,9 +11118,9 @@
             "Marma"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -11154,9 +11154,9 @@
             "Bryan College, Columbia College+, Milligan College, Montreat College, Point University, Reinhardt University, St. Andrews University, Savannah College of Art and Design at Atlanta, Tennessee Wesleyan College, Truett-McConnell College, Union College, Virginia Intermont College"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11174,7 +11174,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11210,7 +11210,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11227,7 +11227,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -11262,7 +11262,7 @@
             "Thailand"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -11336,7 +11336,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -11353,7 +11353,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -11370,7 +11370,7 @@
             "Mobitel"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -11442,7 +11442,7 @@
             "France"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -11478,8 +11478,8 @@
             "October 4, 1954"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -11497,7 +11497,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -11534,7 +11534,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11569,8 +11569,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -11586,7 +11586,7 @@
             "Birkbeck, University of London, University of East Anglia, University of Essex, Goldsmiths, University of London, Institute of Education, University of London, University of Lancaster, University of Leicester, Loughborough University, Royal Holloway, University of London, SOAS, University of London, University of Sussex"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -11624,7 +11624,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11642,7 +11642,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11658,7 +11658,7 @@
             "67,282"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -11712,7 +11712,7 @@
             "1988 Winter Paralympics"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -11748,7 +11748,7 @@
             "5"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am sure"
         ]
@@ -11768,7 +11768,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11784,8 +11784,8 @@
             "Vilija Sereikaite, Ellen van Dijk, Joanna Rowsell, Svitlana Halyuk, Aksana Papko, Oxana Kozonchuk, Jarmila Machacova, Stephanie Pohl, Lisa Brennauer, Edyta Jasinska, Audrey Cordon, Alena Amialyusik, Hannah Mayho, Viktoriya Kondel, Oksana Lyesnik, Elise van Hage, Dominika Maczka"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -11856,9 +11856,9 @@
             "13 February"
         ],
         "confidences": [
+            "I am sure",
             "I am unsure",
-            "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -11876,7 +11876,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -11911,7 +11911,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -11928,7 +11928,7 @@
             "Desmond Trufant, Robert Alford, Malliciah Goodman, Levine Toilolo, Stansly Maponga, Kemal Ishmael, Zeke Motta, Sean Renfree"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am sure"
         ]
@@ -11965,7 +11965,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -12000,8 +12000,8 @@
             "24,388, 54,075"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -12018,9 +12018,9 @@
             "September 12"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -12037,7 +12037,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -12054,8 +12054,8 @@
             "Green Bay Packers"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -12072,8 +12072,8 @@
             "Autonomist Party of Corrientes"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -12092,7 +12092,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -12127,7 +12127,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -12162,7 +12162,7 @@
             "19th"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am sure"
         ]
@@ -12199,7 +12199,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -12217,8 +12217,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -12236,7 +12236,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12254,7 +12254,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12289,7 +12289,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -12306,9 +12306,9 @@
             "Gonzaga Coutinho, Pedro Osorio S.A.R.L., Concha, Gabriela Schaaf, Toze Brito, Teresa Silva Carvalho, Florencia, Manuel Jose Soares, Manuela Bravo"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -12326,7 +12326,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12343,8 +12343,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -12362,7 +12362,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12397,7 +12397,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am sure"
         ]
     },
@@ -12432,9 +12432,9 @@
             "800-829"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -12468,9 +12468,9 @@
             "103,130, 83,900"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12487,7 +12487,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -12524,7 +12524,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12541,8 +12541,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -12578,7 +12578,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12614,7 +12614,7 @@
         "confidences": [
             "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12632,7 +12632,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -12648,9 +12648,9 @@
             "Nova Scotia"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -12666,9 +12666,9 @@
             "2006/07"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -12684,8 +12684,8 @@
             "551,009"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -12703,7 +12703,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -12740,7 +12740,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12794,7 +12794,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -12866,7 +12866,7 @@
         "confidences": [
             "I am sure",
             "I am sure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -12900,8 +12900,8 @@
             "November 7"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -12956,7 +12956,7 @@
         "confidences": [
             "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -12973,7 +12973,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -12990,9 +12990,9 @@
             "Matthew Stafford, Brandon Pettigrew, Louis Delmas, DeAndre Levy, Derrick Williams, Sammie Lee Hill, Aaron Brown, Lydon Murtha, Zack Follett, Dan Gronkowski"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -13026,8 +13026,8 @@
             "Asia"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -13062,9 +13062,9 @@
             "Saat Phere"
         ],
         "confidences": [
-            "I am sure",
             "I am unsure",
-            "I am sure"
+            "I am unsure",
+            "I am unsure"
         ]
     },
     {
@@ -13134,7 +13134,7 @@
             "Jeremy Mayfield"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -13152,7 +13152,7 @@
             "Swedish Social Democratic Party, Moderate Party, Left Party, Christian Democrats, Centre Party, Liberal Peoples Party, Green Party, Sweden Democrats, Other parties, Invalid/blank votes"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -13190,7 +13190,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -13260,7 +13260,7 @@
             "18 February 1969"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am sure"
         ]
@@ -13369,7 +13369,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -13386,7 +13386,7 @@
             "1933, Sam McAllister, 1934, Herschel Bobo, 1934-1939, Del Morgan, 1940, Porter Grant, 1941-1942, Jimmy Hitchcock, 1943-1946, Bob Evans, 1947-1948, Danny Doyle, 1949-1950, Johnny Williamson, 1951-1957, Dick McGowen, 1958, Joe Connally, 1959-1962, Erk Russell, 1963-1984, Paul Nix, 1985-2000, Hal Baird, 2001-2004, Steve Renfroe, 2005-2008, Tom Slater, 2009-2013, John Pawlowski, 2014-Present, Sunny Golloway"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am unsure"
         ]
@@ -13404,8 +13404,8 @@
             "Murder by Phone, Reckless Disregard, Anne of Green Gables, Perry Mason Returns, Perry Mason: The Case of the Shooting Star, Alex: The Life of a Child, Smith & Smiths Comedy Mill, Deep Sea Conspiracy, Amerika, Anne of Avonlea, Looking for Miracles, Road to Avonlea, A Stranger in the Family, Goosebumps, Happy Christmas, Miss King, Shadow Lake, My Grandmother Ironed the Kings Shirts, Timothy Goes to School, Bonded Pairs, The Being Frank Show"
         ],
         "confidences": [
-            "I am unsure",
-            "I am unsure",
+            "I am sure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -13422,7 +13422,7 @@
             "F#7"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am unsure"
         ]
@@ -13442,7 +13442,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -13494,9 +13494,9 @@
             "16"
         ],
         "confidences": [
+            "I am unsure",
             "I am sure",
-            "I am sure",
-            "I am sure"
+            "I am unsure"
         ]
     },
     {
@@ -13549,7 +13549,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am sure"
         ]
     },
@@ -13566,7 +13566,7 @@
             "3:02.77"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -13586,7 +13586,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -13602,8 +13602,8 @@
             "Chinese Taipei (TPE), Russia (RUS), Great Britain (GBR), Slovakia (SVK), China (CHN), Mexico (MEX), Germany (GER), South Korea (KOR), Switzerland (SUI), Thailand (THA), Uzbekistan (UZB)"
         ],
         "confidences": [
-            "I am sure",
-            "I am sure",
+            "I am unsure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -13639,8 +13639,8 @@
         ],
         "confidences": [
             "I am sure",
-            "I am unsure",
-            "I am sure"
+            "I am sure",
+            "I am unsure"
         ]
     },
     {
@@ -13657,7 +13657,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     },
@@ -13675,8 +13675,8 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -13692,7 +13692,7 @@
             "Athens"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am unsure",
             "I am sure"
         ]
@@ -13782,7 +13782,7 @@
             "Colorado Buffaloes"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am sure",
             "I am sure"
         ]
@@ -13908,7 +13908,7 @@
             "Camel Yamaha Team, Camel Yamaha Team, Konica Minolta Honda, Tech 3 Yamaha, Tech 3 Yamaha, Team Roberts, Ducati Marlboro Team, Ducati Marlboro Team, Ducati Marlboro Team, Ducati Marlboro Team, Kawasaki Racing Team, Kawasaki Racing Team, Kawasaki Racing Team, Rizla Suzuki MotoGP, Rizla Suzuki MotoGP, Rizla Suzuki MotoGP, Repsol Honda Team, Repsol Honda Team, Honda LCR, Pramac dAntin MotoGP, Pramac dAntin MotoGP, Pramac dAntin MotoGP, Fortuna Honda, Fortuna Honda, Fortuna Honda, Ilmor SRT"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -13998,9 +13998,9 @@
             "September 15, 1974, September 22, 1974, September 29, 1974, October 6, 1974, October 13, 1974, October 20, 1974, October 27, 1974, November 3, 1974, November 10, 1974, November 18, 1974, November 24, 1974, December 1, 1974, December 8, 1974, December 14, 1974"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am sure",
+            "I am sure"
         ]
     },
     {
@@ -14016,7 +14016,7 @@
             "11th, 9th, 1st, 20th, 3rd, 1st, 16th, 17th, 18th, 2nd"
         ],
         "confidences": [
-            "I am unsure",
+            "I am sure",
             "I am sure",
             "I am unsure"
         ]
@@ -14124,7 +14124,7 @@
             "Appealing For Peace, On Preaching the Word of God, On the Future Peace Conference, On St. Boniface, On the Children of Central Europe, On Peace and Christian Reconciliation, On St. Jerome, On St. Ephram the Syrian, On Children in Central Europe, On the Third Order of St. Francis, On Dante, On St. Dominic"
         ],
         "confidences": [
-            "I am sure",
+            "I am unsure",
             "I am unsure",
             "I am unsure"
         ]
@@ -14144,7 +14144,7 @@
         "confidences": [
             "I am unsure",
             "I am unsure",
-            "I am unsure"
+            "I am sure"
         ]
     },
     {
@@ -14215,7 +14215,7 @@
         ],
         "confidences": [
             "I am sure",
-            "I am sure",
+            "I am unsure",
             "I am unsure"
         ]
     },
@@ -14286,9 +14286,9 @@
             "United States (USA)"
         ],
         "confidences": [
-            "I am unsure",
             "I am sure",
-            "I am unsure"
+            "I am unsure",
+            "I am sure"
         ]
     },
     {
@@ -14341,7 +14341,7 @@
         ],
         "confidences": [
             "I am unsure",
-            "I am unsure",
+            "I am sure",
             "I am unsure"
         ]
     }

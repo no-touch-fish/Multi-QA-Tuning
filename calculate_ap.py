@@ -73,7 +73,7 @@ lora_path = args.lora_path
 
 with open(data_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
-# df = pd.DataFrame(data).head(10)
+# df = pd.DataFrame(data).head(100)
 df = pd.DataFrame(data)
 questions = df['question'].tolist()
 outputs = df['output'].tolist()
@@ -381,12 +381,22 @@ else:
 
     print(f"save the result to {output_file}")
 
-
-# calculate the AP score
+# calculate the accuracy
 input_prob = []
 for prob in probs:
     input_prob.append(prob[' sure'])
 
+total = 0
+correct = 0
+for label, prob in zip(input_label,input_prob):
+    if prob > 0.5:
+        total += 1
+        if label == 1:
+            correct += 1
+if total != 0:
+    print(f"accuracy: {correct/total}")
+
+# calculate the AP score
 a = precision_recall_curve(input_label,input_prob)
 
 sure_score = average_precision_score(input_label,input_prob)

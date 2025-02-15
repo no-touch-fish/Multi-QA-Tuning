@@ -68,7 +68,7 @@ case = args.case
 question_number = args.question_number
 
 template = 'Solve several questions here.'
-MAX_LENGTH = 1200
+MAX_LENGTH = 1350
 batch_size = 1
 
 # Lora config
@@ -86,16 +86,15 @@ training_args = TrainingArguments(
     per_device_train_batch_size= batch_size, # batch size
     gradient_accumulation_steps=4,
     fp16=True,  # FP16 mix
-    learning_rate= 1e-5,
-    num_train_epochs= 3,
+    learning_rate= 5e-5,
+    num_train_epochs= 5,
     logging_dir='/logs',
     save_total_limit=1,
+    lr_scheduler_type = 'linear',
 )
 
 # load the model and the tokenizer
-
-model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-# model_name = 'Qwen/Qwen2-7B-Instruct'
+model_name = 'Qwen/Qwen2-7B-Instruct'
 
 model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
@@ -120,7 +119,7 @@ def preprocess_MTI(data_file):
                 confidence.append('I am unsure')
         combine_data.append({
             "question": subdata['question'], 
-            "answer": f'1: {answers[0]} \n2: {answers[1]} \n3: {answers[2]}',
+            "answer": f'1: <task1>{answers[0]}<task1/> \n2: <task2>{answers[1]}<task2/> \n3: <task3>{answers[2]}<task3/>',
             "confidence": f'1: {confidence[0]} \n2: {confidence[1]} \n3: {confidence[2]}'
         })
     return combine_data
@@ -346,9 +345,6 @@ def tokenize_function_confidence(example):
             "attention_mask": [],
             "labels": []
         }
-        # input_ids = input_ids[:MAX_LENGTH]
-        # attention_mask = attention_mask[:MAX_LENGTH]
-        # labels = labels[:MAX_LENGTH]
     elif len(input_ids) < MAX_LENGTH:  # padding
         padding_length = MAX_LENGTH - len(input_ids)
         input_ids = input_ids + [tokenizer.pad_token_id] * padding_length

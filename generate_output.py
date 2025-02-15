@@ -82,10 +82,10 @@ with open(data_file, 'r') as file:
 df = pd.DataFrame(data)
 questions = df['question'].tolist()
 answers = df['answer'].tolist()
+
 # load model
 model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # model_name = 'Qwen/Qwen2-7B-Instruct'
-
 
 # put the input into format
 def get_generate_input(questions,model_name):
@@ -134,8 +134,12 @@ def generate_vllm(inputs,model_name,batch_size):
     probs = []
     if question_number == 1:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure.'
+    elif question_number == 2:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure.'
     elif question_number == 3:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure.'
+    elif question_number == 4:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure.'
     elif question_number == 5:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure \n5: I am sure/unsure.'
     prompts = []
@@ -184,8 +188,12 @@ def generate_lora(questions,model_name,batch_size):
     probs = []
     if question_number == 1:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure.'
+    elif question_number == 2:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure.'
     elif question_number == 3:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure.'
+    elif question_number == 4:
+        additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure.'
     elif question_number == 5:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure \n5: I am sure/unsure.'
     prompts = []

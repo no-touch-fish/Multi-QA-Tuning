@@ -41,11 +41,15 @@ def CoT(data):
     length = []
     combined_data = []
     if question_number == 1:
-        addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer.'
+        addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer."
+    elif question_number == 2:
+        addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer."
     elif question_number == 3:
         addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer."
+    elif question_number == 4:
+        addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer."
     elif question_number == 5:
-        addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
+        addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer."
 
     for i in range(0, len(data), question_number):
         if i+question_number-1 >= len(data):
@@ -76,8 +80,12 @@ def blank(data):
     combined_data = []
     if question_number == 1:
         addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer.'
+    elif question_number == 2:
+        addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer.'
     elif question_number == 3:
         addtional_part = "Directly give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer."
+    elif question_number == 4:
+        addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer.'
     elif question_number == 5:
         addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
     # if the case is CoQA dataset
@@ -137,8 +145,12 @@ def choice(data):
     combined_data = []
     if question_number == 1:
         addtional_part = 'Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer.'
+    elif question_number == 2:
+        addtional_part = 'Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer \n2: answer.'
     elif question_number == 3:
         addtional_part = 'Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer \n2: answer \n3: answer.'
+    elif question_number == 4:
+        addtional_part = 'Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer.'
     elif question_number == 5:
         addtional_part = 'Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
         # if the case is CoQA dataset

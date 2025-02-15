@@ -68,7 +68,7 @@ case = args.case
 question_number = args.question_number
 
 template = 'Solve several questions here.'
-MAX_LENGTH = 1200
+MAX_LENGTH = 1250
 batch_size = 1
 
 # Lora config
@@ -95,7 +95,6 @@ training_args = TrainingArguments(
 # load the model and the tokenizer
 
 model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-# model_name = 'Qwen/Qwen2-7B-Instruct'
 
 model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
@@ -131,8 +130,12 @@ def preprocess_CoQA(data):
     if case == 'blank':
         if question_number == 1:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer.'
+        elif question_number == 2:
+            addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer.'
         elif question_number == 3:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer.'
+        elif question_number == 4:
+            addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer.'
         elif question_number == 5:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
         # apply templates to the original dataset
@@ -156,8 +159,12 @@ def preprocess_CoQA(data):
     elif case == 'choice':
         if question_number == 1:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice.'
+        elif question_number == 2:
+            addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice.'
         elif question_number == 3:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice.'
+        elif question_number == 4:  
+            addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice.'
         elif question_number == 5:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice \n5: choice.'
         # apply templates to the original dataset
@@ -186,16 +193,20 @@ def preprocess_CoT(data):
     if case == 'blank':
         if question_number == 1:
             addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer."
+        elif question_number == 2:
+            addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer."
         elif question_number == 3:
             addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer."
+        elif question_number == 4:
+            addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer."
         elif question_number == 5:
             addtional_part = "Let's think step by step and give me an answer for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer."
         # apply templates to the original dataset
         for i in range(0, len(data), question_number):
             if i+question_number-1 >= len(data):
                 break
-            combined_question = f'{data[0]["context"]}Solve serveral questions here.\n'
-            # combined_question = f'Solve serveral questions here.\n'
+            # combined_question = f'{data[0]["context"]}Solve serveral questions here.\n'
+            combined_question = f'Solve serveral questions here.\n'
             combined_answer = f''
             combined_confidence = f''
             for j in range(0,question_number):
@@ -216,8 +227,12 @@ def preprocess_data(data):
     if case == 'blank':
         if question_number == 1:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer.'
+        elif question_number == 2:
+            addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer.'
         elif question_number == 3:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer.'
+        elif question_number == 4:
+            addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer.'
         elif question_number == 5:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
         # apply templates to the original dataset
@@ -240,8 +255,12 @@ def preprocess_data(data):
     elif case == 'choice':
         if question_number == 1:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice.'
+        elif question_number == 2:
+            addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice.'
         elif question_number == 3:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice.'
+        elif question_number == 4:
+            addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice.'
         elif question_number == 5:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice \n5: choice.'
         # apply templates to the original dataset
@@ -392,8 +411,8 @@ tokenized_data_qa = data.map(tokenize_function_qa)
 
 # MP Tuning
 print('Doing MP Tuning!')
-# tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
-tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
+# tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
 tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 # R-Tuning (S: question number = 1 / M: question number = 3)
