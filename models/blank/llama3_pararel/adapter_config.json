@@ -4,7 +4,7 @@
     "base_model_class": "LlamaForCausalLM",
     "parent_library": "transformers.models.llama.modeling_llama"
   },
-  "base_model_name_or_path": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "base_model_name_or_path": "meta-llama/Llama-3.2-3B-Instruct",
   "bias": "none",
   "fan_in_fan_out": false,
   "inference_mode": true,

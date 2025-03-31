@@ -69,7 +69,7 @@ question_number = args.question_number
 
 template = 'Solve several questions here.'
 MAX_LENGTH = 1250
-batch_size = 1
+batch_size = 4
 
 # Lora config
 lora_config = LoraConfig(
@@ -94,7 +94,8 @@ training_args = TrainingArguments(
 
 # load the model and the tokenizer
 
-model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+# model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+model_name = "meta-llama/Llama-3.2-3B-Instruct"
 
 model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
@@ -411,8 +412,8 @@ tokenized_data_qa = data.map(tokenize_function_qa)
 
 # MP Tuning
 print('Doing MP Tuning!')
-tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
-# tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
+# tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
 tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 # R-Tuning (S: question number = 1 / M: question number = 3)

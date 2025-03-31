@@ -84,8 +84,10 @@ questions = df['question'].tolist()
 answers = df['answer'].tolist()
 
 # load model
-model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
+# model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # model_name = 'Qwen/Qwen2-7B-Instruct'
+# model_name = 'microsoft/Phi-3-mini-4k-instruct'
+model_name = 'meta-llama/Llama-3.2-3B-Instruct'
 
 # put the input into format
 def get_generate_input(questions,model_name):
@@ -110,7 +112,9 @@ def get_generate_input(questions,model_name):
 def generate_vllm(inputs,model_name,batch_size):
     llm = LLM(
         model= model_name,
-        max_num_seqs = batch_size
+        max_num_seqs = batch_size,
+        gpu_memory_utilization=0.9,
+        # max_model_len = 2048,
         )
     sampling_params = SamplingParams(
         temperature = 0.0, 
@@ -167,7 +171,9 @@ def generate_lora(questions,model_name,batch_size):
     model = LLM(
         model=model_name, 
         enable_lora=True,
-        max_num_seqs = batch_size
+        max_num_seqs = batch_size,
+        gpu_memory_utilization=0.9,
+        max_model_len = 2048,
         )
     results = model.generate(
         prompt_token_ids=inputs,

@@ -49,7 +49,7 @@ def process_json(input_file, output_file):
     print(f'the number of prompts is:{len(lines)}')
     processed_data = [process_qa_pair(json.loads(line)) for line in lines if process_qa_pair(json.loads(line)) is not None]
     prompts = load_prompts_by_category("context.txt")
-    category = "GSM_5"
+    category = "GSM_3"
     context = get_prompt_by_category(prompts, category)
     for data in processed_data:
         data["context"] = context

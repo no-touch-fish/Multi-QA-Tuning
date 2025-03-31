@@ -79,8 +79,9 @@ questions = df['question'].tolist()
 outputs = df['output'].tolist()
 labels = df['label'].tolist()
 
-model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
+# model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # model_name = 'Qwen/Qwen2-7B-Instruct'
+model_name = 'meta-llama/Llama-3.2-3B-Instruct'
 
 sampling_params = SamplingParams(
         temperature=0,
@@ -91,6 +92,8 @@ model = LLM(
         model=model_name, 
         enable_lora=True,
         max_num_seqs = 16,
+        gpu_memory_utilization=0.9,
+        max_model_len = 2048,
     )
 
 def divide_MTI_question(content):
@@ -172,7 +175,7 @@ def divide_content(content):
 
 def divide_content_2(content):
     output_list = content.split('\n')
-    print(output_list)
+    # print(output_list)
     return output_list
 
 # function to get the prob of first index
