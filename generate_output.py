@@ -2,8 +2,8 @@ import pandas as pd
 from transformers import AutoTokenizer
 import torch
 import json
-from vllm import LLM, SamplingParams
-from vllm.lora.request import LoRARequest
+# from vllm import LLM, SamplingParams
+# from vllm.lora.request import LoRARequest
 import argparse
 import os
 import math
@@ -63,6 +63,11 @@ parser.add_argument(
     default = 3,
     help = "the number for how many questions combine together",
 )
+
+# vllm setting
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["VLLM_WORKER_MULTIPROC_METHOD"]= "spawn"
+
 args = parser.parse_args()
 
 data_file = args.data_path
@@ -86,8 +91,9 @@ answers = df['answer'].tolist()
 # load model
 # model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # model_name = 'Qwen/Qwen2-7B-Instruct'
-# model_name = 'microsoft/Phi-3-mini-4k-instruct'
-model_name = 'meta-llama/Llama-3.2-3B-Instruct'
+model_name = 'Qwen/Qwen2.5-14B-Instruct'
+# model_name = "microsoft/Phi-3.5-mini-instruct"
+# model_name = 'meta-llama/Llama-3.2-3B-Instruct'
 
 # put the input into format
 def get_generate_input(questions,model_name):
@@ -114,7 +120,7 @@ def generate_vllm(inputs,model_name,batch_size):
         model= model_name,
         max_num_seqs = batch_size,
         gpu_memory_utilization=0.9,
-        # max_model_len = 2048,
+        max_model_len = 4096,
         )
     sampling_params = SamplingParams(
         temperature = 0.0, 
@@ -173,7 +179,7 @@ def generate_lora(questions,model_name,batch_size):
         enable_lora=True,
         max_num_seqs = batch_size,
         gpu_memory_utilization=0.9,
-        max_model_len = 2048,
+        max_model_len = 4096,
         )
     results = model.generate(
         prompt_token_ids=inputs,
@@ -232,45 +238,51 @@ def get_prob(logprobs):
                 prob_list.append({' unsure':prob})
     return prob_list
 
-# generate the output
-if args.generate_vllm:
-    inputs = get_generate_input(questions,model_name)
-    probs,confidence, generations = generate_vllm(inputs,model_name,batch_size)
-elif args.lora_model:
-    probs,confidence, generations = generate_lora(questions,model_name,batch_size)
+def main():
 
-# get the output
-output_data = []
-if case == 'choice':
-    original_options = df['original_options'].tolist()
-    for question, generation, answer,original_option in zip(questions, generations, answers, original_options):
-        output_data.append({
-            'question': question, 
-            'original_options':original_option,
-            'answer': answer,
-            'output': generation
-        })
-elif case == 'blank':
-    for question, generation, answer in zip(questions, generations, answers):
-        output_data.append({
-            'question': question, 
-            'answer': answer,
-            'output': generation
+    # generate the output
+    if args.generate_vllm:
+        inputs = get_generate_input(questions,model_name)
+        probs,confidence, generations = generate_vllm(inputs,model_name,batch_size)
+    elif args.lora_model:
+        probs,confidence, generations = generate_lora(questions,model_name,batch_size)
+
+    # get the output
+    output_data = []
+    if case == 'choice':
+        original_options = df['original_options'].tolist()
+        for question, generation, answer,original_option in zip(questions, generations, answers, original_options):
+            output_data.append({
+                'question': question, 
+                'original_options':original_option,
+                'answer': answer,
+                'output': generation
             })
+    elif case == 'blank':
+        for question, generation, answer in zip(questions, generations, answers):
+            output_data.append({
+                'question': question, 
+                'answer': answer,
+                'output': generation
+                })
 
-# generate the confidence
-for entry,item,prob in zip(output_data,confidence,probs):
-    entry['confidence'] = item
-    # entry['prob'] = prob
-if 'story' in df.keys():
-    storys = df['story'].tolist()
-    for entry,story in zip(output_data,storys):
-        entry['story'] = story
+    # generate the confidence
+    for entry,item,prob in zip(output_data,confidence,probs):
+        entry['confidence'] = item
+        # entry['prob'] = prob
+    if 'story' in df.keys():
+        storys = df['story'].tolist()
+        for entry,story in zip(output_data,storys):
+            entry['story'] = story
 
-# save the output
-with open(output_file, 'w') as file:
-    json.dump(output_data, file, ensure_ascii=False, indent=4)
+    # save the output
+    with open(output_file, 'w') as file:
+        json.dump(output_data, file, ensure_ascii=False, indent=4)
 
-print(f"save the result to {output_file}")
+    print(f"save the result to {output_file}")
 
+if __name__ == '__main__':
+    from vllm import LLM, SamplingParams
+    from vllm.lora.request import LoRARequest
+    main()
 

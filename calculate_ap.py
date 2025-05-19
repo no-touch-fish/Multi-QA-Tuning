@@ -60,6 +60,10 @@ parser.add_argument(
     help="question number = 1 or not",
 )
 
+# vllm setting
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["VLLM_WORKER_MULTIPROC_METHOD"]= "spawn"
+
 args = parser.parse_args()
 
 data_file = args.data_path
@@ -81,7 +85,9 @@ labels = df['label'].tolist()
 
 # model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # model_name = 'Qwen/Qwen2-7B-Instruct'
-model_name = 'meta-llama/Llama-3.2-3B-Instruct'
+model_name = 'Qwen/Qwen2.5-14B-Instruct'
+# model_name = 'meta-llama/Llama-3.2-3B-Instruct'
+# model_name = "microsoft/Phi-3.5-mini-instruct"
 
 sampling_params = SamplingParams(
         temperature=0,
@@ -93,7 +99,7 @@ model = LLM(
         enable_lora=True,
         max_num_seqs = 16,
         gpu_memory_utilization=0.9,
-        max_model_len = 2048,
+        max_model_len = 8000,
     )
 
 def divide_MTI_question(content):

@@ -1,5 +1,5 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, DataCollatorWithPadding
-from peft import LoraConfig, get_peft_model
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from datasets import Dataset
 import torch
 import json
@@ -68,8 +68,8 @@ case = args.case
 question_number = args.question_number
 
 template = 'Solve several questions here.'
-MAX_LENGTH = 1250
-batch_size = 4
+MAX_LENGTH = 1500
+batch_size = 1
 
 # Lora config
 lora_config = LoraConfig(
@@ -77,7 +77,7 @@ lora_config = LoraConfig(
     r=8,               # rank
     lora_alpha=32,     # alpha
     inference_mode=False,
-    target_modules=["q_proj", "v_proj"],  # module to add lora
+    target_modules=["o_proj","qkv_proj"],  # module to add lora
     lora_dropout=0.1   # dropout
 )
 # training config
@@ -94,9 +94,10 @@ training_args = TrainingArguments(
 
 # load the model and the tokenizer
 
-model_name = "microsoft/Phi-3-mini-4k-instruct"
+model_name = "microsoft/Phi-3.5-mini-instruct"
 
-model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, trust_remote_code=True, device_map="auto")
+# print(model)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id =  tokenizer.eos_token_id
@@ -411,8 +412,8 @@ tokenized_data_qa = data.map(tokenize_function_qa)
 
 # MP Tuning
 print('Doing MP Tuning!')
-tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
-# tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
+# tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
 tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 # R-Tuning (S: question number = 1 / M: question number = 3)
@@ -439,9 +440,10 @@ for i, example in enumerate(tokenized_data):
             'label' : label_text
         })
 
-data_output_file = 'dataset/test.json'
-with open(data_output_file, 'w',encoding='utf-8') as f:
-    json.dump(save_data, f, indent=4, ensure_ascii=False)
+# data_output_file = 'dataset/test.json'
+# with open(data_output_file, 'w',encoding='utf-8') as f:
+#     json.dump(save_data, f, indent=4, ensure_ascii=False)
+# print(f'save to {data_output_file}')
 
 # fine tune
 trainer = Trainer(

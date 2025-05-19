@@ -1,5 +1,5 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, DataCollatorWithPadding
-from peft import LoraConfig, get_peft_model
+from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, DataCollatorWithPadding, BitsAndBytesConfig
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from datasets import Dataset
 import torch
 import json
@@ -69,8 +69,12 @@ question_number = args.question_number
 
 template = 'Solve several questions here.'
 MAX_LENGTH = 1350
-batch_size = 1
+batch_size = 2
 
+# quantization config
+quantization_config = BitsAndBytesConfig(
+    load_in_8bit=True,
+)
 # Lora config
 lora_config = LoraConfig(
     # task_type=TaskType.CAUSAL_LM,
@@ -95,8 +99,10 @@ training_args = TrainingArguments(
 
 # load the model and the tokenizer
 model_name = 'Qwen/Qwen2-7B-Instruct'
+# model_name = 'Qwen/Qwen2.5-14B-Instruct'
 
-model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, trust_remote_code=True, quantization_config=quantization_config)
+model = prepare_model_for_kbit_training(model)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id =  tokenizer.eos_token_id

@@ -412,8 +412,8 @@ tokenized_data_qa = data.map(tokenize_function_qa)
 
 # MP Tuning
 print('Doing MP Tuning!')
-# tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
-tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
+tokenized_data = concatenate_datasets([tokenized_data_qa, tokenized_data_confidence])
+# tokenized_data = interleave_datasets([tokenized_data_qa, tokenized_data_confidence])
 tokenized_data = tokenized_data.filter(lambda x: len(x["input_ids"]) > 0)
 
 # R-Tuning (S: question number = 1 / M: question number = 3)
