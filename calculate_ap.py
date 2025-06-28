@@ -83,9 +83,9 @@ questions = df['question'].tolist()
 outputs = df['output'].tolist()
 labels = df['label'].tolist()
 
-# model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
+model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # model_name = 'Qwen/Qwen2-7B-Instruct'
-model_name = 'Qwen/Qwen2.5-14B-Instruct'
+# model_name = 'Qwen/Qwen2.5-14B-Instruct'
 # model_name = 'meta-llama/Llama-3.2-3B-Instruct'
 # model_name = "microsoft/Phi-3.5-mini-instruct"
 

@@ -1,5 +1,5 @@
 ---
-base_model: meta-llama/Llama-3.2-3B-Instruct
+base_model: Qwen/Qwen2-7B-Instruct
 library_name: peft
 ---
 
@@ -199,4 +199,5 @@ Carbon emissions can be estimated using the [Machine Learning Impact calculator]
 [More Information Needed]
 ### Framework versions
 
+- PEFT 0.15.1
 - PEFT 0.12.0

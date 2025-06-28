@@ -94,8 +94,8 @@ training_args = TrainingArguments(
 
 # load the model and the tokenizer
 
-# model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "meta-llama/Llama-3.2-3B-Instruct"
+model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+# model_name = "meta-llama/Llama-3.2-3B-Instruct"
 
 model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code = True)
@@ -103,6 +103,18 @@ tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id =  tokenizer.eos_token_id
 
 model = get_peft_model(model, lora_config)
+
+def generate_addtional_part(question_number,case):
+    if case == 'blank':
+        addtion_apart = f'Directly Give me an answer without explanation for each question in following format: '
+    elif case == 'choice':
+        addtion_apart = f'Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: '
+    elif case == 'cot':
+        addtion_apart = f'Let\'s think step by step and give me an answer for each question in following format: '
+    for i in range(1, question_number):
+        addtion_apart += f'{i}: answer \n'
+    addtion_apart += f'{question_number}: answer.'
+    return addtion_apart
 
 # deal with MTI dataset
 def preprocess_MTI(data_file):
@@ -139,6 +151,8 @@ def preprocess_CoQA(data):
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer.'
         elif question_number == 5:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
+        else:
+            addtional_part = generate_addtional_part(question_number,case)
         # apply templates to the original dataset
         for subdata in data:
             for i in range(0, len(subdata['questions']), question_number):
@@ -168,6 +182,8 @@ def preprocess_CoQA(data):
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice.'
         elif question_number == 5:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice \n5: choice.'
+        else:
+            addtional_part = generate_addtional_part(question_number,case)
         # apply templates to the original dataset
         for subdata in data:
             for i in range(0, len(subdata['questions']), question_number):
@@ -236,6 +252,8 @@ def preprocess_data(data):
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer.'
         elif question_number == 5:
             addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
+        else:
+            addtional_part = generate_addtional_part(question_number,case)
         # apply templates to the original dataset
         for i in range(0, len(data), question_number):
             if i+question_number-1 >= len(data):
@@ -264,6 +282,8 @@ def preprocess_data(data):
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice.'
         elif question_number == 5:
             addtional_part = 'Directly Give me a choice (which should be a letter from the alphabet) for each question in following format: 1: choice \n2: choice \n3: choice \n4: choice \n5: choice.'
+        else:
+            addtional_part = generate_addtional_part(question_number,case)
         # apply templates to the original dataset
         for i in range(0, len(data), question_number):
             if i+question_number-1 >= len(data):

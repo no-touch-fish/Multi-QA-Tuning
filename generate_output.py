@@ -89,11 +89,18 @@ questions = df['question'].tolist()
 answers = df['answer'].tolist()
 
 # load model
-# model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
+model_name = 'meta-llama/Meta-Llama-3-8B-Instruct'
 # model_name = 'Qwen/Qwen2-7B-Instruct'
-model_name = 'Qwen/Qwen2.5-14B-Instruct'
+# model_name = 'Qwen/Qwen2.5-14B-Instruct'
 # model_name = "microsoft/Phi-3.5-mini-instruct"
 # model_name = 'meta-llama/Llama-3.2-3B-Instruct'
+
+def generate_additional_part(question_number):
+    addtional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format:'
+    for i in range(1, question_number):
+        addtional_part += f' {i}: I am sure/unsure \n'
+    addtional_part += f' {question_number}: I am sure/unsure.'
+    return addtional_part
 
 # put the input into format
 def get_generate_input(questions,model_name):
@@ -152,6 +159,8 @@ def generate_vllm(inputs,model_name,batch_size):
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure.'
     elif question_number == 5:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure \n5: I am sure/unsure.'
+    else:
+        additional_part = generate_additional_part(question_number)
     prompts = []
     for question, output in zip(questions,generation):
         prompts.append(f'Question:{question}\nAnswer:{output}.{additional_part}')
@@ -208,6 +217,8 @@ def generate_lora(questions,model_name,batch_size):
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure.'
     elif question_number == 5:
         additional_part = 'Are you sure you accurately answered the question based on your internal knowledge? Answer in following format: 1: I am sure/unsure \n2: I am sure/unsure \n3: I am sure/unsure \n4: I am sure/unsure \n5: I am sure/unsure.'
+    else:
+        additional_part = generate_additional_part(question_number)
     prompts = []
     for question, output in zip(questions,generation):
         prompts.append(f'Question:{question}\nAnswer:{output}.{additional_part}')

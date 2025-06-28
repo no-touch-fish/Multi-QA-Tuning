@@ -34,6 +34,18 @@ output_file = args.save_path
 case = args.case
 question_number = args.question_number
 
+def generate_addtional_part(question_number,case):
+    if case == 'blank':
+        addtion_apart = f'Directly Give me an answer without explanation for each question in following format: '
+    elif case == 'choice':
+        addtion_apart = f'Directly Give me an answer without explanation (which should be A, B, C, D) for each question in following format: '
+    elif case == 'cot':
+        addtion_apart = f'Let\'s think step by step and give me an answer for each question in following format: '
+    for i in range(1, question_number):
+        addtion_apart += f'{i}: answer \n'
+    addtion_apart += f'{question_number}: answer.'
+    return addtion_apart
+
 with open(data_file, 'r',encoding='utf-8') as file:
     data = json.load(file)
 # deal with CoT setting
@@ -88,6 +100,8 @@ def blank(data):
         addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer.'
     elif question_number == 5:
         addtional_part = 'Directly Give me an answer without explanation for each question in following format: 1: answer \n2: answer \n3: answer \n4: answer \n5: answer.'
+    else:
+        addtional_part = generate_addtional_part(question_number,'blank')
     # if the case is CoQA dataset
     count = 0
     if 'story' in data[0].keys():
