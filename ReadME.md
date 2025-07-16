@@ -90,3 +90,17 @@ python calculate_ap.py --data_path fine_tune_result/blank/pararel.json --lora_mo
 
 ---
 This pipeline ensures a systematic approach to processing, fine-tuning, and evaluating the **Pararel** dataset. 🚀
+
+If you find this repository helpful, please consider citing our paper to support the research.
+```
+@misc{huang2025mactuningllmmulticompositionalproblem,
+  title={MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness}, 
+  author={Junsheng Huang and Zhitao He and Sandeep Polisetty and Qingyun Wang and May Fung},
+  year={2025},
+  eprint={2504.21773},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2504.21773}, 
+}
+
+```
